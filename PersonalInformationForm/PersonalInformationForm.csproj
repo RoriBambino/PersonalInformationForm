@@ -133,6 +133,7 @@
     <Content Include="Image\investigation.png" />
     <Content Include="Image\no-alarm.png" />
     <Content Include="Image\payment-method.png" />
+    <Content Include="Image\plus_sign_007-removebg-preview.png" />
     <Content Include="Image\settings.png" />
     <Content Include="Image\wallet.png" />
     <Content Include="Image\wallet2.png" />
@@ -141,6 +142,7 @@
     <Content Include="Signin.aspx" />
     <Content Include="Client.aspx" />
     <Content Include="Cashin.aspx" />
+    <Content Include="Cashout.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -260,6 +262,13 @@
     </Compile>
     <Compile Include="Cashin.aspx.designer.cs">
       <DependentUpon>Cashin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cashout.aspx.cs">
+      <DependentUpon>Cashout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cashout.aspx.designer.cs">
+      <DependentUpon>Cashout.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

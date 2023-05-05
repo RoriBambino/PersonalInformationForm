@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Cash In</title>
-    <link href="Style.css" rel="stylesheet"/>
+   <link href="Style.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
@@ -18,12 +18,15 @@
     </style>
 </head>
 <body>
-      <!--Menu Bar-->
+       <!--Menu Bar-->
       <div class="menu">
             <!--Header-->
            <div class="logo">
                <a  ref="pageLogo" href="PersonalInfoEntry.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
-               
+               <form> 
+                <asp:Label ID="Label2" runat="server" CssClass="auto-style22" Font-Names="Bookman Old Style" Font-Size="X-Large" ForeColor="Black" Text="E-Save"></asp:Label>
+
+               </form>
                <nav>
                 <input type="checkbox" id="check">
                 <label for="check" class="checkbtn">
@@ -34,13 +37,13 @@
                    <ul>
                        <!---Menu Buttons-->
                        <li class="click">
-                           <a rel="Home" href="PersonalInfoEntry.aspx">
+                           <a rel="Home" href="Client.aspx">
                                Home
                            </a>
                        </li>
-                       <li><a href="#">Cash In</a></li>
+                       <li><a href="Cashin.aspx">Cash In</a></li>
                         <li>
-                           <a href="#">
+                           <a href="Cashout.aspx">
                              Cash Out
                            </a>
                        </li>

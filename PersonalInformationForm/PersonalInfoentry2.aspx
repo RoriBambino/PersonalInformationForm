@@ -433,7 +433,7 @@
             top: 32px;
             left: 163px;
             z-index: 1;
-            width: 74px;
+            width: 82px;
         }
        
     </style>
@@ -513,7 +513,7 @@
         </asp:DropDownList>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="city" CssClass="auto-style26" ErrorMessage="*Input City" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
-        <asp:Label ID="Label27" runat="server" CssClass="auto-style161" Font-Names="Britannic Bold" Font-Size="X-Large" Text="E-Save"></asp:Label>
+        <asp:Label ID="Label27" runat="server" CssClass="auto-style161" Font-Names="Bookman Old Style" Font-Size="X-Large" Text="E-Save"></asp:Label>
         <br />
         <asp:DropDownList ID="DropDownList4" runat="server" CssClass="auto-style134">
             <asp:ListItem>Sex</asp:ListItem>

@@ -32,9 +32,8 @@ namespace PersonalInformationForm
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string insertQuerry = "";
-
-                    SqlCommand cmd = new SqlCommand("select USERNAME,PASSWORD from entry where USERNAME = '" + input_username.Text + "' and PASSWORD = '" + check_pass.Text + "'", conn);
+                   
+                    SqlCommand cmd = new SqlCommand("SELECT USERNAME,PASSWORD FROM CLIENT WHERE USERNAME = '" + input_username.Text + "' AND PASSWORD = '" + check_pass.Text + "'", conn);
 
 
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -47,7 +46,7 @@ namespace PersonalInformationForm
                         conn.Close();
                         Label.Text = "Valid loginid and password";
                         Label.ForeColor = System.Drawing.Color.DarkRed;
-                       // Server.Transfer(".aspx");
+                        Server.Transfer("Client.aspx");
                     }
                     else
                     {
