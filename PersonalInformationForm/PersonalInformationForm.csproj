@@ -143,6 +143,7 @@
     <Content Include="Client.aspx" />
     <Content Include="Cashin.aspx" />
     <Content Include="Cashout.aspx" />
+    <Content Include="SendMoney.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -269,6 +270,13 @@
     </Compile>
     <Compile Include="Cashout.aspx.designer.cs">
       <DependentUpon>Cashout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendMoney.aspx.cs">
+      <DependentUpon>SendMoney.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendMoney.aspx.designer.cs">
+      <DependentUpon>SendMoney.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

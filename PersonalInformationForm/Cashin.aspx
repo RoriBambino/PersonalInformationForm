@@ -71,17 +71,18 @@
         <div>
         </div>
     </form>
-     <div class="footer-basic">
+ <div class="footer-basic">
         <footer>
-            <div class="social" style="width: 1054px"><a href="#" class="auto-style1"><i class="icon ion-social-instagram"></i></a><a href="#" class="auto-style3"><i class="icon ion-social-twitter"></i></a><a href="#" class="auto-style2"><i class="icon ion-social-facebook"></i></a></div>
+            <div class="social" style="width: 1104px"><a href="#" class="auto-style3"><i class="icon ion-social-instagram"></i></a><a href="#" class="auto-style2"><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: -1px; width: 42px; height: 40px;"></i></a><a href="#" class="auto-style4"><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 2px; width: 36px"></i></a>
+                <asp:Label ID="show_money" runat="server" CssClass="auto-style18"></asp:Label>
+            </div>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="PersonalInfoEntry.aspx" class="auto-style8">Home</a></li>
-                <li class="list-inline-item"><a href="#" class="auto-style7">Services</a></li>
-                <li class="list-inline-item"><a href="#" class="auto-style6">About</a></li>
-                <li class="list-inline-item"><a href="Signin.aspx" class="auto-style5">Sign In</a></li>
-                <li class="list-inline-item"><a href="#" class="auto-style4">Register</a></li>
+                <li class="list-inline-item"><a href="Client.aspx" class="auto-style5">Home</a></li>
+                <li class="auto-style9"><a href="Cashin.aspx">Cash In</a></li>
+                <li class="auto-style7"><a href="Cashout.aspx">Cash out</a></li>
+                <li class="auto-style8"><a href="SendMoney.aspx">Send Money</a></li>
+                <li class="auto-style10" style="z-index: 1"><a href="#" class="auto-style6">View Transactions</a></li>
             </ul>
-            <p class="copyright" style="z-index: 1; width: 848px; height: 19px; position: absolute; top: 625px; left: 293px">E-Wallet Co. © 2023</p>
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

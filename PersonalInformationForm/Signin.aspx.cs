@@ -46,7 +46,7 @@ namespace PersonalInformationForm
                         conn.Close();
                         Label.Text = "Valid loginid and password";
                         Label.ForeColor = System.Drawing.Color.DarkRed;
-                        Server.Transfer("Client.aspx");
+                        Response.Redirect("Client.aspx", false);
                     }
                     else
                     {

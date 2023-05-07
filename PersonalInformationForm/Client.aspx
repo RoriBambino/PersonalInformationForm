@@ -219,7 +219,7 @@
                            </a>
                        </li>
                         <li>
-                           <a href="#">
+                           <a href="SendMoney.aspx">
                              Send Money
                            </a>
                        </li>
@@ -262,27 +262,29 @@
         </div>
 
     <a href="Cashin.aspx"><img class= "auto-style14" src="Image/wallet2.png" alt="Cash In" /></a>
-    <a href="#"><img class= "auto-style13" src="Image/cash.png" alt="Cash Out"/></a>
-    <a href="#"><img class= "auto-style12" src="Image/payment-method.png" alt="Send Money"/></a>
+    <a href="Cashout.aspx"><img class= "auto-style13" src="Image/cash.png" alt="Cash Out"/></a>
+    <a href="SendMoney.aspx"><img class= "auto-style12" src="Image/payment-method.png" alt="Send Money"/></a>
     <a href="#"><img class= "auto-style11" src="Image/investigation.png" alt="View Transactions"/></a>
     <a href="#"><img src="Image/settings.png" alt="Settings" class="auto-style21" /> </a>
 
- &nbsp;<div class="footer-basic">
+ &nbsp;
+    </form>
+<div class="footer-basic">
         <footer>
             <div class="social" style="width: 1104px"><a href="#" class="auto-style3"><i class="icon ion-social-instagram"></i></a><a href="#" class="auto-style2"><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: -1px; width: 42px; height: 40px;"></i></a><a href="#" class="auto-style4"><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 2px; width: 36px"></i></a>
                 <asp:Label ID="show_money" runat="server" CssClass="auto-style18"></asp:Label>
             </div>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="PersonalInfoEntry.aspx" class="auto-style5">Home</a></li>
+                <li class="list-inline-item"><a href="Client.aspx" class="auto-style5">Home</a></li>
                 <li class="auto-style9"><a href="Cashin.aspx">Cash In</a></li>
-                <li class="auto-style7"><a href="#">About</a></li>
-                <li class="auto-style8"><a href="Signin.aspx">Sign In</a></li>
-                <li class="auto-style10" style="z-index: 1"><a href="PersonalInfoentry2.aspx" class="auto-style6">Register</a></li>
+                <li class="auto-style7"><a href="Cashout.aspx">Cash out</a></li>
+                <li class="auto-style8"><a href="SendMoney.aspx">Send Money</a></li>
+                <li class="auto-style10" style="z-index: 1"><a href="#" class="auto-style6">View Transactions</a></li>
             </ul>
         </footer>
     </div>
-    </form>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
