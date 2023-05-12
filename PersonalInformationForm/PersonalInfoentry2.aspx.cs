@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
-using System.Drawing.Imaging;
+using System.Drawing.Imaging; // This is where you get the PostedFile
 using System.IO;
 
 namespace PersonalInformationForm
@@ -21,10 +21,16 @@ namespace PersonalInformationForm
 
         protected void submit_Click(object sender, EventArgs e)
         {
-            
+
             //For Image to DB
-            //string filename = Path.GetFileName(postedfile.FileName);
-           //string fileExt = Path.GetExtension(filename).ToLower();
+            HttpPostedFile postedFile = picUpload.PostedFile;
+            string filename = Path.GetFileName(postedFile.FileName);// command to get the file name
+            string fileExt = Path.GetExtension(filename).ToLower(); //
+            int filesize = postedFile.ContentLength; // get the length of the file
+            byte[] pic = new byte[picUpload.PostedFile.ContentLength];
+            // Get data from input stream
+            picUpload.PostedFile.InputStream.Read(pic, 0, picUpload.PostedFile.ContentLength);
+            
            // For data base
             string get_lname = lname.Text;
             string get_fname = fname.Text;
@@ -42,7 +48,16 @@ namespace PersonalInformationForm
             string get_username = user_name.Text;
             string get_password = password.Text;
 
-
+            // Create or set a condition to check if the file being uploaded is an image file
+            if (fileExt == ".jpeg" || fileExt == ".png") || fileExt == ".jpg" || fileExt == ".GIF"){
+                using (var db = new SqlConnection(connectionString))
+                {
+                    jb.open();
+                    
+                }
+                using var (cmd and db ) 
+            }
+           
             try
             {
                 using(SqlConnection conn =  new SqlConnection(connectionString))

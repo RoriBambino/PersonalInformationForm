@@ -436,6 +436,23 @@
             width: 82px;
         }
        
+        .auto-style162 {
+            position: absolute;
+            top: 312px;
+            left: 49px;
+            z-index: 1;
+            width: 199px;
+            height: 25px;
+        }
+        .auto-style163 {
+            position: absolute;
+            top: 226px;
+            left: 123px;
+            z-index: 1;
+            width: 49px;
+            height: 35px;
+        }
+       
     </style>
 </head>
 <body style="height: auto; width: auto; margin-left: 0px; margin-top: 0px; margin-bottom: 3px;">
@@ -486,12 +503,14 @@
             <asp:Label runat="server" CssClass="auto-style146" Text="Confirm Password"></asp:Label>
             <asp:RequiredFieldValidator ID="ConfirmPasswordRequired" runat="server" ControlToValidate="confirmpassoword" CssClass="auto-style149" Display="Dynamic" ErrorMessage="*Password Confirmation is Required" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
             <asp:CompareValidator ID="ComparePassword" runat="server" ControlToCompare="password" ControlToValidate="confirmpassoword" CssClass="auto-style150" ErrorMessage="* Your Password Doesn`t Match" Font-Size="Small" ForeColor="Red"></asp:CompareValidator>
+            <asp:Image ID="Image1" runat="server" CssClass="auto-style163" />
         </p>
         <p>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="date_birth" CssClass="auto-style16" ErrorMessage="*Input date of birth" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
         <asp:TextBox ID="middle_name" runat="server" CssClass="auto-style13"></asp:TextBox>
             <asp:TextBox ID="confirmpassoword" runat="server" CssClass="auto-style147" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredPassword" runat="server" ControlToValidate="password" CssClass="auto-style148" ErrorMessage="* Input Passoword" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:FileUpload ID="picUpload" runat="server" CssClass="auto-style162" />
         </p>
         <asp:Label ID="Label5" runat="server" CssClass="auto-style9" Text="First Name"></asp:Label>
         <asp:Label ID="Label4" runat="server" CssClass="auto-style6" Text="Last Name"></asp:Label>
