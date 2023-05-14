@@ -195,9 +195,7 @@
                        <li><a href="Signin.aspx">Sign In</a></li>
                         <li>
                            <a href="PersonalInfoentry2.aspx">
-                               Register
-                           </a>
-                       </li>
+                               Sign Up</a></li>
                    </ul>
                </nav>
            </div>   

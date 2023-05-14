@@ -26,40 +26,36 @@ namespace PersonalInformationForm
            // For data base
             string get_username = user_name.Text;
             string get_password = password.Text;
+            DateTime today = DateTime.Today;
 
             try
             {
                 using(SqlConnection conn =  new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string insertQuerry = "INSERT INTO CLIENT (CLIENT.USERNAME, CLIENT.PASSWORD ) VALUES (@GET_USERNAME, @GET_PASSWORD)";
+                    string insertQuerry = "INSERT INTO CLIENT (CLIENT.USERNAME, CLIENT.PASSWORD, CLIENT.DATE_CREATED) VALUES (@GET_USERNAME, @GET_PASSWORD, @TODAY)";
 
                     
                     
                     if(conn.State == System.Data.ConnectionState.Open)
                     {
-
-                        Response.Write("<p>Connected Successfully!</p>");
+                        Response.Write("<script>alert('Connected Successfully!')</script>");
 
                         using (SqlCommand cmd = new SqlCommand(insertQuerry, conn))
                         {
                             cmd.Parameters.AddWithValue("@GET_USERNAME", get_username);
                             cmd.Parameters.AddWithValue("@GET_PASSWORD", get_password);
-                        
-
-
-
+                            cmd.Parameters.AddWithValue("@TODAY", today);
 
                             //check if already added 
                             int rowsAffected = cmd.ExecuteNonQuery();
                             if(rowsAffected > 0)
                             {
-                                Response.Write("<p>Successfully Added !</p>");
-                                Response.Write("<script language=javascript>alert('Successfully Added !');</script>");
+                                Response.Write("<script>alert('Successfully Added !');</script>");
                             }
                             else
                             {
-                                Response.Write("<p>Failed to Add !</p>");
+                                Response.Write("<script>alert('>Failed to Add !');</script>");
                             }
                             Server.Transfer("Signin.aspx");
                         }

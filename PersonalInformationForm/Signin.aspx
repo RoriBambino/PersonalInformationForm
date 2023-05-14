@@ -163,7 +163,7 @@
                        <li><a href="#">Sign In</a></li>
                         <li>
                            <a href=" PersonalInfoentry2.aspx">
-                               Register
+                              Sign Up
                            </a>
                        </li>
                    </ul>
