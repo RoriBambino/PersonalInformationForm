@@ -33,7 +33,7 @@ namespace PersonalInformationForm
                 using(SqlConnection conn =  new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string insertQuerry = "INSERT INTO CLIENT (CLIENT.USERNAME, CLIENT.PASSWORD, CLIENT.DATE_CREATED) VALUES (@GET_USERNAME, @GET_PASSWORD, @TODAY)";
+                    string insertQuerry = "INSERT INTO CLIENT (CLI.USERNAME, CLI.PASSWORD, CLI.DATE_CREATED) VALUES (@GET_USERNAME, @GET_PASSWORD, @TODAY)";
 
                     
                     
