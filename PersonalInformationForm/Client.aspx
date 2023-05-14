@@ -11,195 +11,236 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style type="text/css">
+       
         .auto-style1 {
-            height: 21px;
+            height: 8px;
+            width: 947px;
+            position: absolute;
+            top: 243px;
+            left: 0px;
+            z-index: 1;
         }
          .footer-basic footer{
             margin-top: 500px;
         }
-        .auto-style2 {
-            position: absolute;
-            top: 946px;
-            left: 764px;
-            z-index: 1;
-        }
-        .auto-style3 {
-            height: 21px;
-            position: absolute;
-            top: 943px;
-            left: 668px;
-        }
-        .auto-style4 {
-            height: 21px;
-            position: absolute;
-            top: 944px;
-            left: 579px;
-            z-index: 1;
-        }
         .auto-style5 {
-            height: 21px;
+            height: 24px;
             position: absolute;
-            top: 995px;
-            left: 574px;
-            z-index: 1;
-        }
-        .auto-style6 {
-            height: 21px;
-            position: absolute;
-            top: 996px;
-            left: 574px;
+            top: 889px;
+            left: 422px;
             z-index: 1;
         }
         .auto-style7 {
-            height: 21px;
+            height: 26px;
             position: absolute;
-            top: 995px;
-            left: 661px;
+            top: 889px;
+            left: 517px;
             z-index: 1;
         }
         .auto-style8 {
-            height: 21px;
+            height: 25px;
             position: absolute;
-            top: 993px;
-            left: 857px;
+            top: 891px;
+            left: 757px;
             z-index: 1;
-            
+            width: 130px;
         }
         .auto-style9 {
-            height: 21px;
+            height: 25px;
             position: absolute;
-            top: 994px;
-            left: 758px;
+            top: 890px;
+            left: 645px;
             z-index: 1;
         }
         .auto-style10 {
-            display: inline-block;
+            
             position: absolute;
-            top: 991px;
-            left: 462px;
-        }
-        .auto-style11 {
-            padding: 0;
-            width: 77px;
-            cursor: pointer;
-            margin: 20px 0 7px 0;
-            position: absolute;
-            top: 379px;
-            left: 846px;
+            top: 890px;
+            left: 905px;
             z-index: 1;
-            height: 81px;
-        }
-        .auto-style12 {
-            padding: 0;
-            width: 79px;
-            cursor: pointer;
-            margin: 20px 0 10px 0;
-            position: absolute;
-            top: 377px;
-            left: 687px;
-            z-index: 1;
-            height: 77px;
-        }
-        .auto-style13 {
-            padding: 0;
-            width: 91px;
-            cursor: pointer;
-            margin: 20px 0 8px 0;
-            position: absolute;
-            top: 375px;
-            left: 509px;
-            z-index: 1;
-            height: 80px;
-        }
-        .auto-style14 {
-            padding: 0;
-            width: 87px;
-            cursor: pointer;
-            margin: 20px 0 7px 0;
-            position: absolute;
-            top: 374px;
-            left: 333px;
-            z-index: 1;
-            height: 70px;
+            width: 180px;
         }
         .auto-style18 {
             position: absolute;
-            top: 203px;
-            left: 604px;
+            top: 302px;
+            left: 247px;
             z-index: 1;
         }
         .auto-style19 {
             position: absolute;
-            top: 268px;
-            left: 591px;
+            top: 134px;
+            left: 315px;
             z-index: 1;
         }
         .auto-style20 {
             position: absolute;
-            top: 201px;
-            left: 753px;
+            top: -158px;
+            left: 540px;
             z-index: 1;
-            width: 29px;
+            width: 27px;
             height: 26px;
-        }
-        .auto-style21 {
-            position: absolute;
-            top: 524px;
-            left: 330px;
-            z-index: 1;
-            width: 97px;
-            height: 99px;
         }
         .auto-style22 {
             position: absolute;
-            top: 33px;
-            left: 151px;
+            top: 32px;
+            left: 159px;
             z-index: 1;
         }
-        .auto-style23 {
+        .auto-style28 {
+            width: 103%;
+            display: flex;
+            align-items: center;
+            height: 89px;
+        }
+        .auto-style29 {
             position: absolute;
-            top: 495px;
-            left: 349px;
+            top: 244px;
+            left: 0px;
+        }
+        .auto-style30 {
+            position: absolute;
+            top: 176px;
+            left: 18px;
+            z-index: 1;
+            width: 185px;
+        }
+        .auto-style31 {
+            position: absolute;
+            top: -67px;
+            left: 184px;
+            z-index: 1;
+            width: 177px;
+        }
+        .auto-style32 {
+            position: absolute;
+            top: 98px;
+            left: 595px;
             z-index: 1;
         }
-        .auto-style24 {
+        .auto-style33 {
             position: absolute;
-            top: 500px;
-            left: 523px;
+            top: 96px;
+            left: 676px;
+            z-index: 1;
+            width: 156px;
+        }
+        .auto-style34 {
+            position: absolute;
+            top: 84px;
+            left: 0px;
+            z-index: 1;
+            width: 1358px;
+            height: 84px;
+        }
+        .auto-style35 {
+            width: 100%;
+            min-height: 10vh;
+            padding-left: 7%;
+            padding-right: 5%;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: #0082C8;
+        }
+       
+        .auto-style36 {
+            position: absolute;
+            top: 164px;
+            left: 1065px;
+            z-index: 1;
+            width: 146px;
+        }
+        .auto-style37 {
+            position: absolute;
+            top: 164px;
+            left: 1231px;
             z-index: 1;
         }
-        .auto-style25 {
+        .auto-style38 {
             position: absolute;
-            top: 503px;
-            left: 684px;
+            top: 381px;
+            left: 831px;
+            z-index: 1;
+            width: 159px;
+        }
+        .auto-style39 {
+            position: absolute;
+            top: 301px;
+            left: 769px;
             z-index: 1;
         }
-        .auto-style26 {
+        .auto-style40 {
             position: absolute;
-            top: 502px;
-            left: 840px;
+            top: 142px;
+            left: 664px;
             z-index: 1;
         }
-        .auto-style27 {
+       
+        .auto-style41 {
+            width: 53px;
+            height: 46px;
             position: absolute;
-            top: 620px;
-            left: 352px;
-            
+            top: 559px;
+            left: 476px;
+            z-index: 1;
         }
+        .auto-style42 {
+            width: 59px;
+            height: 50px;
+            position: absolute;
+            top: 556px;
+            left: 614px;
+            z-index: 1;
+        }
+        .auto-style43 {
+            width: 54px;
+            height: 53px;
+            position: absolute;
+            top: 556px;
+            left: 786px;
+            z-index: 1;
+        }
+        .auto-style44 {
+            position: absolute;
+            top: 558px;
+            left: 959px;
+            z-index: 1;
+            width: 54px;
+            height: 54px;
+        }
+               
+        .auto-style45 {
+            position: absolute;
+            top: 823px;
+            left: 597px;
+            z-index: 1;
+        }
+        .auto-style46 {
+            position: absolute;
+            top: 823px;
+            left: 696px;
+            z-index: 1;
+        }
+        .auto-style47 {
+            position: absolute;
+            top: 822px;
+            left: 799px;
+            z-index: 1;
+        }
+               
     </style>
 </head>
 <body>
         <!--Menu Bar-->
-      <div class="menu">
-            <!--Header-->
-           <div class="logo">
-               <a  ref="pageLogo" href="PersonalInfoEntry.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
-               <form> 
-                <asp:Label ID="Label2" runat="server" CssClass="auto-style22" Font-Names="Bookman Old Style" Font-Size="X-Large" ForeColor="Black" Text="E-Save"></asp:Label>
 
-               </form>
+    <form id="form1" runat="server">
+      <div class="auto-style35">
+            <!--Header-->
+           <div class="auto-style28">
+               <a  ref="pageLogo" href="PersonalInfoEntry.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
                <nav>
                 <input type="checkbox" id="check">
+                <asp:Label ID="Label2" runat="server" CssClass="auto-style22" Font-Names="Bookman Old Style" Font-Size="X-Large" ForeColor="Black" Text="E-Save"></asp:Label>
+
                 <label for="check" class="checkbtn">
                     <i class="fas fa-bars">
                        
@@ -229,9 +270,8 @@
                            </a>
                        </li>
                         <li>
-                           <a href="#">
-                            Settings
-                           </a>
+                            <a href="#">Account </a>
+        
                        </li>
                        
                    </ul>
@@ -239,50 +279,59 @@
            </div>   
     </div>
 
-    <form id="form1" runat="server">
         <div class="auto-style1">
-
-            <asp:Label ID="Label3" runat="server" CssClass="auto-style23" Text="Cash In"></asp:Label>
-
-            <asp:Label ID="Label1" runat="server" CssClass="auto-style19" Text="Available Balance"></asp:Label>
-            <a href="Cashin.aspx">
+            <asp:Label ID="Label1" runat="server" CssClass="auto-style19" Text="Available Balance" Font-Size="15pt"></asp:Label>
+            <a href="Cashin.aspx" class="auto-style29" style="z-index: 1">
                 <img src="Image/plus_sign_007-removebg-preview.png" alt="plus-sign" class="auto-style20"/>
-
-           
-            <asp:Label ID="Label4" runat="server" CssClass="auto-style24" Text="Cash Out"></asp:Label>
-            <asp:Label ID="Label5" runat="server" CssClass="auto-style25" Text="Send Money"></asp:Label>
-            <asp:Label ID="Label6" runat="server" CssClass="auto-style26" Text="Transactions"></asp:Label>
-            <asp:Label ID="Label7" runat="server" CssClass="auto-style27" Text="Settings"></asp:Label>
+            
 
             </a>
-       
-           
-      
-        
+            <asp:Label ID="acc_num" runat="server" CssClass="auto-style31" Font-Size="15pt"></asp:Label>
         </div>
-
-    <a href="Cashin.aspx"><img class= "auto-style14" src="Image/wallet2.png" alt="Cash In" /></a>
-    <a href="Cashout.aspx"><img class= "auto-style13" src="Image/cash.png" alt="Cash Out"/></a>
-    <a href="SendMoney.aspx"><img class= "auto-style12" src="Image/payment-method.png" alt="Send Money"/></a>
-    <a href="#"><img class= "auto-style11" src="Image/investigation.png" alt="View Transactions"/></a>
-    <a href="#"><img src="Image/settings.png" alt="Settings" class="auto-style21" /> </a>
-
- &nbsp;
-    </form>
-<div class="footer-basic">
+    
+        <a href="Cashin.aspx">
+        &nbsp;<asp:Label ID="Label3" runat="server" CssClass="auto-style23" Text="Cash In" style="z-index: 1; position: absolute; top: 511px; left: 468px" Font-Size="14pt"></asp:Label> 
+        <img class= "auto-style41" src="Image/wallet2.png" alt="Cash In" /></a><a href="Cashout.aspx"><img class= "auto-style42" src="Image/cash.png" alt="Cash Out"/>
+        <asp:Label ID="Label4" runat="server" CssClass="auto-style24" Text="Cash Out" style="z-index: 1; position: absolute; top: 512px; left: 599px" Font-Size="14pt"></asp:Label>
+    </a>
+    <a href="SendMoney.aspx">
+        <img class= "auto-style43" src="Image/payment-method.png" alt="Send Money"/>
+        <asp:Label ID="Label5" runat="server" CssClass="auto-style25" Text="Send Money" style="z-index: 1; position: absolute; top: 513px; left: 757px" Font-Size="14pt"></asp:Label>
+    </a>
+    <a href="#">
+        <img class= "auto-style44" src="Image/investigation.png" alt="View Transactions"/>
+        &nbsp;<asp:Label ID="Label6" runat="server" CssClass="auto-style26" Text="Transactions" style="z-index: 1; position: absolute; top: 515px; left: 935px" Font-Size="14pt"></asp:Label>
+    </a>
+     <a href="#">
+         &nbsp;</a><div>
+            <asp:Label ID="Label14" runat="server" CssClass="auto-style36" Font-Size="15pt" Text="Registered Date:"></asp:Label>
+            <asp:Label ID="tot_monsent" runat="server" CssClass="auto-style39" Font-Size="35pt"></asp:Label>
+            <asp:Label ID="Label13" runat="server" BackColor="#93AEFF" CssClass="auto-style34"></asp:Label>
+             &nbsp;<asp:Label ID="Label12" runat="server" CssClass="auto-style32" Text="Hello," Font-Size="20pt"></asp:Label>
+            <asp:Label ID="cli_create_date" runat="server" CssClass="auto-style37" Font-Size="15pt"></asp:Label>
+        </div>
+        
+        <asp:Label ID="user_name" runat="server" CssClass="auto-style33" Font-Size="20pt"></asp:Label>
+&nbsp;<asp:Label ID="acc_status" runat="server" CssClass="auto-style40"></asp:Label>
+        <div class="footer-basic">
         <footer>
-            <div class="social" style="width: 1104px"><a href="#" class="auto-style3"><i class="icon ion-social-instagram"></i></a><a href="#" class="auto-style2"><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: -1px; width: 42px; height: 40px;"></i></a><a href="#" class="auto-style4"><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 2px; width: 36px"></i></a>
-                <asp:Label ID="show_money" runat="server" CssClass="auto-style18"></asp:Label>
+            <div class="social" style="width: 1104px"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -23px; left: -2px; width: 43px; height: 44px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -20px; left: 1px; width: 39px"></i></a>
+                <asp:Label ID="acc_balance" runat="server" CssClass="auto-style18" Font-Size="35pt"></asp:Label>
+                <a href="#" class="auto-style47" ><i class="icon ion-social-instagram" style="z-index: 1; position: absolute; top: -21px; left: -2px; width: 42px; height: 40px"></i></a>
             </div>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="Client.aspx" class="auto-style5">Home</a></li>
                 <li class="auto-style9"><a href="Cashin.aspx">Cash In</a></li>
                 <li class="auto-style7"><a href="Cashout.aspx">Cash out</a></li>
                 <li class="auto-style8"><a href="SendMoney.aspx">Send Money</a></li>
-                <li class="auto-style10" style="z-index: 1"><a href="#" class="auto-style6">View Transactions</a></li>
+                <li class="auto-style10"><a href="#">View Transactions</a></li>
             </ul>
+            <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 936px; left: 442px">E-Wallet Co. © 2023</p>
         </footer>
+        <asp:Label ID="Label11" runat="server" CssClass="auto-style30" Text="Account Number:" Font-Size="15pt"></asp:Label>
+            <asp:Label ID="Label15" runat="server" CssClass="auto-style38" Font-Size="15pt" Text="Total Money Sent"></asp:Label>
     </div>
+    </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

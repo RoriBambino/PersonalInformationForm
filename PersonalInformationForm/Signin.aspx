@@ -61,16 +61,16 @@
         }
         .auto-style9 {
             position: absolute;
-            top: 174px;
-            left: 628px;
+            top: 172px;
+            left: 676px;
             z-index: 1;
             width: 69px;
             height: 44px;
         }
         .auto-style10 {
             position: absolute;
-            top: 273px;
-            left: 470px;
+            top: 271px;
+            left: 539px;
             z-index: 1;
         }
         .forms{
@@ -81,64 +81,60 @@
       
         .auto-style11 {
             position: absolute;
-            top: 273px;
-            left: 574px;
+            top: 270px;
+            left: 627px;
             z-index: 1;
         }
         .auto-style12 {
             position: absolute;
-            top: 326px;
-            left: 472px;
+            top: 327px;
+            left: 542px;
             z-index: 1;
         }
         .auto-style13 {
             position: absolute;
-            top: 298px;
-            left: 608px;
+            top: 299px;
+            left: 671px;
             z-index: 1;
         }
         .auto-style15 {
             position: absolute;
             top: 324px;
-            left: 575px;
+            left: 628px;
             z-index: 1;
         }
         .auto-style16 {
             position: absolute;
             top: 348px;
-            left: 613px;
+            left: 673px;
             z-index: 1;
         }
         .auto-style18 {
             position: absolute;
-            top: 421px;
-            left: 744px;
+            top: 386px;
+            left: 611px;
             z-index: 1;
             margin-bottom: 20;
             text-decoration: none;
             border-radius: 50px;
             cursor: pointer;
             border-style: none;
-            background-color: grey
-            
+            background-color: grey;
+            width: 210px;
+            height: 38px;
         }
         .auto-style19 {
             position: absolute;
-            top: 224px;
-            left: 161px;
+            top: 429px;
+            left: 617px;
             z-index: 1;
         }
       
-        .auto-style21 {
+        .auto-style22 {
             position: absolute;
-            top: 419px;
-            left: 445px;
+            top: 427px;
+            left: 764px;
             z-index: 1;
-            text-decoration: none;
-            border-radius: 50px;
-            cursor: pointer;
-            border-style: none;
-            background-color: grey
         }
       
     </style>
@@ -185,9 +181,9 @@
         <asp:TextBox ID="check_pass" runat="server" CssClass="auto-style15" TextMode="Password"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="check_pass" CssClass="auto-style16" ErrorMessage="* Input Password" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
         <asp:Button ID="Button1" runat="server" CssClass="auto-style18" Font-Names="Britannic Bold" Font-Size="X-Large" ForeColor="#CC99FF" OnClick="Button1_Click" Text="Sign In" />
-        <asp:Label ID="Label3" runat="server" CssClass="auto-style19" Text="Label"></asp:Label>
+        <asp:Label ID="Label3" runat="server" CssClass="auto-style19" Text="Don't have account yet?" Font-Size="Small"></asp:Label>
         
-        <asp:Button ID="sign_up" runat="server" CssClass="auto-style21" Font-Names="Britannic Bold" Font-Size="X-Large" ForeColor="#9999FF" Text="Sign Up" CausesValidation="False" OnClick="sign_up_Click" />
+        <p CssClass="auto-style21"><a href="PersonalInfoentry2.aspx" class="auto-style22" style="font-size: 14px">Sign Up</a></p>
         
       
     </form>

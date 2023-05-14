@@ -15,60 +15,61 @@
             width: 44px;
             height: 45px;
             position: absolute;
-            top: 1265px;
-            left: 750px;
+            top: 6px;
+            left: 766px;
             z-index: 1;
             margin-bottom: 7;
         }
         .auto-style2 {
             position: absolute;
-            top: 1263px;
-            left: 669px;
+            top: 4px;
+            left: 581px;
             z-index: 1;
         }
         .auto-style3 {
             position: absolute;
-            top: 1265px;
-            left: 590px;
+            top: 4px;
+            left: 673px;
             z-index: 1;
         }
         .auto-style4 {
             position: absolute;
-            top: 1315px;
+            top: 1170px;
             left: 482px;
             z-index: 1;
         }
         .auto-style5 {
             position: absolute;
-            top: 1317px;
-            left: 835px;
+            top: 1168px;
+            left: 872px;
             z-index: 1;
         }
         .auto-style6 {
             display: inline-block;
             position: absolute;
-            top: 1316px;
-            left: 742px;
+            top: 1169px;
+            left: 749px;
             z-index: 1;
+            width: 84px;
         }
         .auto-style7 {
             display: inline-block;
             position: absolute;
-            top: 1318px;
+            top: 1169px;
             left: 654px;
             z-index: 1;
         }
         .auto-style8 {
             display: inline-block;
             position: absolute;
-            top: 1316px;
+            top: 1170px;
             left: 551px;
             z-index: 1;
         }
         .auto-style9 {
             position: absolute;
-            top: 182px;
-            left: 263px;
+            top: 251px;
+            left: 693px;
             z-index: 1;
             width: 408px;
             height: 55px;
@@ -81,8 +82,8 @@
         }
         .auto-style11 {
             position: absolute;
-            top: 250px;
-            left: 646px;
+            top: 333px;
+            left: 530px;
             z-index: 1;
             margin-top: 0px;
         }
@@ -93,31 +94,31 @@
             margin: 20px 0;
             position: absolute;
             top: 395px;
-            left: 919px;
+            left: 1031px;
             z-index: 1;
             height: 135px;
         }
         .auto-style13 {
             padding: 0;
-            width: 145px;
+            width: 166px;
             cursor: pointer;
             margin: 20px 0;
             position: absolute;
             top: 538px;
-            left: 659px;
+            left: 710px;
             z-index: 1;
             height: 165px;
         }
         .auto-style14 {
             padding: 0;
-            width: 144px;
+            width: 155px;
             cursor: pointer;
             margin: 20px 0;
             position: absolute;
             top: 398px;
-            left: 366px;
+            left: 418px;
             z-index: 1;
-            height: 136px;
+            height: 146px;
         }
         .auto-style15 {
             padding: 0;
@@ -125,40 +126,40 @@
             cursor: pointer;
             margin: 20px 0;
             position: absolute;
-            top: 581px;
-            left: 97px;
+            top: 548px;
+            left: 153px;
             z-index: 1;
             height: 108px;
         }
         .auto-style16 {
             position: absolute;
-            top: 549px;
-            left: 125px;
+            top: 516px;
+            left: 185px;
             z-index: 1;
         }
         .auto-style17 {
             position: absolute;
             top: 612px;
-            left: 386px;
+            left: 443px;
             z-index: 1;
         }
         .auto-style18 {
             position: absolute;
             top: 506px;
-            left: 663px;
+            left: 733px;
             z-index: 1;
         }
         .auto-style19 {
             position: absolute;
             top: 597px;
-            left: 902px;
+            left: 1010px;
             z-index: 1;
             width: 208px;
         }
         .auto-style20 {
             position: absolute;
-            top: 308px;
-            left: 500px;
+            top: 207px;
+            left: 378px;
             z-index: 1;
         }
         .auto-style21 {
@@ -245,19 +246,9 @@
     <br/>
     <br/>
     <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
     <div class="footer-basic">
         <footer>
-            <div class="social" style="width: 1056px"><a href="#" class="auto-style3"><i class="icon ion-social-instagram"></i></a><a href="#" class="auto-style2"><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -21px; left: -2px; width: 42px; height: 40px;"></i></a><a href="#" class="auto-style1"><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 2px; width: 36px"></i></a></div>
+            <div class="social" style="width: 1056px; z-index: 1; height: 49px; position: absolute; top: 1090px; left: 12px;"><a href="#" class="auto-style3"><i class="icon ion-social-instagram"></i></a><a href="#" class="auto-style2"><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -21px; left: -2px; width: 42px; height: 40px; right: 0px;"></i></a><a href="#" class="auto-style1"><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -21px; left: -2px; width: 45px"></i></a></div>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="PersonalInfoEntry.aspx" class="auto-style4">Home</a></li>
                 <li class="auto-style8"><a href="#">Services</a></li>
@@ -265,7 +256,7 @@
                 <li class="auto-style6"><a href="Signin.aspx">Sign In</a></li>
                 <li class="list-inline-item"><a href="PersonalInfoentry2.aspx" class="auto-style5">Register</a></li>
             </ul>
-            <p class="copyright" style="z-index: 1; width: 945px; height: 19px; position: absolute; top: 1350px; left: 249px">E-Wallet Co. © 2023</p>
+            <p class="copyright" style="z-index: 1; width: 945px; height: 19px; position: absolute; top: 1209px; left: 254px">E-Wallet Co. © 2023</p>
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

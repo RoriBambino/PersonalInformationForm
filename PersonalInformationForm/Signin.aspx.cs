@@ -33,7 +33,7 @@ namespace PersonalInformationForm
                 {
                     conn.Open();
                    
-                    SqlCommand cmd = new SqlCommand("SELECT USERNAME,PASSWORD FROM CLIENT WHERE USERNAME = '" + input_username.Text + "' AND PASSWORD = '" + check_pass.Text + "'", conn);
+                    SqlCommand cmd = new SqlCommand("SELECT CLIENT.USERNAME, CLIENT.PASSWORD FROM CLIENT WHERE CLIENT.USERNAME = '" + input_username.Text + "' AND CLIENT.PASSWORD = '" + check_pass.Text + "'", conn);
 
 
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -73,9 +73,6 @@ namespace PersonalInformationForm
         }
 
 
-        protected void sign_up_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("PersonalInfoentry2.aspx");
-        }
+     
     }
 }
