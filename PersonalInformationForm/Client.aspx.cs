@@ -26,7 +26,7 @@ namespace PersonalInformationForm
            try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
-                {
+                { //Make it like after user login access the db matching their account
                     conn.Open();
 
                     string insertQuerry = "SELECT CLI_ID, CLI_LNAME, CLI_FNAME, CLI_MNAME, CLI_DATE_CREATED FROM CLIENT";

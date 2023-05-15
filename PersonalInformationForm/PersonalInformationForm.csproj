@@ -146,6 +146,7 @@
     <Content Include="SendMoney.aspx" />
     <Content Include="user_verify.aspx" />
     <Content Include="Account.aspx" />
+    <Content Include="view_transaction.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -293,6 +294,13 @@
     </Compile>
     <Compile Include="Account.aspx.designer.cs">
       <DependentUpon>Account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view_transaction.aspx.cs">
+      <DependentUpon>view_transaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view_transaction.aspx.designer.cs">
+      <DependentUpon>view_transaction.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

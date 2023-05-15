@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-   <title>E-Wallet Send Money</title>
+   <title>Send Money</title>
+    <link rel="icon" type="image/png" href="Image/wallet.png" />
     <link href="Style.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
@@ -12,17 +13,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-     <!--Menu Bar-->
-      <div class="menu">
+   <!--Menu Bar-->
+     <div class="menu">
             <!--Header-->
            <div class="logo">
                <a  ref="pageLogo" href="PersonalInfoEntry.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
-               <form> 
-                <asp:Label ID="Label2" runat="server" CssClass="auto-style22" Font-Names="Bookman Old Style" Font-Size="X-Large" ForeColor="Black" Text="E-Save"></asp:Label>
-
-               </form>
                <nav>
                 <input type="checkbox" id="check">
+                <asp:Label ID="Label2" runat="server" CssClass="auto-style22" Font-Names="Bookman Old Style" Font-Size="X-Large" ForeColor="Black" Text="E-Save" style="z-index: 1; position: absolute; top: 33px; left: 169px"></asp:Label>
+
                 <label for="check" class="checkbtn">
                     <i class="fas fa-bars">
                        
@@ -47,14 +46,12 @@
                            </a>
                        </li>
                         <li>
-                           <a href="#">
+                           <a href="view_transaction.aspx">
                              View Transactions
                            </a>
                        </li>
                         <li>
-                           <a href="#">
-                            Settings
-                           </a>
+                            <a href="Account.aspx">Account </a>
                        </li>
                        
                    </ul>
@@ -66,18 +63,20 @@
 
         </div>
     </form>
-  <div class="footer-basic">
+   <div class="footer-basic">
         <footer>
-            <div class="social" style="width: 1104px"><a href="#" class="auto-style3"><i class="icon ion-social-instagram"></i></a><a href="#" class="auto-style2"><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: -1px; width: 42px; height: 40px;"></i></a><a href="#" class="auto-style4"><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 2px; width: 36px"></i></a>
-                <asp:Label ID="show_money" runat="server" CssClass="auto-style18"></asp:Label>
+        
+            <div class="social" style="width: 1104px; z-index: 1; height: 65px; position: absolute; top: 830px; left: 170px;"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: 472px; width: 43px; height: 44px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 533px; width: 39px"></i></a>
+                <a href="#" class="auto-style47" ><i class="icon ion-social-instagram" style="z-index: 1; position: absolute; top: -19px; left: 588px; width: 42px; height: 40px"></i></a>
             </div>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="Client.aspx" class="auto-style5">Home</a></li>
-                <li class="auto-style9"><a href="Cashin.aspx">Cash In</a></li>
-                <li class="auto-style7"><a href="Cashout.aspx">Cash out</a></li>
-                <li class="auto-style8"><a href="SendMoney.aspx">Send Money</a></li>
-                <li class="auto-style10" style="z-index: 1"><a href="#" class="auto-style6">View Transactions</a></li>
+                <li class="auto-style2"><a href="Client.aspx">Home</a></li>
+                <li class="auto-style9"><a href="Cashin.aspx" class="auto-style3">Cash In</a></li>
+                <li class="auto-style7"><a href="Cashout.aspx" class="auto-style4">Cash out</a></li>
+                <li class="auto-style5"><a href="SendMoney.aspx">Send Money</a></li>
+                <li class="auto-style1"><a href="view_transaction.aspx">View Transactions</a></li>
             </ul>
+            <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 948px; left: 447px">E-Wallet Co. © 2023</p>
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

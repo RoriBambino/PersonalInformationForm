@@ -233,9 +233,7 @@
 </head>
 <body>
         <!--Menu Bar-->
-
-    <form id="form1" runat="server">
-      <div class="auto-style35">
+     <div class="auto-style35">
             <!--Header-->
            <div class="auto-style28">
                <a  ref="pageLogo" href="PersonalInfoEntry.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
@@ -267,7 +265,7 @@
                            </a>
                        </li>
                         <li>
-                           <a href="#">
+                           <a href="view_transaction.aspx">
                              View Transactions
                            </a>
                        </li>
@@ -279,6 +277,9 @@
                </nav>
            </div>   
     </div>
+
+    <form id="form1" runat="server">
+     
 
         <div class="auto-style1">
             <asp:Label ID="Label1" runat="server" CssClass="auto-style19" Text="Available Balance" Font-Size="15pt"></asp:Label>
@@ -297,7 +298,7 @@
     </a>
     <a href="SendMoney.aspx">
         <img class= "auto-style43" src="Image/payment-method.png" alt="Send Money"/>
-        <asp:Label ID="Label5" runat="server" CssClass="auto-style25" Text="Send Money" style="z-index: 1; position: absolute; top: 513px; left: 757px" Font-Size="14pt"></asp:Label>
+        <asp:Label ID="Label5" runat="server" CssClass="auto-style25" Text="Send Money" style="z-index: 1; position: absolute; top: 513px; left: 757px; width: 109px;" Font-Size="14pt"></asp:Label>
     </a>
     <a href="#">
         <img class= "auto-style44" src="Image/investigation.png" alt="View Transactions"/>
@@ -314,10 +315,14 @@
         
         <asp:Label ID="user_name" runat="server" CssClass="auto-style33" Font-Size="20pt"></asp:Label>
 &nbsp;<asp:Label ID="acc_status" runat="server" CssClass="auto-style40"></asp:Label>
-        <div class="footer-basic">
+                <asp:Label ID="acc_balance" runat="server" CssClass="auto-style18" Font-Size="35pt"></asp:Label>
+
+        <asp:Label ID="Label11" runat="server" CssClass="auto-style30" Text="Account Number:" Font-Size="15pt"></asp:Label>
+            <asp:Label ID="Label15" runat="server" CssClass="auto-style38" Font-Size="15pt" Text="Total Money Sent"></asp:Label>
+    </form>
+     <div class="footer-basic">
         <footer>
             <div class="social" style="width: 1104px"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: -1px; width: 43px; height: 44px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -20px; left: 1px; width: 39px"></i></a>
-                <asp:Label ID="acc_balance" runat="server" CssClass="auto-style18" Font-Size="35pt"></asp:Label>
                 <a href="#" class="auto-style47" ><i class="icon ion-social-instagram" style="z-index: 1; position: absolute; top: -20px; left: -2px; width: 42px; height: 40px"></i></a>
             </div>
             <ul class="list-inline">
@@ -325,16 +330,12 @@
                 <li class="auto-style9"><a href="Cashin.aspx">Cash In</a></li>
                 <li class="auto-style7"><a href="Cashout.aspx">Cash out</a></li>
                 <li class="auto-style8"><a href="SendMoney.aspx">Send Money</a></li>
-                <li class="auto-style10"><a href="#">View Transactions</a></li>
+                <li class="auto-style10"><a href="view_transaction.aspx">View Transactions</a></li>
             </ul>
             <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 936px; left: 442px">E-Wallet Co. © 2023</p>
         </footer>
-        <asp:Label ID="Label11" runat="server" CssClass="auto-style30" Text="Account Number:" Font-Size="15pt"></asp:Label>
-            <asp:Label ID="Label15" runat="server" CssClass="auto-style38" Font-Size="15pt" Text="Total Money Sent"></asp:Label>
+       
     </div>
-    </form>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
