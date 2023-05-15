@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Client</title>
+    <link rel="icon" type="image/png" href="Image/wallet.png"/>
    <link href="Style.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
@@ -114,15 +115,15 @@
         .auto-style32 {
             position: absolute;
             top: 98px;
-            left: 595px;
+            left: 512px;
             z-index: 1;
         }
         .auto-style33 {
             position: absolute;
             top: 96px;
-            left: 676px;
+            left: 583px;
             z-index: 1;
-            width: 156px;
+            width: 496px;
         }
         .auto-style34 {
             position: absolute;
@@ -145,14 +146,14 @@
         .auto-style36 {
             position: absolute;
             top: 164px;
-            left: 1065px;
+            left: 978px;
             z-index: 1;
             width: 146px;
         }
         .auto-style37 {
             position: absolute;
             top: 164px;
-            left: 1231px;
+            left: 1125px;
             z-index: 1;
         }
         .auto-style38 {
@@ -173,6 +174,7 @@
             top: 142px;
             left: 664px;
             z-index: 1;
+            width: 128px;
         }
        
         .auto-style41 {
@@ -270,8 +272,7 @@
                            </a>
                        </li>
                         <li>
-                            <a href="#">Account </a>
-        
+                            <a href="Account.aspx">Account </a>
                        </li>
                        
                    </ul>
@@ -315,9 +316,9 @@
 &nbsp;<asp:Label ID="acc_status" runat="server" CssClass="auto-style40"></asp:Label>
         <div class="footer-basic">
         <footer>
-            <div class="social" style="width: 1104px"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -23px; left: -2px; width: 43px; height: 44px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -20px; left: 1px; width: 39px"></i></a>
+            <div class="social" style="width: 1104px"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: -1px; width: 43px; height: 44px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -20px; left: 1px; width: 39px"></i></a>
                 <asp:Label ID="acc_balance" runat="server" CssClass="auto-style18" Font-Size="35pt"></asp:Label>
-                <a href="#" class="auto-style47" ><i class="icon ion-social-instagram" style="z-index: 1; position: absolute; top: -21px; left: -2px; width: 42px; height: 40px"></i></a>
+                <a href="#" class="auto-style47" ><i class="icon ion-social-instagram" style="z-index: 1; position: absolute; top: -20px; left: -2px; width: 42px; height: 40px"></i></a>
             </div>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="Client.aspx" class="auto-style5">Home</a></li>

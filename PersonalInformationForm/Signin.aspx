@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>E-Wallet</title>
+    <link rel="icon" type="image/png" href="Image/wallet.png"/>
     <link href="Style.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="Image/wallet.png"/>
@@ -63,7 +64,7 @@
         .auto-style9 {
             position: absolute;
             top: 172px;
-            left: 676px;
+            left: 684px;
             z-index: 1;
             width: 69px;
             height: 44px;
@@ -112,7 +113,7 @@
         }
         .auto-style18 {
             position: absolute;
-            top: 386px;
+            top: 405px;
             left: 611px;
             z-index: 1;
             margin-bottom: 20;
@@ -126,15 +127,22 @@
         }
         .auto-style19 {
             position: absolute;
-            top: 429px;
+            top: 448px;
             left: 617px;
             z-index: 1;
         }
       
         .auto-style22 {
             position: absolute;
-            top: 427px;
+            top: 447px;
             left: 764px;
+            z-index: 1;
+        }
+      
+        .auto-style23 {
+            position: absolute;
+            top: 375px;
+            left: 671px;
             z-index: 1;
         }
       
@@ -184,7 +192,8 @@
         <asp:Button ID="Button1" runat="server" CssClass="auto-style18" Font-Names="Britannic Bold" Font-Size="X-Large" ForeColor="#CC99FF" OnClick="Button1_Click" Text="Sign In" />
         <asp:Label ID="Label3" runat="server" CssClass="auto-style19" Text="Don't have account yet?" Font-Size="Small"></asp:Label>
         
-        <p CssClass="auto-style21"><a href="PersonalInfoentry2.aspx" class="auto-style22" style="font-size: 14px">Sign Up</a></p>
+        <p CssClass="auto-style21"><a href="PersonalInfoentry2.aspx" class="auto-style22" style="font-size: 14px">Sign Up</a><asp:Label ID="Label4" runat="server" CssClass="auto-style23" Font-Size="12pt" ForeColor="Red"></asp:Label>
+        </p>
         
       
     </form>

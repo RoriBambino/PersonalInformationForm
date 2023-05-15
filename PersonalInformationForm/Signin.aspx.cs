@@ -33,7 +33,7 @@ namespace PersonalInformationForm
                 {
                     conn.Open();
                    
-                    SqlCommand cmd = new SqlCommand("SELECT CLIENT.USERNAME, CLIENT.PASSWORD FROM CLIENT WHERE CLIENT.USERNAME = '" + input_username.Text + "' AND CLIENT.PASSWORD = '" + check_pass.Text + "'", conn);
+                    SqlCommand cmd = new SqlCommand("SELECT CLI_USERNAME, CLI_PASSWORD FROM CLIENT WHERE CLI_USERNAME = '" + input_username.Text + "' AND CLI_PASSWORD = '" + check_pass.Text + "'", conn);
 
 
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -44,14 +44,13 @@ namespace PersonalInformationForm
                         Session["LoginID"] = input_username.Text;
                         dr.Close();
                         conn.Close();
-                        Label.Text = "Valid loginid and password";
-                        Label.ForeColor = System.Drawing.Color.DarkRed;
-                        Response.Redirect("Client.aspx", false);
+                        Label4.Text = ("Valid signin and password");
+                        Response.Redirect("Client.aspx", true);
                     }
                     else
                     {
-                        Label.Text = "Invalid loginid and password";
-                        Label.ForeColor = System.Drawing.Color.DarkGreen;
+                        Label4.Text = "Invalid loginid and password";
+                        
                     }
 
                     if (conn.State == System.Data.ConnectionState.Open)

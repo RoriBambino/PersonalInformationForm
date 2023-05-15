@@ -22,20 +22,27 @@ namespace PersonalInformationForm
         protected void submit_Click(object sender, EventArgs e)
         {
 
-          
-           // For data base
+
+            // For data base
+            string get_lname = user_lname.Text;
+            string get_fname = user_fname.Text;
+            string get_midname = user_midname.Text;
             string get_username = user_name.Text;
             string get_password = password.Text;
-            DateTime today = DateTime.Today;
+            
+            string get_status = "UnVerified";
+
+
 
             try
             {
                 using(SqlConnection conn =  new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string insertQuerry = "INSERT INTO CLIENT (CLI.USERNAME, CLI.PASSWORD, CLI.DATE_CREATED) VALUES (@GET_USERNAME, @GET_PASSWORD, @TODAY)";
-
                     
+                    string insertQuerry = "INSERT INTO Client (CLI_LNAME, CLI_FNAME, CLI_MNAME, CLI_USERNAME, CLI_PASSWORD) VALUES ( @GET_LNAME, @GET_FNAME, @GET_MIDNAME, @GET_USERNAME, @GET_PASSWORD)";
+                    string insertQuerry2 = "INSERT INTO Account (ACC_STATUS) VALUES (@GET_STATUS)";
+                        
                     
                     if(conn.State == System.Data.ConnectionState.Open)
                     {
@@ -43,9 +50,14 @@ namespace PersonalInformationForm
 
                         using (SqlCommand cmd = new SqlCommand(insertQuerry, conn))
                         {
+                            cmd.Parameters.AddWithValue("@GET_LNAME", get_lname);
+                            cmd.Parameters.AddWithValue("@GET_FNAME", get_fname);
+                            cmd.Parameters.AddWithValue("@GET_MIDNAME", get_midname);
                             cmd.Parameters.AddWithValue("@GET_USERNAME", get_username);
                             cmd.Parameters.AddWithValue("@GET_PASSWORD", get_password);
-                            cmd.Parameters.AddWithValue("@TODAY", today);
+                            
+
+
 
                             //check if already added 
                             int rowsAffected = cmd.ExecuteNonQuery();
@@ -58,12 +70,20 @@ namespace PersonalInformationForm
                                 Response.Write("<script>alert('>Failed to Add !');</script>");
                             }
                             Server.Transfer("Signin.aspx");
+
                         }
+                        
+                            
+                        // Huna hunaa unsaon pag connect sa Other table ma butang didto ang foreign key data
+
+
+
                     }
                     else
                     {
                         Response.Write("<p>Failed to Connect!</p>");
                     }
+                    
                     conn.Close();
                 }
             }

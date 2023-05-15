@@ -27,7 +27,7 @@
         }
         .auto-style133 {
             position: absolute;
-            top: 359px;
+            top: 520px;
             left: 883px;
             z-index: 1;
              border-radius: 50px;
@@ -66,62 +66,62 @@
 
         .auto-style139 {
             position: absolute;
-            top: 196px;
-            left: 604px;
+            top: 359px;
+            left: 596px;
             z-index: 1;
         }
         .auto-style140 {
             position: absolute;
-            top: 196px;
-            left: 697px;
+            top: 357px;
+            left: 698px;
             z-index: 1;
         }
         .auto-style143 {
             position: absolute;
-            top: 219px;
-            left: 741px;
+            top: 382px;
+            left: 740px;
             z-index: 1;
         }
         .auto-style144 {
             position: absolute;
-            top: 240px;
-            left: 614px;
+            top: 400px;
+            left: 606px;
             z-index: 1;
         }
         .auto-style145 {
             position: absolute;
-            top: 237px;
-            left: 697px;
+            top: 398px;
+            left: 698px;
             z-index: 1;
         }
         .auto-style146 {
             position: absolute;
-            top: 283px;
-            left: 551px;
+            top: 439px;
+            left: 544px;
             z-index: 1;
         }
         .auto-style147 {
             position: absolute;
-            top: 281px;
+            top: 439px;
             left: 697px;
             z-index: 1;
         }
         .auto-style148 {
             position: absolute;
-            top: 260px;
-            left: 738px;
+            top: 421px;
+            left: 737px;
             z-index: 1;
         }
         .auto-style149 {
             position: absolute;
-            top: 307px;
+            top: 462px;
             left: 686px;
             z-index: 1;
         }
         .auto-style150 {
             position: absolute;
-            top: 308px;
-            left: 699px;
+            top: 462px;
+            left: 698px;
             z-index: 1;
         }
 
@@ -177,7 +177,7 @@
        
         .auto-style160 {
             position: absolute;
-            top: 361px;
+            top: 520px;
             left: 550px;
             z-index: 1;
             text-decoration: none;
@@ -199,15 +199,71 @@
        
         .auto-style162 {
             position: absolute;
-            top: 332px;
-            left: 681px;
+            top: 484px;
+            left: 684px;
             z-index: 1;
         }
        
         .auto-style163 {
             position: absolute;
-            top: 330px;
-            left: 819px;
+            top: 482px;
+            left: 823px;
+            z-index: 1;
+        }
+       
+        .auto-style164 {
+            position: absolute;
+            top: 231px;
+            left: 597px;
+            z-index: 1;
+        }
+        .auto-style165 {
+            position: absolute;
+            top: 229px;
+            left: 697px;
+            z-index: 1;
+            width: 181px;
+        }
+        .auto-style166 {
+            position: absolute;
+            top: 255px;
+            left: 734px;
+            z-index: 1;
+        }
+        .auto-style167 {
+            position: absolute;
+            top: 273px;
+            left: 596px;
+            z-index: 1;
+        }
+        .auto-style168 {
+            position: absolute;
+            top: 273px;
+            left: 697px;
+            z-index: 1;
+        }
+        .auto-style169 {
+            position: absolute;
+            top: 298px;
+            left: 732px;
+            z-index: 1;
+        }
+        .auto-style170 {
+            position: absolute;
+            top: 316px;
+            left: 580px;
+            z-index: 1;
+        }
+        .auto-style171 {
+            position: absolute;
+            top: 315px;
+            left: 697px;
+            z-index: 1;
+        }
+        .auto-style172 {
+            position: absolute;
+            top: 340px;
+            left: 728px;
             z-index: 1;
         }
        
@@ -249,6 +305,7 @@
         <asp:Label ID="Label3" runat="server" CssClass="auto-style5" Font-Size="30pt" Text="Sign up" Font-Names="Calisto MT" ForeColor="#CC66FF"></asp:Label>
         <p>
             <asp:Label ID="Label25" runat="server" CssClass="auto-style139" Text="User Name"></asp:Label>
+            <asp:TextBox ID="user_fname" runat="server" BorderStyle="Outset" CssClass="auto-style168"></asp:TextBox>
         </p>
         <p>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator17" runat="server" ControlToValidate="user_name" CssClass="auto-style143" ErrorMessage="* Input Username" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -257,15 +314,23 @@
             <asp:Label runat="server" CssClass="auto-style146" Text="Confirm Password"></asp:Label>
             <asp:RequiredFieldValidator ID="ConfirmPasswordRequired" runat="server" ControlToValidate="confirmpassoword" CssClass="auto-style149" Display="Dynamic" ErrorMessage="*Password Confirmation is Required" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
             <asp:CompareValidator ID="ComparePassword" runat="server" ControlToCompare="password" ControlToValidate="confirmpassoword" CssClass="auto-style150" ErrorMessage="* Your Password Doesn`t Match" Font-Size="Small" ForeColor="Red"></asp:CompareValidator>
+            <asp:TextBox ID="user_lname" runat="server" BorderStyle="Outset" CssClass="auto-style165"></asp:TextBox>
+            <asp:Label ID="Label30" runat="server" CssClass="auto-style167" Text="First Name"></asp:Label>
+            <asp:Label ID="Label31" runat="server" CssClass="auto-style170" Text="Middle Name"></asp:Label>
         </p>
         <p>
             <asp:TextBox ID="confirmpassoword" runat="server" CssClass="auto-style147" TextMode="Password" BorderStyle="Outset"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredPassword" runat="server" ControlToValidate="password" CssClass="auto-style148" ErrorMessage="* Input Passoword" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:Label ID="Label29" runat="server" CssClass="auto-style164" Text="Last Name"></asp:Label>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator18" runat="server" ControlToValidate="user_lname" CssClass="auto-style166" ErrorMessage="* Input Last Name" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator19" runat="server" ControlToValidate="user_fname" CssClass="auto-style169" ErrorMessage="* Input First Name" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:TextBox ID="user_midname" runat="server" BorderStyle="Outset" CssClass="auto-style171"></asp:TextBox>
         </p>
         <br />
         <asp:Label ID="Label27" runat="server" CssClass="auto-style161" Font-Names="Bookman Old Style" Font-Size="X-Large" Text="E-Save"></asp:Label>
         <asp:Label ID="Label28" runat="server" CssClass="auto-style162" Font-Size="Small" ForeColor="#999999" Text="Already have account?"></asp:Label>
-        <p><a href="Signin.aspx" class="auto-style163" style="font-size: 14px">Sign In</a></p>
+        <p><a href="Signin.aspx" class="auto-style163" style="font-size: 14px">Sign In</a><asp:RequiredFieldValidator ID="RequiredFieldValidator20" runat="server" ControlToValidate="user_midname" CssClass="auto-style172" ErrorMessage="* Input Middle Name" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+        </p>
         <br />
         <br />
         <br />

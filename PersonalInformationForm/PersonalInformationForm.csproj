@@ -145,6 +145,7 @@
     <Content Include="Cashout.aspx" />
     <Content Include="SendMoney.aspx" />
     <Content Include="user_verify.aspx" />
+    <Content Include="Account.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -285,6 +286,13 @@
     </Compile>
     <Compile Include="user_verify.aspx.designer.cs">
       <DependentUpon>user_verify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account.aspx.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account.aspx.designer.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
