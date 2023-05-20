@@ -29,14 +29,17 @@ namespace PersonalInformationForm
                 { //Make it like after user login access the db matching their account
                     conn.Open();
 
-                    string insertQuerry = "SELECT CLI_ID, CLI_LNAME, CLI_FNAME, CLI_MNAME, CLI_DATE_CREATED FROM CLIENT";
+                    string insertQuerry = "SELECT * FROM CLIENT";
 
                     SqlCommand cmd = new SqlCommand(insertQuerry, conn);
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read()){
 
-                        user_name.Text = reader["CLI_FNAME"].ToString() + reader["CLI_MNAME"].ToString() + reader["CLI_LNAME"].ToString();
+                        string fname = reader["CLI_FNAME"].ToString();
+                        string midname = reader["CLI_MNAME"].ToString();
+                        string lname = reader["CLI_LNAME"].ToString();
+                        user_name.Text = fname + " " + midname + " " + lname;
                         acc_num.Text = reader["CLI_ID"].ToString();
                         cli_create_date.Text = reader["CLI_DATE_CREATED"].ToString();
 

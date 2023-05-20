@@ -260,13 +260,7 @@
             left: 697px;
             z-index: 1;
         }
-        .auto-style172 {
-            position: absolute;
-            top: 340px;
-            left: 728px;
-            z-index: 1;
-        }
-       
+               
     </style>
 </head>
 <body style="height: auto; width: auto; margin-left: 0px; margin-top: 0px; margin-bottom: 3px;">
@@ -329,8 +323,7 @@
         <br />
         <asp:Label ID="Label27" runat="server" CssClass="auto-style161" Font-Names="Bookman Old Style" Font-Size="X-Large" Text="E-Save"></asp:Label>
         <asp:Label ID="Label28" runat="server" CssClass="auto-style162" Font-Size="Small" ForeColor="#999999" Text="Already have account?"></asp:Label>
-        <p><a href="Signin.aspx" class="auto-style163" style="font-size: 14px">Sign In</a><asp:RequiredFieldValidator ID="RequiredFieldValidator20" runat="server" ControlToValidate="user_midname" CssClass="auto-style172" ErrorMessage="* Input Middle Name" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
-        </p>
+        <p><a href="Signin.aspx" class="auto-style163" style="font-size: 14px">Sign In</a></p>
         <br />
         <br />
         <br />

@@ -13,5 +13,10 @@ namespace PersonalInformationForm
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("user_verify.aspx");
+        }
     }
 }

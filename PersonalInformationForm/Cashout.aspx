@@ -20,7 +20,7 @@
             width: 176px;
             height: 28px;
             position: absolute;
-            top: 892px;
+            top: 890px;
             left: 882px;
             z-index: 1;
         }
@@ -35,24 +35,24 @@
             width: 123px;
             height: 28px;
             position: absolute;
-            top: 895px;
-            left: 499px;
+            top: 731px;
+            left: 501px;
             z-index: 1;
         }
         .auto-style4 {
             width: 99px;
             height: 28px;
             position: absolute;
-            top: 895px;
-            left: 636px;
+            top: 705px;
+            left: 638px;
             z-index: 1;
         }
         .auto-style5 {
-            width: 110px;
+            width: 124px;
             height: 28px;
             position: absolute;
-            top: 894px;
-            left: 751px;
+            top: 891px;
+            left: 749px;
             z-index: 1;
         }
         .auto-style6 {
@@ -93,14 +93,15 @@
         .auto-style12 {
             position: absolute;
             top: 371px;
-            left: 683px;
+            left: 693px;
             z-index: 1;
             height: 28px;
+            width: 152px;
         }
         .auto-style13 {
             position: absolute;
-            top: 304px;
-            left: 696px;
+            top: 243px;
+            left: 860px;
             z-index: 1;
             text-decoration: none;
             border-radius: 50px;
@@ -113,20 +114,21 @@
         .auto-style14 {
             position: absolute;
             top: 413px;
-            left: 669px;
+            left: 659px;
             z-index: 1;
+            width: 236px;
         }
         .auto-style15 {
             position: absolute;
             top: 414px;
-            left: 645px;
+            left: 638px;
             z-index: 1;
             height: 28px;
             width: 17px;
         }
         .auto-style16 {
             position: absolute;
-            top: 442px;
+            top: 443px;
             left: 677px;
             z-index: 1;
             text-decoration: none;
@@ -139,15 +141,22 @@
         }
         .auto-style17 {
             position: absolute;
-            top: 444px;
+            top: 443px;
             left: 689px;
             z-index: 1;
         }
         .auto-style18 {
             position: absolute;
-            top: 469px;
-            left: 718px;
+            top: 476px;
+            left: 705px;
             z-index: 1;
+             text-decoration: none;
+            border-radius: 50px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 112px;
+            height: 35px;
         }
     </style>
 </head>
@@ -209,12 +218,12 @@
         <asp:Button ID="Button1" runat="server" CssClass="auto-style13" Text="Continue" CausesValidation="False" />
         <asp:TextBox ID="user_withdraw" runat="server" CssClass="auto-style14"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="user_withdraw" CssClass="auto-style16" ErrorMessage="* Please Input Money Amount" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="user_withdraw" CssClass="auto-style17" ErrorMessage="* Money Inputed is Invalid" Font-Size="Small" ForeColor="#CC0000" MaximumValue="10000" MinimumValue="100"></asp:RangeValidator>        
         <asp:Button ID="withdraw_btn" runat="server" CssClass="auto-style18" Text="Withdraw" />
  
     </form>
      <div class="footer-basic">
         <footer>
-        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="user_withdraw" CssClass="auto-style17" ErrorMessage="* Money Inputed is Invalid" Font-Size="Small" ForeColor="#CC0000" MaximumValue="10000.00" MinimumValue="100.00"></asp:RangeValidator>
         
             <div class="social" style="width: 1104px; z-index: 1; height: 65px; position: absolute; top: 830px; left: 170px;"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: 472px; width: 43px; height: 44px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 533px; width: 39px"></i></a>
                 <a href="#" class="auto-style47" ><i class="icon ion-social-instagram" style="z-index: 1; position: absolute; top: -19px; left: 588px; width: 42px; height: 40px"></i></a>

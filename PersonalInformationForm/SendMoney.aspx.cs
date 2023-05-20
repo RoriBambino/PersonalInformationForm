@@ -11,7 +11,24 @@ namespace PersonalInformationForm
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Enable
+            txt_amount.Enabled = false;
+            txt_password.Enabled = false;
+            btnsend.Enabled = false;
+
+
+            // Visibility i set lang og true after search account number = acc_id mo true
+            Label_sendmoney.Visible = false;
+            txt_amount.Visible = false;
+            Label_amount.Visible = false;
+            Label_amount2.Visible = false;
+            txt_password.Visible = false;
+            Label_pass.Visible = false;
+            btnsend.Visible = false;
+
 
         }
+
+       
     }
 }

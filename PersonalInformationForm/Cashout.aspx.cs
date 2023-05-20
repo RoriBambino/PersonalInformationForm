@@ -11,7 +11,8 @@ namespace PersonalInformationForm
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            user_withdraw.Enabled = false;
+            withdraw_btn.Enabled = false;
         }
     }
 }

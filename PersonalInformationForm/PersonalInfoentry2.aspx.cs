@@ -41,7 +41,9 @@ namespace PersonalInformationForm
                     conn.Open();
                     
                     string insertQuerry = "INSERT INTO Client (CLI_LNAME, CLI_FNAME, CLI_MNAME, CLI_USERNAME, CLI_PASSWORD) VALUES ( @GET_LNAME, @GET_FNAME, @GET_MIDNAME, @GET_USERNAME, @GET_PASSWORD)";
-                    string insertQuerry2 = "INSERT INTO Account (ACC_STATUS) VALUES (@GET_STATUS)";
+                   
+                    string user_id = "SELECT CLI_ID FROM CLIENT";
+                    string insertQuerry2 = "INSERT INTO Account (CLI_ID, ACC_STATUS) VALUES (@USER_ID, @GET_STATUS)";
                         
                     
                     if(conn.State == System.Data.ConnectionState.Open)
@@ -55,10 +57,7 @@ namespace PersonalInformationForm
                             cmd.Parameters.AddWithValue("@GET_MIDNAME", get_midname);
                             cmd.Parameters.AddWithValue("@GET_USERNAME", get_username);
                             cmd.Parameters.AddWithValue("@GET_PASSWORD", get_password);
-                            
-
-
-
+  
                             //check if already added 
                             int rowsAffected = cmd.ExecuteNonQuery();
                             if(rowsAffected > 0)
@@ -69,14 +68,33 @@ namespace PersonalInformationForm
                             {
                                 Response.Write("<script>alert('>Failed to Add !');</script>");
                             }
+
+                        }
+
+
+                        // Huna hunaa unsaon pag connect sa Other table ma butang didto ang foreign key data
+
+                        using (SqlCommand cmd = new SqlCommand(insertQuerry2, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@USER_ID", user_id);
+                            cmd.Parameters.AddWithValue("@GET_STATUS", get_status);
+
+
+
+
+                            //check if already added 
+                            int rowsAffected = cmd.ExecuteNonQuery();
+                            if (rowsAffected > 0)
+                            {
+                                Response.Write("<script>alert('Successfully Added !');</script>");
+                            }
+                            else
+                            {
+                                Response.Write("<script>alert('>Failed to Add !');</script>");
+                            }
                             Server.Transfer("Signin.aspx");
 
                         }
-                        
-                            
-                        // Huna hunaa unsaon pag connect sa Other table ma butang didto ang foreign key data
-
-
 
                     }
                     else
