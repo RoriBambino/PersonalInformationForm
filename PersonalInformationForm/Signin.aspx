@@ -142,7 +142,7 @@
         .auto-style23 {
             position: absolute;
             top: 375px;
-            left: 671px;
+            left: 689px;
             z-index: 1;
         }
       

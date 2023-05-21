@@ -135,6 +135,9 @@
     <Content Include="Image\payment-method.png" />
     <Content Include="Image\plus_sign_007-removebg-preview.png" />
     <Content Include="Image\settings.png" />
+    <Content Include="Image\user status.png" />
+    <Content Include="Image\verified-account.png" />
+    <Content Include="Image\View Transaction.png" />
     <Content Include="Image\wallet.png" />
     <Content Include="Image\wallet2.png" />
     <Content Include="PersonalInfoEntry.aspx" />
@@ -147,6 +150,7 @@
     <Content Include="user_verify.aspx" />
     <Content Include="Account.aspx" />
     <Content Include="view_transaction.aspx" />
+    <Content Include="Admin.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -301,6 +305,13 @@
     </Compile>
     <Compile Include="view_transaction.aspx.designer.cs">
       <DependentUpon>view_transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

@@ -17,6 +17,37 @@ namespace PersonalInformationForm
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+
+                using(SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string insertQuerry2 = "SELECT * FROM CLIENT";
+                    SqlCommand cmd = new SqlCommand(insertQuerry2, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        txt_username.Text = reader["CLI_ID"].ToString();
+                    }
+                    if (conn.State == System.Data.ConnectionState.Open)
+                    {
+                        Response.Write("<script>alert('Connected Successfully!')</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<p>Failed to Connect!</p>");
+                    }
+                    conn.Close();
+
+                }
+               
+            }
+            catch(Exception ex)
+            {
+                Response.Write(ex);
+            }
+          
 
         }
 
@@ -46,9 +77,7 @@ namespace PersonalInformationForm
             string get_marital = DropDownList1.Text;
             string get_sex = DropDownList4.Text;
             string get_mobnumber = m_number.Text;
-            string get_homenum = home_number.Text;
-            string get_worknum = work_num.Text;
-            string get_username = user_name.Text;
+            
             
 
             // Create or set a condition to check if the file being uploaded is an image file
@@ -66,7 +95,7 @@ namespace PersonalInformationForm
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string insertQuerry = "INSERT INTO CLIENT (LNAME, FNAME, MIDNAME, DATE_OF_BIRTH, STREET_ADD, APPARTMENT_UNIT,CITY, MARITAL_STATUS, SEX, MOBILE_NUM, HOME_NUM, WORK_NUM, USERNAME, PASSWORD ) VALUES (@GET_LNAME, @GET_FNAME, @GET_MIDNAME, @GET_DOB, @GET_STREETADD, @GET_APPUNIT, @GET_CITY, @GET_MARITAL, @GET_SEX, @GET_MOBNUMBER, @GET_HOMENUM, @GET_WORKNUM, @GET_USERNAME, @GET_PASSWORD)";
+                    string insertQuerry = "INSERT INTO CLIENT (LNAME, FNAME, MIDNAME, DATE_OF_BIRTH, STREET_ADD, APPARTMENT_UNIT,CITY, MARITAL_STATUS, SEX, MOBILE_NUM) VALUES (@GET_LNAME, @GET_FNAME, @GET_MIDNAME, @GET_DOB, @GET_STREETADD, @GET_APPUNIT, @GET_CITY, @GET_MARITAL, @GET_SEX, @GET_MOBNUMBER)";
 
 
 
@@ -89,9 +118,7 @@ namespace PersonalInformationForm
                             cmd.Parameters.AddWithValue("@GET_SEX", get_sex);
 
                             cmd.Parameters.AddWithValue("@GET_MOBNUMBER", get_mobnumber);
-                            cmd.Parameters.AddWithValue("@GET_HOMENUM", get_homenum);
-                            cmd.Parameters.AddWithValue("@GET_WORKNUM", get_worknum);
-                            cmd.Parameters.AddWithValue("@GET_USERNAME", get_username);
+                            
                             
 
 
@@ -109,7 +136,7 @@ namespace PersonalInformationForm
                             {
                                 Response.Write("<p>Failed to Add !</p>");
                             }
-                            Server.Transfer("Signin.aspx");
+                            
                         }
                     }
                     else

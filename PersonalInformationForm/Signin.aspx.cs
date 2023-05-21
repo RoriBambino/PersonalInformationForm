@@ -33,7 +33,7 @@ namespace PersonalInformationForm
                 {
                     conn.Open();
                    
-                    SqlCommand cmd = new SqlCommand("SELECT CLI_USERNAME, CLI_PASSWORD FROM CLIENT WHERE CLI_USERNAME = '" + input_username.Text + "' AND CLI_PASSWORD = '" + check_pass.Text + "'", conn);
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM CLIENT, ADMIN WHERE CLI_USERNAME = '" + input_username.Text + "' AND CLI_PASSWORD = '" + check_pass.Text + "' OR ADMIN_EMAIL ='" + input_username.Text + "' AND ADMIN_PASS = '"+ check_pass.Text +"' ", conn);
 
 
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -42,10 +42,26 @@ namespace PersonalInformationForm
                     if (dr.HasRows)
                     {
                         Session["LoginID"] = input_username.Text;
+
+                        while (dr.Read())
+                        {
+                            string user = dr["CLI_USERNAME"].ToString();
+                            string admin = dr["ADMIN_EMAIL"].ToString();
+                            if (input_username.Text == user)
+                            {
+                                Response.Redirect("Client.aspx", true);
+
+                            }
+                            else if(input_username.Text == admin)
+                            {
+                                Response.Redirect("Admin.aspx", true);
+                            }
+                        }
+                        
                         dr.Close();
                         conn.Close();
                         Label4.Text = ("Valid signin and password");
-                        Response.Redirect("Client.aspx", true);
+                       
                     }
                     else
                     {

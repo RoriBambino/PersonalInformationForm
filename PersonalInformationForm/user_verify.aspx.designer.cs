@@ -78,6 +78,24 @@ namespace PersonalInformationForm
         protected global::System.Web.UI.WebControls.Label Label10;
 
         /// <summary>
+        /// Label25 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label25;
+
+        /// <summary>
+        /// txt_username control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txt_username;
+
+        /// <summary>
         /// RequiredFieldValidator3 control.
         /// </summary>
         /// <remarks>
@@ -112,6 +130,15 @@ namespace PersonalInformationForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label5;
+
+        /// <summary>
+        /// DropDownList1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
 
         /// <summary>
         /// Label4 control.
@@ -204,15 +231,6 @@ namespace PersonalInformationForm
         protected global::System.Web.UI.WebControls.Label Label11;
 
         /// <summary>
-        /// DropDownList1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-
-        /// <summary>
         /// RequiredFieldValidator6 control.
         /// </summary>
         /// <remarks>
@@ -220,15 +238,6 @@ namespace PersonalInformationForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
-
-        /// <summary>
-        /// Label27 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label27;
 
         /// <summary>
         /// DropDownList4 control.
@@ -285,15 +294,6 @@ namespace PersonalInformationForm
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator14;
 
         /// <summary>
-        /// work_num control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox work_num;
-
-        /// <summary>
         /// Label21 control.
         /// </summary>
         /// <remarks>
@@ -301,15 +301,6 @@ namespace PersonalInformationForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label21;
-
-        /// <summary>
-        /// home_number control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox home_number;
 
         /// <summary>
         /// Label22 control.
@@ -339,60 +330,6 @@ namespace PersonalInformationForm
         protected global::System.Web.UI.WebControls.RangeValidator RangeValidator2;
 
         /// <summary>
-        /// RequiredFieldValidator15 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator15;
-
-        /// <summary>
-        /// Label23 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label23;
-
-        /// <summary>
-        /// RangeValidator3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator3;
-
-        /// <summary>
-        /// Label24 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label24;
-
-        /// <summary>
-        /// RequiredFieldValidator16 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator16;
-
-        /// <summary>
-        /// RangeValidator4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator4;
-
-        /// <summary>
         /// submit control.
         /// </summary>
         /// <remarks>
@@ -400,14 +337,5 @@ namespace PersonalInformationForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submit;
-
-        /// <summary>
-        /// user_name control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user_name;
     }
 }
