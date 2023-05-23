@@ -58,7 +58,7 @@
         .auto-style6 {
             position: absolute;
             top: 164px;
-            left: 719px;
+            left: 734px;
             z-index: 1;
         }
         .auto-style7 {
@@ -88,7 +88,7 @@
             top: 250px;
             left: 729px;
             z-index: 1;
-            width: 241px;
+            width: 123px;
         }
         .auto-style12 {
             position: absolute;
@@ -126,25 +126,6 @@
             height: 28px;
             width: 17px;
         }
-        .auto-style16 {
-            position: absolute;
-            top: 443px;
-            left: 677px;
-            z-index: 1;
-            text-decoration: none;
-            border-radius: 50px;
-            cursor: pointer;
-            border-style: none;
-            background-color: grey;
-            width: 173px;
-            height: 20px;
-        }
-        .auto-style17 {
-            position: absolute;
-            top: 443px;
-            left: 689px;
-            z-index: 1;
-        }
         .auto-style18 {
             position: absolute;
             top: 476px;
@@ -157,6 +138,46 @@
             background-color: grey;
             width: 112px;
             height: 35px;
+        }
+        .auto-style19 {
+            position: absolute;
+            top: 439px;
+            left: 676px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 50px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 186px;
+            height: 16px;
+        }
+        .auto-style20 {
+            position: absolute;
+            top: 437px;
+            left: 608px;
+            z-index: 1;
+            width: 355px;
+            height: 19px;
+        }
+        .auto-style21 {
+            position: absolute;
+            top: 438px;
+            left: 685px;
+            z-index: 1;
+            width: 185px;
+        }
+        .auto-style22 {
+            position: absolute;
+            top: 281px;
+            left: 762px;
+            z-index: 1;
+        }
+        .auto-style23 {
+            position: absolute;
+            top: 281px;
+            left: 747px;
+            z-index: 1;
         }
     </style>
 </head>
@@ -210,16 +231,18 @@
         <div>
             <asp:Label ID="Label5" runat="server" CssClass="auto-style10" Text="₱"></asp:Label>
             <asp:Label ID="Label7" runat="server" CssClass="auto-style15" Font-Size="Large" Text="₱"></asp:Label>
+            <asp:Label ID="check_balance" runat="server" CssClass="auto-style23" Visible="False"></asp:Label>
         </div>
         <asp:Label ID="Label3" runat="server" CssClass="auto-style6" Text="Cash Out"></asp:Label>
         <asp:Label ID="Label4" runat="server" CssClass="auto-style8" Text="Total Balance:"></asp:Label>
-        <asp:Label ID="money_balance" runat="server" CssClass="auto-style11"></asp:Label>
+        <asp:Label ID="money_balance" runat="server" CssClass="auto-style11">0</asp:Label>
         <asp:Label ID="Label6" runat="server" CssClass="auto-style12" Text="Amount To Withdraw"></asp:Label>
-        <asp:Button ID="Button1" runat="server" CssClass="auto-style13" Text="Continue" CausesValidation="False" />
-        <asp:TextBox ID="user_withdraw" runat="server" CssClass="auto-style14"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="user_withdraw" CssClass="auto-style16" ErrorMessage="* Please Input Money Amount" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
-        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="user_withdraw" CssClass="auto-style17" ErrorMessage="* Money Inputed is Invalid" Font-Size="Small" ForeColor="#CC0000" MaximumValue="10000" MinimumValue="100"></asp:RangeValidator>        
-        <asp:Button ID="withdraw_btn" runat="server" CssClass="auto-style18" Text="Withdraw" />
+        <asp:Button ID="Button1" runat="server" CssClass="auto-style13" Text="Continue" CausesValidation="False" OnClick="Button1_Click" />
+        <asp:TextBox ID="user_withdraw" runat="server" CssClass="auto-style14" ></asp:TextBox>
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="user_withdraw" CssClass="auto-style19" ErrorMessage="* Please Input Money Amount" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="user_withdraw" CssClass="auto-style20" ErrorMessage="* Amount must be within the range of 100.00 to 10,000.00" Font-Size="Small" ForeColor="#CC0000" MaximumValue="10000.00" MinimumValue="100.00" Type="Currency"></asp:RangeValidator>
+        <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="* Must be divisible by 100" CssClass="auto-style21" Font-Size="Small" ForeColor="Red" OnServerValidate="CustomValidator1_ServerValidate"></asp:CustomValidator>
+        <asp:Button ID="withdraw_btn" runat="server" CssClass="auto-style18" Text="Withdraw" OnClick="withdraw_btn_Click" />
  
     </form>
      <div class="footer-basic">

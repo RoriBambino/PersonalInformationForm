@@ -56,6 +56,7 @@ namespace PersonalInformationForm
         protected void submit_Click(object sender, EventArgs e)
         {
 
+
             //For Image to DB
             HttpPostedFile postedFile = picUpload.PostedFile;
             string filename = Path.GetFileName(postedFile.FileName);// command to get the file name
@@ -77,8 +78,14 @@ namespace PersonalInformationForm
             string get_marital = DropDownList1.Text;
             string get_sex = DropDownList4.Text;
             string get_mobnumber = m_number.Text;
-            
-            
+            string verify_status = "PENDING";
+
+            // Get the Updated date with Status on
+            DateTime currentDate = DateTime.Now;
+           
+
+
+
 
             // Create or set a condition to check if the file being uploaded is an image file
             /* if (fileExt == ".jpeg" || fileExt == ".png") || fileExt == ".jpg" || fileExt == ".GIF"){
@@ -95,8 +102,8 @@ namespace PersonalInformationForm
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string insertQuerry = "INSERT INTO CLIENT (LNAME, FNAME, MIDNAME, DATE_OF_BIRTH, STREET_ADD, APPARTMENT_UNIT,CITY, MARITAL_STATUS, SEX, MOBILE_NUM) VALUES (@GET_LNAME, @GET_FNAME, @GET_MIDNAME, @GET_DOB, @GET_STREETADD, @GET_APPUNIT, @GET_CITY, @GET_MARITAL, @GET_SEX, @GET_MOBNUMBER)";
-
+                    string insertQuerry = "INSERT INTO CLIENT (CLI_LNAME, CLI_FNAME, CLI_MIDNAME, CLI_DOB, CLI_STREET_ADD, CLI_APP_UNIT_UNIT, CLI_CITY, CLI_MARITAL_STATUS, CLI_SEX, CLI_MOBILE_NUM, CLI_DATE_UPDATED) VALUES (@GET_LNAME, @GET_FNAME, @GET_MIDNAME, @GET_DOB, @GET_STREETADD, @GET_APPUNIT, @GET_CITY, @GET_MARITAL, @GET_SEX, @GET_MOBNUMBER, @Date)";
+                   
 
 
                     if (conn.State == System.Data.ConnectionState.Open)
@@ -106,6 +113,7 @@ namespace PersonalInformationForm
 
                         using (SqlCommand cmd = new SqlCommand(insertQuerry, conn))
                         {
+                            SqlDataReader reader = cmd.ExecuteReader();
                             cmd.Parameters.AddWithValue("@GET_LNAME", get_lname);
                             cmd.Parameters.AddWithValue("@GET_FNAME", get_fname);
                             cmd.Parameters.AddWithValue("@GET_MIDNAME", get_midname);
@@ -113,31 +121,34 @@ namespace PersonalInformationForm
                             cmd.Parameters.AddWithValue("@GET_STREETADD", get_streetadd);
                             cmd.Parameters.AddWithValue("@GET_APPUNIT", get_appunit);
                             cmd.Parameters.AddWithValue("@GET_CITY", get_city);
-
                             cmd.Parameters.AddWithValue("@GET_MARITAL", get_marital);
                             cmd.Parameters.AddWithValue("@GET_SEX", get_sex);
-
                             cmd.Parameters.AddWithValue("@GET_MOBNUMBER", get_mobnumber);
-                            
-                            
+                            cmd.Parameters.AddWithValue("@DATE", currentDate);
+                            while (reader.Read())
+                            {
+                                cmd.CommandType = CommandType.Text;
+                                string user_id = reader["CLI_ID"].ToString();
+                                cmd.CommandText = "UPDATE CLIENT SET CLI_VERIFY = @verify_status WHERE CLI_ID = '" + user_id + "'";
+                                cmd.Parameters.AddWithValue("@VERIFY_STATUS", verify_status);
 
-
-
-
-
+                            }
+                      
                             //check if already added 
                             int rowsAffected = cmd.ExecuteNonQuery();
                             if (rowsAffected > 0)
                             {
-                                Response.Write("<p>Successfully Added !</p>");
-                                Response.Write("<script language=javascript>alert('Successfully Added !');</script>");
+                                
+                                Response.Write("<script language=javascript>alert('Successfully Updated!');</script>");
+                                Response.Redirect("Account.aspx");
                             }
                             else
                             {
-                                Response.Write("<p>Failed to Add !</p>");
-                            }
-                            
+                                Response.Write("<script language=javascript>alert('Failed to Update!');</script>");
+                            }     
                         }
+                       
+
                     }
                     else
                     {

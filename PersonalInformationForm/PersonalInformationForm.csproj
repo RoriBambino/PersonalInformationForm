@@ -130,7 +130,10 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Image\Bangko_Sentral_ng_Pilipinas__BSP_.svg-removebg-preview.png" />
     <Content Include="Image\cash.png" />
+    <Content Include="Image\Deactivate Acc.png" />
+    <Content Include="Image\Edit Account.png" />
     <Content Include="Image\investigation.png" />
+    <Content Include="Image\log-out.png" />
     <Content Include="Image\no-alarm.png" />
     <Content Include="Image\payment-method.png" />
     <Content Include="Image\plus_sign_007-removebg-preview.png" />
@@ -151,6 +154,7 @@
     <Content Include="Account.aspx" />
     <Content Include="view_transaction.aspx" />
     <Content Include="Admin.aspx" />
+    <Content Include="admin_verify.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -312,6 +316,13 @@
     </Compile>
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_verify.aspx.cs">
+      <DependentUpon>admin_verify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_verify.aspx.designer.cs">
+      <DependentUpon>admin_verify.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

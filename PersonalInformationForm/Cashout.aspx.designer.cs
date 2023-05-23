@@ -51,6 +51,15 @@ namespace PersonalInformationForm
         protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
+        /// check_balance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label check_balance;
+
+        /// <summary>
         /// Label3 control.
         /// </summary>
         /// <remarks>
@@ -121,6 +130,15 @@ namespace PersonalInformationForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
+
+        /// <summary>
+        /// CustomValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
 
         /// <summary>
         /// withdraw_btn control.

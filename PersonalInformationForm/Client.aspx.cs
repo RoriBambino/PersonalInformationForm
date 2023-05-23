@@ -28,24 +28,44 @@ namespace PersonalInformationForm
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 { //Make it like after user login access the db matching their account
                     conn.Open();
+                  
+                    using (var cmd = conn.CreateCommand())
+                    {
+                        // Connect database
+                        cmd.CommandType = CommandType.Text;
+                        string username = (string)Session["Username"];
+                        string password = (string)Session["Password"];
 
-                    string insertQuerry = "SELECT * FROM CLIENT";
+                        cmd.CommandText = "SELECT * FROM CLIENT WHERE CLI_USERNAME = '" + username + "' AND CLI_PASSWORD ='" + password + "'";
 
-                    SqlCommand cmd = new SqlCommand(insertQuerry, conn);
-                    SqlDataReader reader = cmd.ExecuteReader();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                           if(reader.Read())
+                            {
+                                Session["Client_id"] = reader["CLI_ID"];
+                                // Display the given information from the Database
+                                string fname = reader["CLI_FNAME"].ToString();
+                                string midname = reader["CLI_MNAME"].ToString();
+                                string lname = reader["CLI_LNAME"].ToString();
+                                user_name.Text = fname + " " + midname + " " + lname;
 
-                    while (reader.Read()){
-
-                        string fname = reader["CLI_FNAME"].ToString();
-                        string midname = reader["CLI_MNAME"].ToString();
-                        string lname = reader["CLI_LNAME"].ToString();
-                        user_name.Text = fname + " " + midname + " " + lname;
-                        acc_num.Text = reader["CLI_ID"].ToString();
-                        cli_create_date.Text = reader["CLI_DATE_CREATED"].ToString();
-
-                    }
+                                acc_num.Text = reader["CLI_ID"].ToString();
+                                //Get the date from database and display only the date 
+                                DateTime recordedDate = (DateTime)reader["CLI_DATE_CREATED"];
+                                string get_date = recordedDate.ToString("yyyy-MM-dd");
+                                cli_create_date.Text = get_date;
+                                acc_status.Text = reader["CLI_VERIFY"].ToString();
+                              //  acc_balance.Text = reader["TOTAL_BALANCE"].ToString();
 
 
+
+                            }
+                            else
+                            {
+                                Response.Write("System Error");
+                            }
+                        }
+                    } 
                     if (conn.State == System.Data.ConnectionState.Open)
                     {
                         Response.Write("<script>alert('Connected Successfully!')</script>");

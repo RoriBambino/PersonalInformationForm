@@ -62,9 +62,16 @@
         }
         .auto-style8 {
             position: absolute;
-            top: 277px;
-            left: 657px;
+            top: 345px;
+            left: 383px;
             z-index: 1;
+            text-decoration: none;
+            border-radius: 50px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 120px;
+            height: 37px;
         }
         .auto-style9 {
             position: absolute;
@@ -74,20 +81,79 @@
         }
         .auto-style10 {
             position: absolute;
-            top: 374px;
-            left: 667px;
+            top: 345px;
+            left: 570px;
             z-index: 1;
+            text-decoration: none;
+            border-radius: 50px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 120px;
+            height: 37px;
         }
         .auto-style11 {
             position: absolute;
-            top: 418px;
-            left: 680px;
+            top: 346px;
+            left: 950px;
             z-index: 1;
+            text-decoration: none;
+            border-radius: 50px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 120px;
+            height: 37px;
         }
         .auto-style12 {
             position: absolute;
-            top: 329px;
-            left: 669px;
+            top: 345px;
+            left: 772px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 50px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 120px;
+            height: 37px;
+        }
+        .auto-style13 {
+            width: 112px;
+            height: 115px;
+            position: absolute;
+            top: 220px;
+            left: 386px;
+            z-index: 1;
+        }
+        .auto-style14 {
+            width: 117px;
+            height: 111px;
+            position: absolute;
+            top: 222px;
+            left: 769px;
+            z-index: 1;
+        }
+        .auto-style15 {
+            width: 115px;
+            height: 105px;
+            position: absolute;
+            top: 228px;
+            left: 574px;
+            z-index: 1;
+        }
+        .auto-style16 {
+            width: 98px;
+            height: 100px;
+            position: absolute;
+            top: 226px;
+            left: 963px;
+            z-index: 1;
+        }
+        .auto-style17 {
+            position: absolute;
+            top: 194px;
+            left: 396px;
             z-index: 1;
         }
     </style>
@@ -141,10 +207,24 @@
     <form id="form1" runat="server">
         <div class="auto-style6">
 
-            <asp:Button ID="btn_veracc" runat="server" CssClass="auto-style8" OnClick="Button1_Click" Text="Verify Account" />
-            <asp:Button ID="Button2" runat="server" CssClass="auto-style11" Text="Sign Out" />
-            <asp:Button ID="Button3" runat="server" CssClass="auto-style10" Text="Edit Account" />
-            <asp:Button ID="Button4" runat="server" CssClass="auto-style12" Text="  Deactivate" />
+            <a href="user_verify.aspx">
+                <img id="verify" runat="server" alt="Verify Account" class="auto-style13" src="Image/verified-account.png" />
+                <asp:Button ID="btn_veracc" runat="server" CssClass="auto-style8" OnClick="Button1_Click" Text="Verify Account" ForeColor="#CC99FF" />
+            </a>
+            <a href="#">
+                <asp:Button ID="Button3" runat="server" CssClass="auto-style10" Text="Edit Account" ForeColor="#6699FF" />
+                <img id="edit" runat="server" alt="Edit Account" class="auto-style15" src="Image/Edit%20Account.png" />
+            </a>
+            <a href="#">
+                <asp:Button ID="Button4" runat="server" CssClass="auto-style12" Text="Deactivate" ForeColor="#660066" />
+                <img id="deactivate" runat="server" alt="Deactiviate PNG" class="auto-style14" src="Image/Deactivate%20Acc.png" />
+            </a>
+            <a href="#">
+                <asp:Button ID="Button2" runat="server" CssClass="auto-style11" Text="Sign Out" ForeColor="#3399FF" />
+                <img id="logout" runat="server" alt="logout" class="auto-style16" src="Image/log-out.png" />
+            <asp:Label ID="txt_verifyacc" runat="server" CssClass="auto-style17"></asp:Label>
+            </a>
+
 
         </div>
     </form>
@@ -162,6 +242,7 @@
                 <li class="auto-style1"><a href="view_transaction.aspx">View Transactions</a></li>
             </ul>
             <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 912px; left: 447px">E-Wallet Co. © 2023</p>
+
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

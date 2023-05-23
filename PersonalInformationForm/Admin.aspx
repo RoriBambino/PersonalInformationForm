@@ -53,21 +53,21 @@
         }
         .auto-style10 {
             position: absolute;
-            top: 66px;
-            left: 593px;
+            top: 2px;
+            left: 595px;
             z-index: 1;
             width: 128px;
             height: 126px;
         }
         .auto-style11 {
             position: absolute;
-            top: 193px;
-            left: 615px;
+            top: 132px;
+            left: 617px;
             z-index: 1;
         }
         .auto-style12 {
             position: absolute;
-            top: 63px;
+            top: 2px;
             left: 359px;
             z-index: 1;
             width: 131px;
@@ -75,21 +75,21 @@
         }
         .auto-style13 {
             position: absolute;
-            top: 70px;
-            left: 803px;
+            top: 1px;
+            left: 821px;
             z-index: 1;
             width: 122px;
             height: 123px;
         }
         .auto-style14 {
             position: absolute;
-            top: 196px;
-            left: 799px;
+            top: 130px;
+            left: 820px;
             z-index: 1;
         }
         .auto-style15 {
             position: absolute;
-            top: 189px;
+            top: 128px;
             left: 373px;
             z-index: 1;
         }
@@ -119,7 +119,7 @@
                        </li>
                 
                         <li>
-                           <a href="#">
+                           <a href="admin_verify.aspx">
                              Verify
                            </a>
                        </li>
@@ -147,7 +147,7 @@
                 <img src="Image/user%20status.png" class="auto-style10" /><br />
                 <asp:Label ID="Label1" runat="server" Text="User Status" CssClass="auto-style11"></asp:Label>
             </a>
-            <a href="#">
+            <a href="admin_verify.aspx">
                 <img src="Image/verified-account.png" class="auto-style12" />
                 <asp:Label ID="Label3" runat="server" Text="Verify Account" CssClass="auto-style15"></asp:Label>
             </a>
@@ -165,7 +165,7 @@
             </div>
             <ul class="list-inline">
                 <li class="auto-style2"><a href="Admin.aspx">Home</a></li>
-                <li class="auto-style5"><a href="#" >Verify</a></li>
+                <li class="auto-style5"><a href="admin_verify.aspx" >Verify</a></li>
                 <li class="auto-style4"><a href="#" >Status</a></li>
                 <li class="auto-style1"><a href="#">View Transactions</a></li>
             </ul>

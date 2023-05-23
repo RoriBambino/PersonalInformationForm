@@ -49,6 +49,10 @@ namespace PersonalInformationForm
                             string admin = dr["ADMIN_EMAIL"].ToString();
                             if (input_username.Text == user)
                             {
+                                Session["Username"] = get_input;
+                                Session["Password"] = get_pass;
+                                Session["Client_id"] = dr["CLI_ID"];
+                                
                                 Response.Redirect("Client.aspx", true);
 
                             }

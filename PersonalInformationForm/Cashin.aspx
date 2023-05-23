@@ -104,7 +104,7 @@
         }
         .auto-style13 {
             position: absolute;
-            top: 260px;
+            top: 259px;
             left: 655px;
             z-index: 1;
             width: 184px;
@@ -112,9 +112,17 @@
         }
         .auto-style14 {
             position: absolute;
-            top: 259px;
-            left: 663px;
+            top: 258px;
+            left: 577px;
             z-index: 1;
+            width: 381px;
+        }
+        .auto-style15 {
+            position: absolute;
+            top: 257px;
+            left: 535px;
+            z-index: 1;
+            width: 517px;
         }
     </style>
 </head>
@@ -123,7 +131,7 @@
      <div class="menu">
             <!--Header-->
            <div class="logo">
-               <a  ref="pageLogo" href="PersonalInfoEntry.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
+               <a  ref="pageLogo" href="Client.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
                <nav>
                 <input type="checkbox" id="check">
                 <asp:Label ID="Label2" runat="server" CssClass="auto-style22" Font-Names="Bookman Old Style" Font-Size="X-Large" ForeColor="Black" Text="E-Save" style="z-index: 1; position: absolute; top: 33px; left: 169px"></asp:Label>
@@ -168,13 +176,14 @@
         <div>
 
             <asp:Label ID="Label3" runat="server" CssClass="auto-style8" Font-Size="XX-Large" Text="Cash In"></asp:Label>
-
-        </div>
-        <asp:Label ID="Label4" runat="server" CssClass="auto-style10" Font-Bold="False" Font-Size="XX-Large" Text="₱"></asp:Label>
-        <asp:TextBox ID="cash_money" runat="server" BorderStyle="Inset" CssClass="auto-style11"></asp:TextBox>
-        <asp:Button ID="confirm_btn" runat="server" CssClass="auto-style12" Text="Confirm" Font-Names="Arial Black" Font-Size="Large" ForeColor="#CC99FF" />
+            <asp:Label ID="Label4" runat="server" CssClass="auto-style10" Font-Bold="False" Font-Size="XX-Large" Text="₱"></asp:Label>
+        <asp:TextBox ID="cash_money" runat="server" BorderStyle="Inset" CssClass="auto-style11" TextMode="Number"></asp:TextBox>
+        <asp:Button ID="confirm_btn" runat="server" CssClass="auto-style12" Text="Confirm" Font-Names="Arial Black" Font-Size="Large" ForeColor="#CC99FF" OnClick="confirm_btn_Click" />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="cash_money" CssClass="auto-style13" ErrorMessage="* Please Input Money Amount" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
-        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="cash_money" CssClass="auto-style14" ErrorMessage="* Money Inputed is Invalid" Font-Size="Small" ForeColor="#CC0000" MaximumValue="10000.00" MinimumValue="100.00"></asp:RangeValidator>
+        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="cash_money" CssClass="auto-style14" ErrorMessage="* Amount must be within the range of 100.00 to 10,000.00" Font-Size="Small" ForeColor="#CC0000" MaximumValue="10000.00" MinimumValue="100.00" Type="Currency"></asp:RangeValidator>
+         <asp:CustomValidator ID="customValidator" runat="server" ControlToValidate="cash_money" OnServerValidate="customValidator_ServerValidate" ErrorMessage="* Amount must be divisible by 100.00 and within the range of 100.00 to 10,000.00" CssClass="auto-style15" Font-Size="Small" ForeColor="#CC0000" />
+        
+        </div>
         
     </form>
   <div class="footer-basic">

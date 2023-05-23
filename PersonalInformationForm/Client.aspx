@@ -63,8 +63,8 @@
         }
         .auto-style18 {
             position: absolute;
-            top: 302px;
-            left: 247px;
+            top: 305px;
+            left: 381px;
             z-index: 1;
         }
         .auto-style19 {
@@ -153,7 +153,7 @@
         .auto-style37 {
             position: absolute;
             top: 164px;
-            left: 1125px;
+            left: 1129px;
             z-index: 1;
         }
         .auto-style38 {
@@ -165,14 +165,14 @@
         }
         .auto-style39 {
             position: absolute;
-            top: 301px;
-            left: 769px;
+            top: 303px;
+            left: 904px;
             z-index: 1;
         }
         .auto-style40 {
             position: absolute;
             top: 142px;
-            left: 664px;
+            left: 651px;
             z-index: 1;
             width: 128px;
         }
@@ -236,7 +236,7 @@
      <div class="auto-style35">
             <!--Header-->
            <div class="auto-style28">
-               <a  ref="pageLogo" href="PersonalInfoEntry.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
+               <a  ref="pageLogo" href="#"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
                <nav>
                 <input type="checkbox" id="check">
                 <asp:Label ID="Label2" runat="server" CssClass="auto-style22" Font-Names="Bookman Old Style" Font-Size="X-Large" ForeColor="Black" Text="E-Save"></asp:Label>
@@ -307,7 +307,7 @@
      <a href="#">
          &nbsp;</a><div>
             <asp:Label ID="Label14" runat="server" CssClass="auto-style36" Font-Size="15pt" Text="Registered Date:"></asp:Label>
-            <asp:Label ID="tot_monsent" runat="server" CssClass="auto-style39" Font-Size="35pt"></asp:Label>
+            <asp:Label ID="tot_monsent" runat="server" CssClass="auto-style39" Font-Size="35pt">0</asp:Label>
             <asp:Label ID="Label13" runat="server" BackColor="#93AEFF" CssClass="auto-style34"></asp:Label>
              &nbsp;<asp:Label ID="Label12" runat="server" CssClass="auto-style32" Text="Hello," Font-Size="20pt"></asp:Label>
             <asp:Label ID="cli_create_date" runat="server" CssClass="auto-style37" Font-Size="15pt"></asp:Label>
@@ -315,7 +315,7 @@
         
         <asp:Label ID="user_name" runat="server" CssClass="auto-style33" Font-Size="20pt"></asp:Label>
 &nbsp;<asp:Label ID="acc_status" runat="server" CssClass="auto-style40"></asp:Label>
-                <asp:Label ID="acc_balance" runat="server" CssClass="auto-style18" Font-Size="35pt"></asp:Label>
+                <asp:Label ID="acc_balance" runat="server" CssClass="auto-style18" Font-Size="35pt">0</asp:Label>
 
         <asp:Label ID="Label11" runat="server" CssClass="auto-style30" Text="Account Number:" Font-Size="15pt"></asp:Label>
             <asp:Label ID="Label15" runat="server" CssClass="auto-style38" Font-Size="15pt" Text="Total Money Sent"></asp:Label>

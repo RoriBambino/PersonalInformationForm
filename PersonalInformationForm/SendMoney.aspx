@@ -80,6 +80,7 @@
             top: 315px;
             left: 681px;
             z-index: 1;
+            width: 254px;
         }
         .auto-style13 {
             position: absolute;
@@ -192,8 +193,9 @@
         .auto-style28 {
             position: absolute;
             top: 255px;
-            left: 684px;
+            left: 672px;
             z-index: 1;
+            width: 287px;
         }
     </style>
 </head>
@@ -245,12 +247,31 @@
     </div>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="Label4" runat="server" CssClass="auto-style9" Text="Account Number:"></asp:Label>
+            <asp:TextBox ID="txt_id" runat="server" CssClass="auto-style10" TextMode="Search"></asp:TextBox>
+           <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_id" CssClass="auto-style11" ErrorMessage="* Input Account Id To proceed" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+            <asp:Button ID="btnsearch" runat="server" CssClass="auto-style20" Text="Search" />
 
             <asp:Label ID="Label_sendmoney" runat="server" CssClass="auto-style8" Text="Send Money"></asp:Label>
 
+             <asp:Label ID="Label_amount" runat="server" CssClass="auto-style17" Text="Amount:"></asp:Label>
+            <asp:Label ID="Label_amount2" runat="server" CssClass="auto-style19" Text="₱"></asp:Label>
+
+
+         <asp:Label ID="Label5" runat="server" CssClass="auto-style12" Text="Recipients Information"></asp:Label>
+        <asp:Label ID="Label6" runat="server" CssClass="auto-style13" Text="Account Number:"></asp:Label>
+        <asp:Label ID="txt_accnum" runat="server" CssClass="auto-style14"></asp:Label>
+        <asp:Label ID="Label7" runat="server" CssClass="auto-style15" Text="Reciepients Name:"></asp:Label>
+        <asp:Label ID="txt_recname" runat="server" CssClass="auto-style16"></asp:Label>
+        <asp:TextBox ID="txt_amount" runat="server" CssClass="auto-style18"></asp:TextBox>
+        <asp:Button ID="btnsend" runat="server" CssClass="auto-style21" Text="Send" />
+        <asp:Label ID="Label_pass" runat="server" CssClass="auto-style23" Text="Password:"></asp:Label>
+        <asp:TextBox ID="txt_password" runat="server" CssClass="auto-style24" TextMode="Password"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_amount" CssClass="auto-style25" ErrorMessage="* Input Amount" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txt_amount" CssClass="auto-style26" ErrorMessage="* Money Reached Min/Max Amount" Font-Size="Small" ForeColor="#CC0000"></asp:RangeValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txt_password" CssClass="auto-style27" ErrorMessage="* Input Password" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
         </div>
-        <asp:Label ID="Label4" runat="server" CssClass="auto-style9" Text="Account Number:"></asp:Label>
-        <asp:TextBox ID="txt_id" runat="server" CssClass="auto-style10" TextMode="Search"></asp:TextBox>
+        
    <div class="footer-basic">
         <footer>
         
@@ -263,27 +284,13 @@
                 <li class="auto-style3"><a href="Cashout.aspx" >Cash out</a></li>
                 <li class="auto-style5"><a href="SendMoney.aspx">Send Money</a></li>
                 <li class="auto-style1"><a href="view_transaction.aspx">View Transactions</a></li>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_id" CssClass="auto-style11" ErrorMessage="* Input Account Id To proceed" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                
             </ul>
             <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 911px; left: 447px">E-Wallet Co. © 2023</p>
-            <asp:Label ID="Label_amount" runat="server" CssClass="auto-style17" Text="Amount:"></asp:Label>
-            <asp:Label ID="Label_amount2" runat="server" CssClass="auto-style19" Text="₱"></asp:Label>
-            <asp:Button ID="btnsearch" runat="server" CssClass="auto-style20" Text="Search" />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txt_id" CssClass="auto-style28" ErrorMessage="* Input Account Number to Proceed" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+           
         </footer>
     </div>
-        <asp:Label ID="Label5" runat="server" CssClass="auto-style12" Text="Recipients Information"></asp:Label>
-        <asp:Label ID="Label6" runat="server" CssClass="auto-style13" Text="Account Number:"></asp:Label>
-        <asp:Label ID="txt_accnum" runat="server" CssClass="auto-style14"></asp:Label>
-        <asp:Label ID="Label7" runat="server" CssClass="auto-style15" Text="Reciepients Name:"></asp:Label>
-        <asp:Label ID="txt_recname" runat="server" CssClass="auto-style16"></asp:Label>
-        <asp:TextBox ID="txt_amount" runat="server" CssClass="auto-style18"></asp:TextBox>
-        <asp:Button ID="btnsend" runat="server" CssClass="auto-style21" Text="Send" />
-        <asp:Label ID="Label_pass" runat="server" CssClass="auto-style23" Text="Password:"></asp:Label>
-        <asp:TextBox ID="txt_password" runat="server" CssClass="auto-style24" TextMode="Password"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_amount" CssClass="auto-style25" ErrorMessage="* Input Amount" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
-        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txt_amount" CssClass="auto-style26" ErrorMessage="* Money Reached Min/Max Amount" Font-Size="Small" ForeColor="#CC0000"></asp:RangeValidator>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txt_password" CssClass="auto-style27" ErrorMessage="* Input Password" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+       
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
