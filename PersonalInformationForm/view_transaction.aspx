@@ -52,14 +52,6 @@
             left: 580px;
             z-index: 1;
         }
-        .auto-style8 {
-            width: 588px;
-            height: 263px;
-            position: absolute;
-            top: 281px;
-            left: 425px;
-            z-index: 1;
-        }
         .auto-style9 {
             position: absolute;
             top: 192px;
@@ -70,8 +62,16 @@
         }
         .auto-style10 {
             position: absolute;
-            top: 245px;
-            left: 938px;
+            top: 275px;
+            left: 873px;
+            z-index: 1;
+        }
+        .auto-style11 {
+            width: 613px;
+            height: 163px;
+            position: absolute;
+            top: 319px;
+            left: 386px;
             z-index: 1;
         }
     </style>
@@ -125,26 +125,9 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Label1" runat="server" Text="Sent, Cash Out, Recieved" CssClass="auto-style9"></asp:Label>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" CssClass="auto-style8" DataKeyNames="ACC_ID" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical">
-                <AlternatingRowStyle BackColor="White" />
-                <Columns>
-                    <asp:BoundField DataField="ACC_ID" HeaderText="ACC_ID" InsertVisible="False" ReadOnly="True" SortExpression="ACC_ID" />
-                    <asp:BoundField DataField="CLI_ID" HeaderText="CLI_ID" SortExpression="CLI_ID" />
-                    <asp:BoundField DataField="ACC_STATUS" HeaderText="ACC_STATUS" SortExpression="ACC_STATUS" />
-                    <asp:BoundField DataField="ACC_BALANCE" HeaderText="ACC_BALANCE" SortExpression="ACC_BALANCE" />
-                </Columns>
-                <FooterStyle BackColor="#CCCC99" />
-                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-                <RowStyle BackColor="#F7F7DE" />
-                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#FBFBF2" />
-                <SortedAscendingHeaderStyle BackColor="#848384" />
-                <SortedDescendingCellStyle BackColor="#EAEAD3" />
-                <SortedDescendingHeaderStyle BackColor="#575357" />
-            </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Account]"></asp:SqlDataSource>
             <asp:Button ID="Button1" runat="server" CssClass="auto-style10" Text="Button" />
+            <asp:GridView ID="GridView1" runat="server" CssClass="auto-style11">
+            </asp:GridView>
         </div>
  
     </form>

@@ -16,16 +16,16 @@
         width: 208px;
         height: 28px;
         position: absolute;
-        top: 1036px;
-        left: 823px;
+        top: 979px;
+        left: 910px;
         z-index: 1;
     }
     .auto-style2 {
         width: 100px;
         height: 28px;
         position: absolute;
-        top: 1037px;
-        left: 382px;
+        top: 980px;
+        left: 496px;
         z-index: 1;
     }
     .auto-style5 {
@@ -40,24 +40,24 @@
         width: 78px;
         height: 28px;
         position: absolute;
-        left: 614px;
+        left: 553px;
         z-index: 1;
-        top: 364px;
+        top: 347px;
     }
     .auto-style7 {
         width: 150px;
         height: 28px;
         position: absolute;
-        top: 1038px;
-        left: 587px;
+        top: 981px;
+        left: 661px;
         z-index: 1;
     }
     .auto-style8 {
         width: 223px;
         height: 28px;
         position: absolute;
-        top: 363px;
-        left: 708px;
+        top: 343px;
+        left: 657px;
         z-index: 1;
     }
     .auto-style9 {
@@ -65,7 +65,7 @@
         height: 28px;
         position: absolute;
         top: 265px;
-        left: 560px;
+        left: 553px;
         z-index: 1;
     }
     .auto-style10 {
@@ -73,7 +73,7 @@
         height: 28px;
         position: absolute;
         top: 260px;
-        left: 659px;
+        left: 658px;
         z-index: 1;
     }
     .auto-style11 {
@@ -88,32 +88,32 @@
         width: 150px;
         height: 28px;
         position: absolute;
-        top: 1038px;
-        left: 471px;
+        top: 980px;
+        left: 558px;
         z-index: 1;
     }
     .auto-style13 {
         width: 222px;
         height: 28px;
         position: absolute;
-        top: 316px;
-        left: 708px;
+        top: 302px;
+        left: 659px;
         z-index: 1;
     }
     .auto-style14 {
         width: 99px;
         height: 28px;
         position: absolute;
-        top: 412px;
-        left: 604px;
+        top: 392px;
+        left: 553px;
         z-index: 1;
     }
     .auto-style15 {
         width: 150px;
         height: 28px;
         position: absolute;
-        top: 1037px;
-        left: 707px;
+        top: 981px;
+        left: 778px;
         z-index: 1;
         margin-top: 0px;
     }
@@ -121,31 +121,31 @@
         width: 121px;
         height: 28px;
         position: absolute;
-        top: 385px;
-        left: 757px;
+        top: 371px;
+        left: 703px;
         z-index: 1;
     }
     .auto-style17 {
         position: absolute;
-        top: 594px;
-        left: 591px;
+        top: 550px;
+        left: 544px;
     }
     .auto-style18 {
         position: absolute;
         top: 229px;
-        left: 561px;
+        left: 554px;
         z-index: 1;
     }
     .auto-style19 {
         position: absolute;
-        top: 617px;
-        left: 737px;
+        top: 571px;
+        left: 700px;
         z-index: 1;
     }
     .auto-style20 {
         position: absolute;
-        top: 547px;
-        left: 560px;
+        top: 509px;
+        left: 512px;
         z-index: 1;
     }
     .auto-style21 {
@@ -162,74 +162,74 @@
         z-index: 1;
     }
     .auto-style23 {
-        width: 150px;
+        width: 120px;
         height: 28px;
         position: absolute;
-        top: 434px;
-        left: 749px;
+        top: 414px;
+        left: 702px;
         z-index: 1;
     }
     .auto-style24 {
         position: absolute;
-        top: 639px;
-        left: 656px;
+        top: 594px;
+        left: 614px;
         z-index: 1;
         width: 34px;
         height: 23px;
     }
     .auto-style25 {
         position: absolute;
-        top: 411px;
-        left: 707px;
+        top: 388px;
+        left: 656px;
         z-index: 1;
         width: 223px;
     }
     .auto-style26 {
         position: absolute;
-        top: 667px;
-        left: 776px;
+        top: 616px;
+        left: 735px;
         z-index: 1;
     }
     .auto-style27 {
         position: absolute;
-        top: 639px;
-        left: 705px;
+        top: 592px;
+        left: 658px;
         z-index: 1;
         width: 218px;
     }
     .auto-style28 {
         position: absolute;
-        top: 571px;
-        left: 720px;
+        top: 528px;
+        left: 684px;
         z-index: 1;
     }
     .auto-style29 {
         width: 100px;
         height: 28px;
         position: absolute;
-        top: 319px;
-        left: 590px;
+        top: 306px;
+        left: 553px;
         z-index: 1;
     }
     .auto-style30 {
         position: absolute;
-        top: 594px;
-        left: 705px;
+        top: 546px;
+        left: 657px;
         z-index: 1;
         height: 25px;
         width: 218px;
     }
     .auto-style31 {
         position: absolute;
-        top: 545px;
-        left: 706px;
+        top: 507px;
+        left: 657px;
         z-index: 1;
         width: 219px;
     }
     .auto-style32 {
         position: absolute;
-        top: 861px;
-        left: 606px;
+        top: 801px;
+        left: 710px;
         z-index: 1;
           text-decoration: none;
             border-radius: 50px;
@@ -240,15 +240,28 @@
             height: 37px;
     }
         .auto-style33 {
-            width: 1372px;
+            width: 118px;
+            z-index: 1;
+            position: absolute;
+            top: 473px;
+            left: 552px;
         }
         .auto-style34 {
-            width: 1372px;
+            width: 127px;
             margin-right: 3px;
+            z-index: 1;
+            position: absolute;
+            top: 471px;
+            left: 663px;
+            height: 21px;
         }
         .auto-style35 {
-            width: 1372px;
+            width: 29px;
             margin-right: 2px;
+            z-index: 1;
+            position: absolute;
+            top: 436px;
+            left: 554px;
         }
         .auto-style36 {
             width: 1074px;
@@ -262,6 +275,12 @@
             box-sizing: border-box;
             overflow: hidden;
             background-color: #0082C8;
+        }
+        .auto-style38 {
+            position: absolute;
+            top: 286px;
+            left: 201px;
+            z-index: 1;
         }
     </style>
 </head>
@@ -327,10 +346,10 @@
         <p>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDOB" CssClass="auto-style23" ErrorMessage="*Input date of birth" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
         <asp:TextBox ID="middle_name" runat="server" CssClass="auto-style13"></asp:TextBox>
-            <asp:FileUpload ID="picUpload" runat="server" CssClass="auto-style162" style="z-index: 1; position: absolute; top: 254px; left: 328px; width: 186px;" />
+            <asp:FileUpload ID="picUpload" runat="server" CssClass="auto-style162" style="z-index: 1; position: absolute; top: 323px; left: 173px; width: 186px;" />
         </p>
         <asp:Label ID="Label5" runat="server" CssClass="auto-style9" Text="First Name:"></asp:Label>
-        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style34" style="z-index: 1; position: absolute; top: 502px; left: 718px; width: 127px; height: 21px">
+        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style34">
             <asp:ListItem>Marital Status</asp:ListItem>
             <asp:ListItem>Single</asp:ListItem>
             <asp:ListItem>Married</asp:ListItem>
@@ -348,14 +367,15 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="appartment" CssClass="auto-style28" ErrorMessage="*Input Appartment/Unit no." Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
         <asp:Label ID="Label11" runat="server" CssClass="auto-style24" Text="City:"></asp:Label>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="city" CssClass="auto-style26" ErrorMessage="*Input City" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
+         <asp:Label ID="Label26" runat="server" CssClass="auto-style38" Text="Upload ID Picture"></asp:Label>
         <br />
         <br />
-        <asp:DropDownList ID="DropDownList4" runat="server" CssClass="auto-style134" style="z-index: 1; position: absolute; top: 462px; left: 706px">
+        <asp:DropDownList ID="DropDownList4" runat="server" CssClass="auto-style134" style="z-index: 1; position: absolute; top: 434px; left: 657px">
             <asp:ListItem>Sex</asp:ListItem>
             <asp:ListItem>Male</asp:ListItem>
             <asp:ListItem>Female</asp:ListItem>
         </asp:DropDownList>
-        <asp:Label ID="Label15" runat="server" CssClass="auto-style35" Text="Sex:" style="z-index: 1; position: absolute; top: 464px; left: 665px; width: 29px"></asp:Label>
+        <asp:Label ID="Label15" runat="server" CssClass="auto-style35" Text="Sex:"></asp:Label>
         <br />
         <br />
         <asp:TextBox ID="city" runat="server" CssClass="auto-style27"></asp:TextBox>
@@ -363,20 +383,20 @@
         <br />
         <br />
             <asp:TextBox ID="street_add" runat="server" CssClass="auto-style30"></asp:TextBox>
-        <asp:Label ID="Label14" runat="server" CssClass="auto-style33" Text="Marital Status:" style="z-index: 1; position: absolute; top: 503px; left: 595px"></asp:Label>
+        <asp:Label ID="Label14" runat="server" CssClass="auto-style33" Text="Marital Status:"></asp:Label>
         <br />
         <br />
         <br />
         <br />
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ControlToValidate="m_number" CssClass="auto-style142" ErrorMessage="*Input Mobile Number" Font-Size="Small" ForeColor="Red" style="z-index: 1; position: absolute; top: 788px; left: 736px"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ControlToValidate="m_number" CssClass="auto-style142" ErrorMessage="*Input Mobile Number" Font-Size="Small" ForeColor="Red" style="z-index: 1; position: absolute; top: 718px; left: 698px"></asp:RequiredFieldValidator>
         <br />
         <br />
-        <asp:Label ID="Label21" runat="server" CssClass="auto-style54" Font-Size="X-Large" Text="Contact Information" style="z-index: 1; position: absolute; top: 715px; left: 301px"></asp:Label>
+        <asp:Label ID="Label21" runat="server" CssClass="auto-style54" Font-Size="X-Large" Text="Contact Information" style="z-index: 1; position: absolute; top: 618px; left: 311px"></asp:Label>
         <br />
         <br />
-        <asp:Label ID="Label22" runat="server" CssClass="auto-style55" Text="Mobile Phone Number" style="z-index: 1; position: absolute; top: 764px; left: 538px"></asp:Label>
-        <asp:TextBox ID="m_number" runat="server" CssClass="auto-style56" style="z-index: 1; position: absolute; top: 762px; left: 706px; width: 218px"></asp:TextBox>
-        <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="m_number" CssClass="auto-style57" ErrorMessage="*Must be 11 Digits" Font-Size="Small" ForeColor="Red" MaximumValue="99999999999" MinimumValue="00000000000" style="z-index: 1; position: absolute; top: 788px; left: 750px"></asp:RangeValidator>
+        <asp:Label ID="Label22" runat="server" CssClass="auto-style55" Text="Mobile Phone Number" style="z-index: 1; position: absolute; top: 656px; left: 682px"></asp:Label>
+        <asp:TextBox ID="m_number" runat="server" CssClass="auto-style56" style="z-index: 1; position: absolute; top: 684px; left: 651px; width: 218px"></asp:TextBox>
+        <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="m_number" CssClass="auto-style57" ErrorMessage="*Must be 11 Digits" Font-Size="Small" ForeColor="Red" MaximumValue="99999999999" MinimumValue="00000000000" style="z-index: 1; position: absolute; top: 717px; left: 706px"></asp:RangeValidator>
         <br />
         <br />
         <br />
@@ -393,8 +413,8 @@
    <div class="footer-basic">
         <footer>
         
-            <div class="social" style="width: 1039px; z-index: 1; height: 65px; position: absolute; top: 986px; left: 176px;"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: 439px; width: 43px; height: 44px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 499px; width: 39px"></i></a>
-                <a href="#" class="auto-style47" ><i class="icon ion-social-instagram" style="z-index: 1; position: absolute; top: -1px; left: 555px; width: 42px; height: 40px; margin-top: 1px; margin-bottom: 2px;"></i></a>
+            <div class="social" style="width: 1039px; z-index: 1; height: 65px; position: absolute; top: 921px; left: 274px;"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -13px; left: 439px; width: 43px; height: 40px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -14px; left: 497px; width: 43px; height: 44px;"></i></a>
+                <a href="#" class="auto-style47" ><i class="icon ion-social-instagram" style="z-index: 1; position: absolute; top: 6px; left: 556px; width: 42px; height: 40px; margin-top: 1px; margin-bottom: 2px;"></i></a>
             </div>
             <ul class="list-inline">
                 <li class="auto-style2"><a href="Client.aspx">Home      <li class="auto-style12"><a href="Cashin.aspx" >Cash In</a></li>
@@ -402,7 +422,7 @@
                 <li class="auto-style15"><a href="SendMoney.aspx">Send Money</a></li>
                 <li class="auto-style1"><a href="view_transaction.aspx">View Transactions</a></li>
             </ul>
-            <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 1060px; left: 322px">E-Wallet Co. © 2023</p>
+            <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 997px; left: 498px">E-Wallet Co. © 2023</p>
         </footer>
     </div>
     </body>

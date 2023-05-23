@@ -19,16 +19,30 @@ namespace PersonalInformationForm
         {
             try
             {
-
-                using(SqlConnection conn = new SqlConnection(connectionString))
-                {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                { //Make it like after user login access the db matching their account
                     conn.Open();
-                    string insertQuerry2 = "SELECT * FROM CLIENT";
-                    SqlCommand cmd = new SqlCommand(insertQuerry2, conn);
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.Read())
+
+                    using (var cmd = conn.CreateCommand())
                     {
-                        txt_username.Text = reader["CLI_ID"].ToString();
+                        // Connect database
+                        cmd.CommandType = CommandType.Text;
+                        string username = (string)Session["Username"];
+                        string password = (string)Session["Password"];
+
+                        cmd.CommandText = "SELECT * FROM CLIENT WHERE CLI_USERNAME = '" + username + "' AND CLI_PASSWORD ='" + password + "'";
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                txt_username.Text = reader["CLI_USERNAME"].ToString();                             
+                            }
+                            else
+                            {
+                                Response.Write("System Error");
+                            }
+                        }
                     }
                     if (conn.State == System.Data.ConnectionState.Open)
                     {
@@ -39,20 +53,15 @@ namespace PersonalInformationForm
                         Response.Write("<p>Failed to Connect!</p>");
                     }
                     conn.Close();
-
                 }
-               
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                Response.Write(ex);
+                Response.Write("Error Message : " + ex);
             }
-          
 
         }
-
-        
-
+           
         protected void submit_Click(object sender, EventArgs e)
         {
 

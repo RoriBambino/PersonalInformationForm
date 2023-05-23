@@ -60,6 +60,7 @@
             top: 164px;
             left: 734px;
             z-index: 1;
+            width: 112px;
         }
         .auto-style7 {
             position: absolute;
@@ -85,7 +86,7 @@
         }
         .auto-style11 {
             position: absolute;
-            top: 250px;
+            top: 251px;
             left: 729px;
             z-index: 1;
             width: 123px;
@@ -100,8 +101,8 @@
         }
         .auto-style13 {
             position: absolute;
-            top: 243px;
-            left: 860px;
+            top: 310px;
+            left: 723px;
             z-index: 1;
             text-decoration: none;
             border-radius: 50px;

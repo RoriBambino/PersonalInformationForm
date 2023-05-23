@@ -51,6 +51,15 @@ namespace PersonalInformationForm
         protected global::System.Web.UI.WebControls.Button btn_veracc;
 
         /// <summary>
+        /// txt_verifyacc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txt_verifyacc;
+
+        /// <summary>
         /// Button3 control.
         /// </summary>
         /// <remarks>
@@ -103,14 +112,5 @@ namespace PersonalInformationForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlImage logout;
-
-        /// <summary>
-        /// txt_verifyacc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txt_verifyacc;
     }
 }

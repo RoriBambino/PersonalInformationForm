@@ -19,10 +19,6 @@ namespace PersonalInformationForm
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            // For data base
-           
-
            try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -52,10 +48,10 @@ namespace PersonalInformationForm
                                 acc_num.Text = reader["CLI_ID"].ToString();
                                 //Get the date from database and display only the date 
                                 DateTime recordedDate = (DateTime)reader["CLI_DATE_CREATED"];
-                                string get_date = recordedDate.ToString("yyyy-MM-dd");
+                                string get_date = recordedDate.ToString("MM-dd-yyyy");
                                 cli_create_date.Text = get_date;
                                 acc_status.Text = reader["CLI_VERIFY"].ToString();
-                              //  acc_balance.Text = reader["TOTAL_BALANCE"].ToString();
+                                acc_balance.Text = reader["CLI_BALANCE"].ToString();
 
 
 
@@ -65,7 +61,46 @@ namespace PersonalInformationForm
                                 Response.Write("System Error");
                             }
                         }
-                    } 
+                    }
+                    
+                    using (var cmd2 = conn.CreateCommand())
+                    {
+                        // Connect database
+                        cmd2.CommandType = CommandType.Text;
+                        int cli_id = Convert.ToInt32(Session["Client_id"]);
+                        cmd2.CommandText = "SELECT * FROM [TRANSACTION] WHERE TRA_TYPE = 'CASH SENT' AND SUM(TRA_AMOUNT) AND CLI_ID = '" + cli_id +"'"; 
+
+                        using (SqlDataReader reader = cmd2.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                int sum_sent = 0;
+                                object sumSentValue = Convert.ToInt32(reader["SUM(TRA_AMOUNT)"]);
+
+                                if (sumSentValue != DBNull.Value)
+                                {
+                                    if (int.TryParse(sum_sent.ToString(), out int parsedValue))
+                                    {
+                                        sum_sent = parsedValue;
+                                        tot_monsent.Text = sum_sent.ToString();
+                                    }
+                                    else
+                                    {
+                                        tot_monsent.Text = "0.00";
+                                    }
+                                }
+                                else
+                                {
+                                    tot_monsent.Text = "0.00";
+                                }
+                               
+                            }
+                            else
+                            {
+                                Response.Write("System Error");
+                            }
+                        }
+                    }
                     if (conn.State == System.Data.ConnectionState.Open)
                     {
                         Response.Write("<script>alert('Connected Successfully!')</script>");

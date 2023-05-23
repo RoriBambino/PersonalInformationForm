@@ -20,7 +20,7 @@ namespace PersonalInformationForm
             user_withdraw.Enabled = false;
             withdraw_btn.Enabled = false;
             Button1.Enabled = false;
-            Button1.Visible = false;
+           
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -30,7 +30,7 @@ namespace PersonalInformationForm
                     {
                         cmd.CommandType = CommandType.Text;
                         int cli_id = Convert.ToInt32(Session["Client_id"]);
-                        cmd.CommandText = "SELECT * FROM CLIENT WHERE  CLI_ID = '" + cli_id + "'";
+                        cmd.CommandText = "SELECT CLI_BALANCE FROM CLIENT WHERE CLI_ID = '" + cli_id + "'";
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             if (reader.Read())
@@ -45,7 +45,6 @@ namespace PersonalInformationForm
                                 }
                                 else
                                 {
-                                    Button1.Visible = true;
                                     Button1.Enabled = true;
 
                                 }
@@ -75,13 +74,14 @@ namespace PersonalInformationForm
         {
             try
             {
+                int cli_id = Convert.ToInt32(Session["Client_id"]);
+
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
                     using (var cmd = conn.CreateCommand())
                     {
                         cmd.CommandType = CommandType.Text;
-                        int cli_id = Convert.ToInt32(Session["Client_id"]);
                         cmd.CommandText = "SELECT * FROM CLIENT WHERE  CLI_ID = '" + cli_id + "'";
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
@@ -95,7 +95,8 @@ namespace PersonalInformationForm
                                 }
                                 else
                                 {
-                                    Response.Write("<script>alert('Balance is Insufficient')</script>");
+                                    check_balance.Text = "Insufficient Balance To send Money";
+                                    Response.Redirect("Cashin.aspx");
                                 }
                             }
 
@@ -108,17 +109,39 @@ namespace PersonalInformationForm
                 Response.Write("Error: " + ex);
             }
         }
-        private int GetNextNumberFromSession()
+        public decimal GetClientBalanceFromSession()
         {
-            // Starting Number
-            int nextNumber = 1000;
-            if (Session["CurrentNumber"] != null)
+            decimal balance = 0;
+            if (Session["Client_id"] != null)
             {
-                // Number Incremented by 1
-                nextNumber = (int)Session["CurrentNumber"] + 1;
+                string clientId = Session["Client_id"].ToString();
+
+                // Assuming you have a connection object named "connection" to connect to the database
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    string sqlquery = "SELECT CLI_BALANCE FROM CLIENT WHERE CLI_ID = @CLI_ID";
+
+                    using (SqlCommand command = new SqlCommand(sqlquery, conn))
+                    {
+                        command.Parameters.AddWithValue("@CLI_ID", clientId);
+
+                        conn.Open();
+
+                        // Execute the query and retrieve the balance value
+                        object result = command.ExecuteScalar();
+
+                        // Check if the result is not null and can be parsed as decimal
+                        if (result != null && decimal.TryParse(result.ToString(), out balance))
+                        {
+                            return balance;
+                        }
+                    }
+                }
             }
-            Session["CurrentNumber"] = nextNumber;
-            return nextNumber;
+
+            // Return 0 if the balance couldn't be retrieved
+            return balance;
         }
 
         protected void withdraw_btn_Click(object sender, EventArgs e)
@@ -126,69 +149,48 @@ namespace PersonalInformationForm
             try
             {
                 int cli_id = Convert.ToInt32(Session["Client_id"]);
+                string type = "CASH OUT";
                 int amount = Convert.ToInt32(user_withdraw.Text);
+                // Transaction Number is a combination between Date and an random number 
                 Random random = new Random();
                 int randomNumber = random.Next(1, 200);
-                string convert = GetNextNumberFromSession().ToString() + randomNumber.ToString();
-                int get_number = Convert.ToInt32(convert);
+                DateTime cli_time = DateTime.Now;
+                string get_date = cli_time.ToString("yyyy");
+                string convert = get_date + randomNumber.ToString();
+                // Transaction Number
+                int tra_number = Convert.ToInt32(convert);
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
+
                     using (var cmd = conn.CreateCommand())
                     {
                         cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "INSERT INTO [TRANSACTION] (TRA_TYPE, TRA_AMOUNT, TRA_NUMBER, CLI_ID) VALUES(@TYPE, @AMOUNT, @TRA_NUMBER, @CLI_ID)";
 
-                        cmd.CommandText = "UPDATE CLIENT SET CLI_BALANCE = CLI_BALANCE - @WITHDRAW  WHERE CLI_ID = @CLI_ID";
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                cmd.Parameters.AddWithValue("@WITHDRAW", amount);
-                                cmd.Parameters.AddWithValue("CLI_ID", cli_id);
-                                int ctr = cmd.ExecuteNonQuery();
-                                if (ctr >= 1)
-                                {
-                                    Response.Write("<script>alert('The record is updated')</script>");
-                                    Response.Redirect("Client.aspx");
-                                }
-                                else
-                                {
-                                    Response.Write("<script>alert('Ooopss.. something missing')</script>");
-                                }
-                            }
-                        }
+                        cmd.Parameters.AddWithValue("@TYPE", type);
+                        cmd.Parameters.AddWithValue("@AMOUNT", amount);
+                        cmd.Parameters.AddWithValue("@TRA_NUMBER", tra_number);
+                        cmd.Parameters.AddWithValue("@CLI_ID", cli_id);
+                        var ctr = cmd.ExecuteNonQuery();
+
                     }
-                    using (var cmd2 = conn.CreateCommand())
+                    
+                    using (var cmd = conn.CreateCommand())
                     {
-                        cmd2.CommandType = CommandType.Text;
+                            cmd.CommandType = CommandType.Text;
+                            cmd.CommandText = "UPDATE CLIENT SET CLI_BALANCE = @CLI_BALANCE WHERE CLI_ID = '"+ cli_id +"'";
+                            decimal balance = GetClientBalanceFromSession();
+                            cmd.Parameters.AddWithValue("@CLI_BALANCE", balance - amount);
 
-                        cmd2.CommandText = "INSERT INTO [TRANSACTION](TRA_TYPE, TRA_AMOUNT, TRA_TRA_NUMBER, CLI_ID) VALUES (@GET_TYPE, @GET_AMOUNT, @GET_NUMBER, @GET_ID) ";
-                        using (SqlDataReader reader = cmd2.ExecuteReader())
-                        {
-                            if (reader.Read())
+                            var ctr = cmd.ExecuteNonQuery();
+                            if (ctr >= 1)
                             {
-                                var get_type = "CASH OUT";
-                                int get_amount = amount;
-                                int get_id = cli_id;
-                                cmd2.Parameters.AddWithValue("@GET_TYPE", get_type);
-                                cmd2.Parameters.AddWithValue("@GET_AMOUNT", get_amount);
-                                cmd2.Parameters.AddWithValue("@GET_NUMBER", get_number);
-                                cmd2.Parameters.AddWithValue("@GET_ID", get_id);
-
-
-                                int ctr = cmd2.ExecuteNonQuery();
-                                if (ctr >= 1)
-                                {
-                                    Response.Write("<script>alert('The record is updated')</script>");
-                                    Response.Redirect("Client.aspx");
-                                }
-                                else
-                                {
-                                    Response.Write("<script>alert('Ooopss.. something missing')</script>");
-                                }
+                                Response.Write("<script>alert('Account Successfuly Cashed Outed')</script>");
+                                Response.Redirect("Client.aspx");
                             }
-                        }
+
                     }
                 }
             }
@@ -197,5 +199,6 @@ namespace PersonalInformationForm
                 Response.Write("Error: " + ex);
             }
         }
+            
     }
 }

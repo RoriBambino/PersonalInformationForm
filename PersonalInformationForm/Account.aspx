@@ -163,7 +163,7 @@
      <div class="menu">
             <!--Header-->
            <div class="logo">
-               <a  ref="pageLogo" href="PersonalInfoEntry.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
+               <a  ref="pageLogo" href="Client.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
                <nav>
                 <input type="checkbox" id="check">
                 <asp:Label ID="Label2" runat="server" CssClass="auto-style22" Font-Names="Bookman Old Style" Font-Size="X-Large" ForeColor="Black" Text="E-Save" style="z-index: 1; position: absolute; top: 33px; left: 169px"></asp:Label>
@@ -210,8 +210,9 @@
             <a href="user_verify.aspx">
                 <img id="verify" runat="server" alt="Verify Account" class="auto-style13" src="Image/verified-account.png" />
                 <asp:Button ID="btn_veracc" runat="server" CssClass="auto-style8" OnClick="Button1_Click" Text="Verify Account" ForeColor="#CC99FF" />
+                <asp:Label ID="txt_verifyacc" runat="server" CssClass="auto-style17"></asp:Label>
             </a>
-            <a href="#">
+            <a href="editacc.aspx">
                 <asp:Button ID="Button3" runat="server" CssClass="auto-style10" Text="Edit Account" ForeColor="#6699FF" />
                 <img id="edit" runat="server" alt="Edit Account" class="auto-style15" src="Image/Edit%20Account.png" />
             </a>
@@ -219,11 +220,10 @@
                 <asp:Button ID="Button4" runat="server" CssClass="auto-style12" Text="Deactivate" ForeColor="#660066" />
                 <img id="deactivate" runat="server" alt="Deactiviate PNG" class="auto-style14" src="Image/Deactivate%20Acc.png" />
             </a>
-            <a href="#">
-                <asp:Button ID="Button2" runat="server" CssClass="auto-style11" Text="Sign Out" ForeColor="#3399FF" />
+            
+                <asp:Button ID="Button2" runat="server" CssClass="auto-style11" Text="Sign Out" ForeColor="#3399FF" OnClick="Button2_Click" />
                 <img id="logout" runat="server" alt="logout" class="auto-style16" src="Image/log-out.png" />
-            <asp:Label ID="txt_verifyacc" runat="server" CssClass="auto-style17"></asp:Label>
-            </a>
+            
 
 
         </div>

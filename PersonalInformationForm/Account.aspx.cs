@@ -75,5 +75,13 @@ namespace PersonalInformationForm
             Response.Redirect("user_verify.aspx");
         }
 
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            // Invalidate the current session
+            Session.Abandon();
+
+            // Redirect the user to the login page or any other desired page
+            Response.Redirect("PersonalInfoEntry.aspx");
+        }
     }
 }

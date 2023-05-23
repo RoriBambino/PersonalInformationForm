@@ -52,9 +52,11 @@
         }
         .auto-style8 {
             position: absolute;
-            top: 443px;
-            left: 712px;
+            top: 444px;
+            left: 762px;
             z-index: 1;
+            width: 46px;
+            height: 23px;
         }
         .auto-style9 {
             position: absolute;
@@ -72,20 +74,21 @@
         .auto-style11 {
             position: absolute;
             top: 256px;
-            left: 693px;
+            left: 696px;
             z-index: 1;
+            width: 180px;
         }
         .auto-style12 {
             position: absolute;
             top: 315px;
-            left: 681px;
+            left: 702px;
             z-index: 1;
-            width: 254px;
+            width: 165px;
         }
         .auto-style13 {
             position: absolute;
             top: 360px;
-            left: 557px;
+            left: 554px;
             z-index: 1;
         }
         .auto-style14 {
@@ -93,11 +96,12 @@
             top: 360px;
             left: 687px;
             z-index: 1;
+            width: 203px;
         }
         .auto-style15 {
             position: absolute;
             top: 391px;
-            left: 557px;
+            left: 554px;
             z-index: 1;
         }
         .auto-style16 {
@@ -189,15 +193,9 @@
             top: 549px;
             left: 701px;
             z-index: 1;
+            width: 107px;
         }
-        .auto-style28 {
-            position: absolute;
-            top: 255px;
-            left: 672px;
-            z-index: 1;
-            width: 287px;
-        }
-    </style>
+        </style>
 </head>
 <body>
    <!--Menu Bar-->
@@ -250,7 +248,7 @@
             <asp:Label ID="Label4" runat="server" CssClass="auto-style9" Text="Account Number:"></asp:Label>
             <asp:TextBox ID="txt_id" runat="server" CssClass="auto-style10" TextMode="Search"></asp:TextBox>
            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_id" CssClass="auto-style11" ErrorMessage="* Input Account Id To proceed" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
-            <asp:Button ID="btnsearch" runat="server" CssClass="auto-style20" Text="Search" />
+            <asp:Button ID="btnsearch" runat="server" CssClass="auto-style20" Text="Search" OnClick="btnsearch_Click" />
 
             <asp:Label ID="Label_sendmoney" runat="server" CssClass="auto-style8" Text="Send Money"></asp:Label>
 
