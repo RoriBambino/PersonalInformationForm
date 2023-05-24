@@ -152,9 +152,10 @@
         }
         .auto-style17 {
             position: absolute;
-            top: 194px;
-            left: 396px;
+            top: 190px;
+            left: 296px;
             z-index: 1;
+            width: 401px;
         }
     </style>
 </head>
@@ -207,13 +208,13 @@
     <form id="form1" runat="server">
         <div class="auto-style6">
 
-            <a href="user_verify.aspx">
+             <asp:Label ID="txt_verifyacc" runat="server" CssClass="auto-style17"></asp:Label>
+            <a href="user_verify.aspx" id="view_mode" runat="server" onclick="return false;">
                 <img id="verify" runat="server" alt="Verify Account" class="auto-style13" src="Image/verified-account.png" />
                 <asp:Button ID="btn_veracc" runat="server" CssClass="auto-style8" OnClick="Button1_Click" Text="Verify Account" ForeColor="#CC99FF" />
-                <asp:Label ID="txt_verifyacc" runat="server" CssClass="auto-style17"></asp:Label>
             </a>
             <a href="editacc.aspx">
-                <asp:Button ID="Button3" runat="server" CssClass="auto-style10" Text="Edit Account" ForeColor="#6699FF" />
+                <asp:Button ID="btn_editacc" runat="server" CssClass="auto-style10" Text="Edit Account" ForeColor="#6699FF" OnClick="btn_editacc_Click" />
                 <img id="edit" runat="server" alt="Edit Account" class="auto-style15" src="Image/Edit%20Account.png" />
             </a>
             <a href="#">

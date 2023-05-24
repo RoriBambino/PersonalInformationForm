@@ -62,9 +62,16 @@
         }
         .auto-style10 {
             position: absolute;
-            top: 275px;
-            left: 873px;
+            top: 273px;
+            left: 930px;
             z-index: 1;
+              text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 120px;
+            height: 37px;
         }
         .auto-style11 {
             width: 613px;
@@ -72,6 +79,31 @@
             position: absolute;
             top: 319px;
             left: 386px;
+            z-index: 1;
+        }
+        .auto-style12 {
+            position: absolute;
+            top: 159px;
+            left: 600px;
+            z-index: 1;
+            width: 261px;
+        }
+        .auto-style13 {
+            position: absolute;
+            top: 275px;
+            left: 325px;
+            z-index: 1;
+        }
+        .auto-style14 {
+            padding: 50px 0;
+            background-color: #ffffff;
+            color: #4b4c4d;
+            margin-left: 40px;
+        }
+        .auto-style15 {
+            position: absolute;
+            top: 274px;
+            left: 638px;
             z-index: 1;
         }
     </style>
@@ -125,13 +157,17 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Label1" runat="server" Text="Sent, Cash Out, Recieved" CssClass="auto-style9"></asp:Label>
-            <asp:Button ID="Button1" runat="server" CssClass="auto-style10" Text="Button" />
-            <asp:GridView ID="GridView1" runat="server" CssClass="auto-style11">
+            <asp:Button ID="btn_vwall" runat="server" CssClass="auto-style10" Text="View" OnClick="btn_vwall_Click" />
+            <asp:TextBox ID="txt_dfrom" Height="25px" placeholder="Last Name" runat="server" style="text-indent: 10px; z-index: 1; position: absolute; top: 272px; left: 388px;" TextMode="Date" CssClass="auto-style25"></asp:TextBox>
+            <asp:TextBox ID="txt_dto" Height="25px" placeholder="Last Name" runat="server" style="text-indent: 10px; z-index: 1; position: absolute; top: 272px; left: 672px;" TextMode="Date" CssClass="auto-style25"></asp:TextBox>
+
+            <asp:GridView ID="vw_all" runat="server" CssClass="auto-style11">
             </asp:GridView>
+            <asp:Label ID="Label3" runat="server" CssClass="auto-style12" Font-Size="X-Large" ForeColor="#3333CC" Text="Statement of Account"></asp:Label>
+            <asp:Label ID="Label5" runat="server" CssClass="auto-style15" Text="TO:"></asp:Label>
         </div>
  
-    </form>
-     <div class="footer-basic">
+     <div class="auto-style14">
         <footer>
         
             <div class="social" style="width: 1104px; z-index: 1; height: 65px; position: absolute; top: 830px; left: 170px;"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: 472px; width: 43px; height: 44px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 533px; width: 39px"></i></a>
@@ -146,7 +182,10 @@
             </ul>
             <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 948px; left: 447px">E-Wallet Co. © 2023</p>
         </footer>
+         <asp:Label ID="Label4" runat="server" CssClass="auto-style13" Text="FROM:"></asp:Label>
     </div>
+ 
+    </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 </body>

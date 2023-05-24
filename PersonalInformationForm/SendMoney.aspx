@@ -261,7 +261,7 @@
             <asp:Label ID="Label4" runat="server" CssClass="auto-style9" Text="Account Number:"></asp:Label>
             <asp:TextBox ID="txt_id" runat="server" CssClass="auto-style10" TextMode="Number"></asp:TextBox>
            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_id" CssClass="auto-style11" ErrorMessage="* Input Account Id To proceed" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
-            <asp:Button ID="btnsearch" runat="server" CssClass="auto-style20" Text="Search" OnClick="btnsearch_Click" CausesValidation="False" />
+            <asp:Button ID="btnsearch" runat="server" CssClass="auto-style20" Text="Search" OnClick="btnsearch_Click"  CausesValidation="False" />
 
             <asp:Label ID="Label_sendmoney" runat="server" CssClass="auto-style8" Text="Send Money"></asp:Label>
 
@@ -275,7 +275,7 @@
         <asp:Label ID="Label7" runat="server" CssClass="auto-style15" Text="Reciepients Name:"></asp:Label>
         <asp:Label ID="txt_recname" runat="server" CssClass="auto-style16"></asp:Label>
         <asp:TextBox ID="txt_amount" runat="server" CssClass="auto-style18"></asp:TextBox>
-        <asp:Button ID="btnsend" runat="server" CssClass="auto-style21" Text="Send" />
+        <asp:Button ID="btnsend" runat="server" CssClass="auto-style21" Text="Send" OnClick="btnsend_Click1"/>
         <asp:Label ID="Label_pass" runat="server" CssClass="auto-style23" Text="Password:"></asp:Label>
         <asp:TextBox ID="txt_password" runat="server" CssClass="auto-style24" TextMode="Password"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_amount" CssClass="auto-style25" ErrorMessage="* Input Amount" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>

@@ -68,18 +68,18 @@ namespace PersonalInformationForm
                         // Connect database
                         cmd2.CommandType = CommandType.Text;
                         int cli_id = Convert.ToInt32(Session["Client_id"]);
-                        cmd2.CommandText = "SELECT SUM(TRA_AMOUNT) AS TOTAL_SUM FROM [TRANSACTION] WHERE TRA_TYPE = 'SEND CASH' AND CLI_ID = '" + cli_id +"'";
+                        cmd2.CommandText = "SELECT SUM(TRA_AMOUNT) AS TOTAL_SUM FROM [TRANSACTION] WHERE TRA_TYPE = 'SENDER' AND CLI_ID = '" + cli_id +"'";
                         object result = cmd2.ExecuteScalar();
                         if (result != DBNull.Value)
                         {
                             // Convert the non-DBNull value to int
-                            int sum = Convert.ToInt32(result);
-                            tot_monsent.Text = sum.ToString();
+                            decimal sum = Convert.ToDecimal(result);
+                            tot_monsent.Text = sum.ToString("0.00");
                         }
                         else
                         {
 
-                            tot_monsent.Text = "0";
+                            tot_monsent.Text = "0.00";
                         }
                        
                        

@@ -64,7 +64,7 @@
         .auto-style18 {
             position: absolute;
             top: 308px;
-            left: 352px;
+            left: 310px;
             z-index: 1;
         }
         .auto-style19 {
@@ -166,7 +166,7 @@
         .auto-style39 {
             position: absolute;
             top: 308px;
-            left: 870px;
+            left: 820px;
             z-index: 1;
         }
         .auto-style40 {

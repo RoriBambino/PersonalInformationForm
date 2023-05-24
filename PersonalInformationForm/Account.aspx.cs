@@ -41,6 +41,7 @@ namespace PersonalInformationForm
                                 else if (check_ver == "PENDING")
                                 {
                                     txt_verifyacc.Text = "Your Account is being Verified right now!";
+                                    view_mode.Attributes["disabled"] = "disabled";
                                     btn_veracc.Enabled = false;
                                 }
                                 else
@@ -82,6 +83,11 @@ namespace PersonalInformationForm
 
             // Redirect the user to the login page or any other desired page
             Response.Redirect("PersonalInfoEntry.aspx");
+        }
+
+        protected void btn_editacc_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("editacc.aspx");
         }
     }
 }

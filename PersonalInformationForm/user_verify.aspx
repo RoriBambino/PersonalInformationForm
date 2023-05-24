@@ -395,7 +395,7 @@
             <asp:ListItem>Female</asp:ListItem>
         </asp:DropDownList>
         <asp:Label ID="Label15" runat="server" CssClass="auto-style35" Text="Sex:"></asp:Label>
-         <asp:Button ID="btn_vwimg" runat="server" CssClass="auto-style40" OnClick="btn_vwimg_Click" Text="Preview" CausesValidation="False" Font-Bold="True" Font-Names="Calisto MT" Font-Size="Medium" ForeColor="#3333CC" />
+         <asp:Button ID="btn_vwimg" runat="server" CssClass="auto-style40" OnClick="btn_vwimg_Click" OnClientClick="return false;" Text="Preview" CausesValidation="False" Font-Bold="True" Font-Names="Calisto MT" Font-Size="Medium" ForeColor="#3333CC" />
         <br />
         <br />
         <asp:TextBox ID="city" runat="server" CssClass="auto-style27"></asp:TextBox>

@@ -82,6 +82,28 @@ namespace PersonalInformationForm
                 using (var conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
+                    using(var cmd4 = conn.CreateCommand())
+                    {
+                        cmd4.CommandType = CommandType.Text;
+                        cmd4.CommandText = "SELECT CLI_ID FROM CLIENT";
+                        using (SqlDataReader reader = cmd4.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                decimal check_blnc = Convert.ToDecimal(reader["CLI_ID"]);
+                                int balance = Convert.ToInt32(check_blnc);
+                                if (balance == 50000)
+                                {
+                                    Response.Write("<script>alert('Balance Exceed Balance')</script>");
+                                }
+                                else
+                                {
+
+                                }
+                            }
+                        }
+
+                    }
 
                     using (var cmd = conn.CreateCommand())
                     {
@@ -96,14 +118,14 @@ namespace PersonalInformationForm
 
                     }
                     
-                    using (var cmd3 = conn.CreateCommand())
+                    using (var cmd2 = conn.CreateCommand())
                     {
-                        cmd3.CommandType = CommandType.Text;
-                        cmd3.CommandText = "UPDATE CLIENT SET CLI_BALANCE = @CLI_BALANCE WHERE CLI_ID = '"+ cli_id+ "'";
+                        cmd2.CommandType = CommandType.Text;
+                        cmd2.CommandText = "UPDATE CLIENT SET CLI_BALANCE = @CLI_BALANCE WHERE CLI_ID = '"+ cli_id+ "'";
                         decimal balance = GetClientBalanceFromSession();
-                        cmd3.Parameters.AddWithValue("@CLI_BALANCE", balance + amount);
+                        cmd2.Parameters.AddWithValue("@CLI_BALANCE", balance + amount);
                           
-                        var ctr = cmd3.ExecuteNonQuery();
+                        var ctr = cmd2.ExecuteNonQuery();
                         if (ctr >= 1)
                         {
                             Response.Write("<script>alert('Account Successfuly Cashed In')</script>");
