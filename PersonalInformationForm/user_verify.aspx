@@ -81,7 +81,7 @@
         height: 28px;
         position: absolute;
         top: 285px;
-        left: 707px;
+        left: 709px;
         z-index: 1;
     }
     .auto-style12 {
@@ -121,8 +121,8 @@
         width: 121px;
         height: 28px;
         position: absolute;
-        top: 371px;
-        left: 703px;
+        top: 372px;
+        left: 706px;
         z-index: 1;
     }
     .auto-style17 {
@@ -138,7 +138,7 @@
     }
     .auto-style19 {
         position: absolute;
-        top: 571px;
+        top: 572px;
         left: 700px;
         z-index: 1;
     }
@@ -165,8 +165,8 @@
         width: 120px;
         height: 28px;
         position: absolute;
-        top: 414px;
-        left: 702px;
+        top: 415px;
+        left: 704px;
         z-index: 1;
     }
     .auto-style24 {
@@ -199,7 +199,7 @@
     }
     .auto-style28 {
         position: absolute;
-        top: 528px;
+        top: 529px;
         left: 684px;
         z-index: 1;
     }
@@ -279,7 +279,26 @@
         .auto-style38 {
             position: absolute;
             top: 286px;
-            left: 201px;
+            left: 206px;
+            z-index: 1;
+        }
+        .auto-style40 {
+            position: absolute;
+            top: 348px;
+            left: 200px;
+            z-index: 1;
+              text-decoration: none;
+            border-radius: 50px;
+            cursor: pointer;
+            border-style: none;
+            background-color: burlywood;
+            width: 125px;
+            height: 41px;
+        }
+        .auto-style42 {
+            position: absolute;
+            top: 397px;
+            left: 162px;
             z-index: 1;
         }
     </style>
@@ -346,7 +365,6 @@
         <p>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDOB" CssClass="auto-style23" ErrorMessage="*Input date of birth" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
         <asp:TextBox ID="middle_name" runat="server" CssClass="auto-style13"></asp:TextBox>
-            <asp:FileUpload ID="picUpload" runat="server" CssClass="auto-style162" style="z-index: 1; position: absolute; top: 323px; left: 173px; width: 186px;" />
         </p>
         <asp:Label ID="Label5" runat="server" CssClass="auto-style9" Text="First Name:"></asp:Label>
         <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style34">
@@ -369,6 +387,7 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="city" CssClass="auto-style26" ErrorMessage="*Input City" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
          <asp:Label ID="Label26" runat="server" CssClass="auto-style38" Text="Upload ID Picture"></asp:Label>
         <br />
+         <asp:Image ID="vw_image" runat="server" Height="25%" Width="20%" CssClass="auto-style42"/>
         <br />
         <asp:DropDownList ID="DropDownList4" runat="server" CssClass="auto-style134" style="z-index: 1; position: absolute; top: 434px; left: 657px">
             <asp:ListItem>Sex</asp:ListItem>
@@ -376,6 +395,7 @@
             <asp:ListItem>Female</asp:ListItem>
         </asp:DropDownList>
         <asp:Label ID="Label15" runat="server" CssClass="auto-style35" Text="Sex:"></asp:Label>
+         <asp:Button ID="btn_vwimg" runat="server" CssClass="auto-style40" OnClick="btn_vwimg_Click" Text="Preview" CausesValidation="False" Font-Bold="True" Font-Names="Calisto MT" Font-Size="Medium" ForeColor="#3333CC" />
         <br />
         <br />
         <asp:TextBox ID="city" runat="server" CssClass="auto-style27"></asp:TextBox>
@@ -385,6 +405,7 @@
             <asp:TextBox ID="street_add" runat="server" CssClass="auto-style30"></asp:TextBox>
         <asp:Label ID="Label14" runat="server" CssClass="auto-style33" Text="Marital Status:"></asp:Label>
         <br />
+            <asp:FileUpload ID="picUpload" runat="server" CssClass="auto-style162" style="z-index: 1; position: absolute; top: 318px; left: 152px; width: 241px;" BorderStyle="None" />
         <br />
         <br />
         <br />
@@ -403,7 +424,7 @@
         <br />
         <br />
         <br />
-         <asp:Button ID="submit" runat="server" Text="Submit" Font-Bold="True" Font-Size="X-Large" Font-Names="Britannic Bold" ForeColor="#CC99FF" CssClass="auto-style32" OnClick="submit_Click" />
+         <asp:Button ID="submit" runat="server" Text="Submit" Font-Bold="True" Font-Size="X-Large" Font-Names="Britannic Bold" ForeColor="#CC99FF" CssClass="auto-style32" OnClick="submit_Click"  />
        
         <br />
         <br />

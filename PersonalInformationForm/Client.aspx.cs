@@ -68,38 +68,21 @@ namespace PersonalInformationForm
                         // Connect database
                         cmd2.CommandType = CommandType.Text;
                         int cli_id = Convert.ToInt32(Session["Client_id"]);
-                        cmd2.CommandText = "SELECT * FROM [TRANSACTION] WHERE TRA_TYPE = 'CASH SENT' AND SUM(TRA_AMOUNT) AND CLI_ID = '" + cli_id +"'"; 
-
-                        using (SqlDataReader reader = cmd2.ExecuteReader())
+                        cmd2.CommandText = "SELECT SUM(TRA_AMOUNT) AS TOTAL_SUM FROM [TRANSACTION] WHERE TRA_TYPE = 'SEND CASH' AND CLI_ID = '" + cli_id +"'";
+                        object result = cmd2.ExecuteScalar();
+                        if (result != DBNull.Value)
                         {
-                            if (reader.Read())
-                            {
-                                int sum_sent = 0;
-                                object sumSentValue = Convert.ToInt32(reader["SUM(TRA_AMOUNT)"]);
-
-                                if (sumSentValue != DBNull.Value)
-                                {
-                                    if (int.TryParse(sum_sent.ToString(), out int parsedValue))
-                                    {
-                                        sum_sent = parsedValue;
-                                        tot_monsent.Text = sum_sent.ToString();
-                                    }
-                                    else
-                                    {
-                                        tot_monsent.Text = "0.00";
-                                    }
-                                }
-                                else
-                                {
-                                    tot_monsent.Text = "0.00";
-                                }
-                               
-                            }
-                            else
-                            {
-                                Response.Write("System Error");
-                            }
+                            // Convert the non-DBNull value to int
+                            int sum = Convert.ToInt32(result);
+                            tot_monsent.Text = sum.ToString();
                         }
+                        else
+                        {
+
+                            tot_monsent.Text = "0";
+                        }
+                       
+                       
                     }
                     if (conn.State == System.Data.ConnectionState.Open)
                     {

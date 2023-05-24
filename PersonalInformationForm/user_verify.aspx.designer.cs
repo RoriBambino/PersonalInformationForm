@@ -114,15 +114,6 @@ namespace PersonalInformationForm
         protected global::System.Web.UI.WebControls.TextBox middle_name;
 
         /// <summary>
-        /// picUpload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload picUpload;
-
-        /// <summary>
         /// Label5 control.
         /// </summary>
         /// <remarks>
@@ -249,6 +240,15 @@ namespace PersonalInformationForm
         protected global::System.Web.UI.WebControls.Label Label26;
 
         /// <summary>
+        /// vw_image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image vw_image;
+
+        /// <summary>
         /// DropDownList4 control.
         /// </summary>
         /// <remarks>
@@ -265,6 +265,15 @@ namespace PersonalInformationForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label15;
+
+        /// <summary>
+        /// btn_vwimg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_vwimg;
 
         /// <summary>
         /// city control.
@@ -292,6 +301,15 @@ namespace PersonalInformationForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label14;
+
+        /// <summary>
+        /// picUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload picUpload;
 
         /// <summary>
         /// RequiredFieldValidator14 control.

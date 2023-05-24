@@ -28,30 +28,13 @@ namespace PersonalInformationForm
                         // Connect database
                         cmd.CommandType = CommandType.Text;
                         string username = (string)Session["Username"];
-                        string password = (string)Session["Password"];
+                        
+                        cmd.CommandText = "SELECT * FROM CLIENT WHERE CLI_USERNAME = '" + username + "'";
 
-                        cmd.CommandText = "SELECT * FROM CLIENT WHERE CLI_USERNAME = '" + username + "' AND CLI_PASSWORD ='" + password + "'";
-
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                txt_username.Text = reader["CLI_USERNAME"].ToString();                             
-                            }
-                            else
-                            {
-                                Response.Write("System Error");
-                            }
-                        }
+                        txt_username.Text = username.ToString();
+                        
                     }
-                    if (conn.State == System.Data.ConnectionState.Open)
-                    {
-                        Response.Write("<script>alert('Connected Successfully!')</script>");
-                    }
-                    else
-                    {
-                        Response.Write("<p>Failed to Connect!</p>");
-                    }
+                   
                     conn.Close();
                 }
             }
@@ -61,111 +44,110 @@ namespace PersonalInformationForm
             }
 
         }
-           
+             
+
+        protected void btn_vwimg_Click(object sender, EventArgs e)
+        {
+            try { 
+            using (var conn = new SqlConnection(connectionString))
+            {
+              
+                // Session
+                string clientId = Session["Client_id"].ToString();
+                    //  //For Image to DB
+                    HttpPostedFile postedFile = picUpload.PostedFile;
+                    string filename = Path.GetFileName(postedFile.FileName);// command to get the file name
+                    string fileExt = Path.GetExtension(filename).ToLower(); //
+                    int filesize = postedFile.ContentLength; // get the length of the file
+
+                    // Get Img by using fieled name from the Table
+                     byte[] pic = new byte[picUpload.PostedFile.ContentLength];
+                     // Get data from input stream
+                     picUpload.PostedFile.InputStream.Read(pic, 0, picUpload.PostedFile.ContentLength);
+                     // Turn the image to String
+                      string str = Convert.ToBase64String(pic);
+                      // Prefix the meme type that include the data in the URL
+                      vw_image.ImageUrl = "data:image/jpeg;base64," + str;
+            }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("Error Message : " + ex);
+            }
+
+        }
+
         protected void submit_Click(object sender, EventArgs e)
         {
-
-
-            //For Image to DB
-            HttpPostedFile postedFile = picUpload.PostedFile;
-            string filename = Path.GetFileName(postedFile.FileName);// command to get the file name
-            string fileExt = Path.GetExtension(filename).ToLower(); //
-            int filesize = postedFile.ContentLength; // get the length of the file
-            byte[] pic = new byte[picUpload.PostedFile.ContentLength];
-            // Get data from input stream
-            picUpload.PostedFile.InputStream.Read(pic, 0, picUpload.PostedFile.ContentLength);
-
-            // For data base
-            string get_lname = lname.Text;
-            string get_fname = fname.Text;
-            string get_midname = middle_name.Text;
-            //string get_dob = ;
-            string get_streetadd = street_add.Text;
-            string get_appunit = appartment.Text;
-            string get_city = city.Text;
-
-            string get_marital = DropDownList1.Text;
-            string get_sex = DropDownList4.Text;
-            string get_mobnumber = m_number.Text;
-            string verify_status = "PENDING";
-
-            // Get the Updated date with Status on
-            DateTime currentDate = DateTime.Now;
-           
-
-
-
-
-            // Create or set a condition to check if the file being uploaded is an image file
-            /* if (fileExt == ".jpeg" || fileExt == ".png") || fileExt == ".jpg" || fileExt == ".GIF"){
-                 using (var db = new SqlConnection(connectionString))
-                 {
-                     jb.open();
-
-                 }
-                 using var (cmd and db ) 
-             }
-            */
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+
+                //For Image to DB
+                HttpPostedFile postedFile = picUpload.PostedFile;
+                string filename = Path.GetFileName(postedFile.FileName);// command to get the file name
+                string fileExt = Path.GetExtension(filename).ToLower(); //
+                int filesize = postedFile.ContentLength; // get the length of the file
+                byte[] pic = new byte[picUpload.PostedFile.ContentLength];
+                // Get data from input stream
+                picUpload.PostedFile.InputStream.Read(pic, 0, picUpload.PostedFile.ContentLength);
+
+                // Session
+                string clientId = Session["Client_id"].ToString();
+                // For data base
+                string get_lname = lname.Text;
+                string get_fname = fname.Text;
+                string get_midname = middle_name.Text;
+                string get_dob = txtDOB.Text;
+                string get_streetadd = street_add.Text;
+                string get_appunit = appartment.Text;
+                string get_city = city.Text;
+
+                string get_marital = DropDownList1.Text;
+                string get_sex = DropDownList4.Text;
+                string get_mobnumber = m_number.Text;
+                string verify_status = "PENDING";
+                DateTime currentDate = DateTime.Now;
+
+                // Create or set a condition to check if the file being uploaded is an image file
+
+                if (fileExt == ".jpeg" || fileExt == ".png" || fileExt == ".jpg" && fileExt != ".GIF")
                 {
-                    conn.Open();
-                    string insertQuerry = "INSERT INTO CLIENT (CLI_LNAME, CLI_FNAME, CLI_MIDNAME, CLI_DOB, CLI_STREET_ADD, CLI_APP_UNIT_UNIT, CLI_CITY, CLI_MARITAL_STATUS, CLI_SEX, CLI_MOBILE_NUM, CLI_DATE_UPDATED) VALUES (@GET_LNAME, @GET_FNAME, @GET_MIDNAME, @GET_DOB, @GET_STREETADD, @GET_APPUNIT, @GET_CITY, @GET_MARITAL, @GET_SEX, @GET_MOBNUMBER, @Date)";
-                   
-
-
-                    if (conn.State == System.Data.ConnectionState.Open)
+                    using (var conn = new SqlConnection(connectionString))
                     {
-
-                        Response.Write("<p>Connected Successfully!</p>");
-
-                        using (SqlCommand cmd = new SqlCommand(insertQuerry, conn))
+                        conn.Open();
+                        using (var cmd = conn.CreateCommand())
                         {
-                            SqlDataReader reader = cmd.ExecuteReader();
-                            cmd.Parameters.AddWithValue("@GET_LNAME", get_lname);
-                            cmd.Parameters.AddWithValue("@GET_FNAME", get_fname);
-                            cmd.Parameters.AddWithValue("@GET_MIDNAME", get_midname);
-                           // cmd.Parameters.AddWithValue("@GET_DOB", get_dob);
+                            cmd.CommandType = CommandType.Text;
+                            cmd.CommandText = "UPDATE CLIENT SET CLI_LNAME = @get_lname, CLI_FNAME = @get_fname, CLI_MIDNAME = @get_midname, CLI_DOB = @get_dob, CLI_STREET_ADD = @get_streetadd , " +
+                                    "CLI_APP_UNIT_UNIT = @get_appunit, CLI_CITY = @get_city, CLI_MARITAL_STATUS = @get_marital, CLI_SEX = @get_sex, CLI_MOBILE_NUM = @get_mobnumber , CLI_ID_PIC = @pic, CLI_DATE_UPDATED = @date, CLI_ CLI_VERIFY = @verify_status WHERE CLI_ID = '" + clientId + "'";
+                            cmd.Parameters.AddWithValue("GET_LNAME", get_lname);
+                            cmd.Parameters.AddWithValue("GET_FNAME", get_fname);
+                            cmd.Parameters.AddWithValue("GET_MIDNAME", get_midname);
+                            cmd.Parameters.AddWithValue("@GET_DOB", get_dob);
                             cmd.Parameters.AddWithValue("@GET_STREETADD", get_streetadd);
                             cmd.Parameters.AddWithValue("@GET_APPUNIT", get_appunit);
                             cmd.Parameters.AddWithValue("@GET_CITY", get_city);
                             cmd.Parameters.AddWithValue("@GET_MARITAL", get_marital);
                             cmd.Parameters.AddWithValue("@GET_SEX", get_sex);
                             cmd.Parameters.AddWithValue("@GET_MOBNUMBER", get_mobnumber);
+                            cmd.Parameters.AddWithValue("@PIC", pic);
                             cmd.Parameters.AddWithValue("@DATE", currentDate);
-                            while (reader.Read())
-                            {
-                                cmd.CommandType = CommandType.Text;
-                                string user_id = reader["CLI_ID"].ToString();
-                                cmd.CommandText = "UPDATE CLIENT SET CLI_VERIFY = @verify_status WHERE CLI_ID = '" + user_id + "'";
-                                cmd.Parameters.AddWithValue("@VERIFY_STATUS", verify_status);
-
-                            }
-                      
-                            //check if already added 
-                            int rowsAffected = cmd.ExecuteNonQuery();
-                            if (rowsAffected > 0)
-                            {
-                                
-                                Response.Write("<script language=javascript>alert('Successfully Updated!');</script>");
-                                Response.Redirect("Account.aspx");
-                            }
-                            else
-                            {
-                                Response.Write("<script language=javascript>alert('Failed to Update!');</script>");
-                            }     
+                            cmd.Parameters.AddWithValue("@VERIFY_STATUS", verify_status);
+                            var ctr = cmd.ExecuteNonQuery();
                         }
-                       
-
+                        if (conn.State == System.Data.ConnectionState.Open)
+                        {
+                            Response.Write("<script>alert('Connected Successfully!')</script>");
+                        }
+                        else
+                        {
+                            Response.Write("<p>Failed to Connect!</p>");
+                        }
+                        conn.Close();
                     }
-                    else
-                    {
-                        Response.Write("<p>Failed to Connect!</p>");
-                    }
-                    conn.Close();
                 }
             }
+
             catch (Exception ex)
             {
                 Response.Write("Error Message : " + ex);

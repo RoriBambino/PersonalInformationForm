@@ -195,6 +195,19 @@
             z-index: 1;
             width: 107px;
         }
+        .auto-style28 {
+            position: absolute;
+            top: 498px;
+            left: 654px;
+            z-index: 1;
+            width: 224px;
+        }
+        .auto-style29 {
+            position: absolute;
+            top: 473px;
+            left: 917px;
+            z-index: 1;
+        }
         </style>
 </head>
 <body>
@@ -246,9 +259,9 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Label4" runat="server" CssClass="auto-style9" Text="Account Number:"></asp:Label>
-            <asp:TextBox ID="txt_id" runat="server" CssClass="auto-style10" TextMode="Search"></asp:TextBox>
+            <asp:TextBox ID="txt_id" runat="server" CssClass="auto-style10" TextMode="Number"></asp:TextBox>
            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_id" CssClass="auto-style11" ErrorMessage="* Input Account Id To proceed" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
-            <asp:Button ID="btnsearch" runat="server" CssClass="auto-style20" Text="Search" OnClick="btnsearch_Click" />
+            <asp:Button ID="btnsearch" runat="server" CssClass="auto-style20" Text="Search" OnClick="btnsearch_Click" CausesValidation="False" />
 
             <asp:Label ID="Label_sendmoney" runat="server" CssClass="auto-style8" Text="Send Money"></asp:Label>
 
@@ -266,7 +279,7 @@
         <asp:Label ID="Label_pass" runat="server" CssClass="auto-style23" Text="Password:"></asp:Label>
         <asp:TextBox ID="txt_password" runat="server" CssClass="auto-style24" TextMode="Password"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_amount" CssClass="auto-style25" ErrorMessage="* Input Amount" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
-        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txt_amount" CssClass="auto-style26" ErrorMessage="* Money Reached Min/Max Amount" Font-Size="Small" ForeColor="#CC0000"></asp:RangeValidator>
+        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txt_amount" CssClass="auto-style26" ErrorMessage="* Money Reached Min/Max Amount" Font-Size="Small" ForeColor="#CC0000" MaximumValue="10000" MinimumValue="100"></asp:RangeValidator>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txt_password" CssClass="auto-style27" ErrorMessage="* Input Password" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
         </div>
         
@@ -288,6 +301,9 @@
            
         </footer>
     </div>
+       
+        <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txt_amount" CssClass="auto-style28" ErrorMessage="*Amount Must be divisible by 100" Font-Size="Small" ForeColor="#CC0000"></asp:CustomValidator>
+        <asp:Label ID="Label_err" runat="server" CssClass="auto-style29"></asp:Label>
        
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
