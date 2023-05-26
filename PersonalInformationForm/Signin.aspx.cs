@@ -23,55 +23,78 @@ namespace PersonalInformationForm
         {
             string get_input = input_username.Text;
             string get_pass = check_pass.Text;
-
-         
-           
-
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                   
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM CLIENT, ADMIN WHERE CLI_USERNAME = '" + input_username.Text + "' AND CLI_PASSWORD = '" + check_pass.Text + "' OR ADMIN_EMAIL ='" + input_username.Text + "' AND ADMIN_PASS = '"+ check_pass.Text +"' ", conn);
-
-
-                    SqlDataReader dr = cmd.ExecuteReader();
-
-
-                    if (dr.HasRows)
+                    using (var cmd = conn.CreateCommand())
                     {
-                        Session["LoginID"] = input_username.Text;
+                        // Connect database
+                        cmd.CommandType = CommandType.Text;
 
-                        while (dr.Read())
+                        cmd.CommandText = "SELECT * FROM CLIENT, ADMIN WHERE CLI_USERNAME = '" + input_username.Text + "' AND CLI_PASSWORD = '" + check_pass.Text + "' OR ADMIN_EMAIL ='" + input_username.Text + "' AND ADMIN_PASS = '" + check_pass.Text + "' ";
+                        using (SqlDataReader dr = cmd.ExecuteReader())
                         {
-                            string user = dr["CLI_USERNAME"].ToString();
-                            string admin = dr["ADMIN_EMAIL"].ToString();
-                            if (input_username.Text == user)
-                            {
-                                Session["Username"] = get_input;
-                                Session["Password"] = get_pass;
-                                Session["Client_id"] = dr["CLI_ID"];
-                                
-                                Response.Redirect("Client.aspx", true);
+                           
+                                Session["LoginID"] = input_username.Text;
 
-                            }
-                            else if(input_username.Text == admin)
-                            {
-                                Response.Redirect("Admin.aspx", true);
-                            }
+                                if (dr.Read())
+                                {
+                                    string user = dr["CLI_USERNAME"].ToString();
+                                    string admin = dr["ADMIN_EMAIL"].ToString();
+                                    DateTime currentDate = DateTime.Today;
+                                    string get_date = currentDate.ToString("MM-dd-yyyy");
+                                if (input_username.Text == user)
+                                    {
+                                        Session["Username"] = get_input;
+                                        Session["Password"] = get_pass;
+                                        Session["Client_id"] = dr["CLI_ID"];
+                                        Session["Date"] = get_date;
+
+                                    }
+                                    else if (input_username.Text == admin)
+                                    {
+                                        Response.Redirect("Admin.aspx", true);
+                                    }
+                                }
+                                else
+                                {
+                                Label4.Text = "Invalid loginid and password";
+
+                                }
                         }
+
+                        using (var cmd3 = conn.CreateCommand())
+                        {
+                            cmd3.CommandType = CommandType.Text;
+                            int cli_id = Convert.ToInt32(Session["Client_id"]);
+
+                            string get_status = "ACTIVE";
+
+                            cmd.CommandText = "UPDATE [CLIENT] SET CLI_STATUS = @CLI_STATUS WHERE CLI_ID = '" + cli_id + "'";
+                            cmd.Parameters.AddWithValue("@CLI_STATUS", get_status);
+                            var ctr = cmd.ExecuteNonQuery();
+                            if (ctr >= 1)
+                            {
+                                Response.Write("<script>alert('Updated!')</script>");
+                                // Invalidate the current session
+
+
+                                // Redirect the user to the login page or any other desired page
+                                Response.Redirect("Client.aspx");
+                            }
+
+
+                        }
+
                         
-                        dr.Close();
+
                         conn.Close();
                         Label4.Text = ("Valid signin and password");
                        
                     }
-                    else
-                    {
-                        Label4.Text = "Invalid loginid and password";
-                        
-                    }
+                   
 
                     if (conn.State == System.Data.ConnectionState.Open)
                     {

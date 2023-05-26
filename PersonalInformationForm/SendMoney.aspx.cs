@@ -34,6 +34,7 @@ namespace PersonalInformationForm
 
 
         }
+
         protected void btnsearch_Click(object sender, EventArgs e)
         {
             try
@@ -51,15 +52,26 @@ namespace PersonalInformationForm
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.CommandText = "SELECT * FROM CLIENT WHERE CLI_ID = @CLI_ID";
+                        
                         cmd.Parameters.AddWithValue("@CLI_ID", search_id);
                         SqlDataReader reader = cmd.ExecuteReader();   
+                         
                             if (reader.Read())
-                            {  
-                                    txt_accnum.Text = reader["CLI_ID"].ToString();
-                                    string lname = reader["CLI_LNAME"].ToString();
-                                    string fnmae = reader["CLI_FNAME"].ToString();
-                                    string mname = reader["CLI_MNAME"].ToString();
-                                    txt_recname.Text = fnmae + " " + mname + " " + lname;
+                            {
+                            string chk_status = "DEACTIVATED";
+                            string get_status = reader["CLI_STATUS"].ToString();
+                            if (get_status == chk_status)
+                            {
+                                txt_status.Text = "This Account Is Unavailable At the Moment!";
+                                
+                            }
+                            else
+                            {
+                                 txt_accnum.Text = reader["CLI_ID"].ToString();
+                            string lname = reader["CLI_LNAME"].ToString();
+                            string fnmae = reader["CLI_FNAME"].ToString();
+                            string mname = reader["CLI_MNAME"].ToString();
+                            txt_recname.Text = fnmae + " " + mname + " " + lname;
                             // Enable
                             txt_amount.Enabled = true;
                             txt_password.Enabled = true;
@@ -74,6 +86,8 @@ namespace PersonalInformationForm
                             txt_password.Visible = true;
                             Label_pass.Visible = true;
                             btnsend.Visible = true;
+                            }
+                           
                             }
                             else
                             {
@@ -97,6 +111,7 @@ namespace PersonalInformationForm
                 Response.Write("Error Message : " + ex);
             }
         }
+
         protected void CustomValidator1_ServerValidate1(object source, ServerValidateEventArgs args)
         {
             int amount = Convert.ToInt32(txt_amount.Text);
@@ -139,7 +154,39 @@ namespace PersonalInformationForm
             // Return 0 if the balance couldn't be retrieved
             return balance;
         }
+        public decimal GetClientBalanceFromSession2()
+        {
+            decimal balance = 0;
+            int get_amount = Convert.ToInt32(txt_amount.Text);
+            int get_id = Convert.ToInt32(txt_id.Text);
 
+
+            // Assuming you have a connection object named "connection" to connect to the database
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    string sqlquery = "SELECT CLI_BALANCE FROM CLIENT WHERE CLI_ID = @CLI_ID";
+
+                    using (SqlCommand command = new SqlCommand(sqlquery, conn))
+                    {
+                        command.Parameters.AddWithValue("@CLI_ID", get_id);
+
+                        conn.Open();
+
+                        // Execute the query and retrieve the balance value
+                        object result = command.ExecuteScalar();
+
+                        // Check if the result is not null and can be parsed as decimal
+                        if (result != null && decimal.TryParse(result.ToString(), out balance))
+                        {
+                            return balance;
+                        }
+                    }
+                }
+            
+            // Return 0 if the balance couldn't be retrieved
+            return balance;
+        }
 
         protected void btnsend_Click1(object sender, EventArgs e)
         {
@@ -149,7 +196,7 @@ namespace PersonalInformationForm
             string password = (string)Session["Password"];
             // Amount
             int get_amount = Convert.ToInt32(txt_amount.Text);
-            string type = "SEND CASH";
+            string type = "RECIEVER";
             // Transaction number
             Random random = new Random();
             int randomNumber = random.Next(1, 200);
@@ -169,32 +216,18 @@ namespace PersonalInformationForm
                 {
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = "SELECT * FROM [CLIENT] WHERE CLI_PASSWORD = '" + password + "' AND CLI_ID = '" + cli_id + "'";
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (get_pass != password)
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            Response.Write("<script>alert('Password Not Matched')</script>");
-                        }
-                        else
-                        {
+                            if (get_pass != password)
+                            {
+                                Response.Write("<script>alert('Password Not Matched')</script>");
+                            }
+                            else
+                            {
                                 Response.Write("<script>alert('Password Matched')</script>");
-                                if (reader.Read())
-                                {
-                                    int check_balance = Convert.ToInt32(reader["CLI_BALANCE"]);
-                                    if (check_balance < get_amount)
-                                    {
-                                        Response.Write("<script>alert('You Do not have enough Balance')</script>");
-                                        
-                                    }
-                                    else if(check_balance > 50000)
-                                    {
-                                        Response.Write("<script>alert('USER CANNOT RECIEVE MONEY')</script>");
-                                        
-                                    }
-                                    
-                                }
+                            }
                         }
-                    }
                 }
                 // Insert Receiver Data
                 using (var cmd2 = conn.CreateCommand())
@@ -218,8 +251,17 @@ namespace PersonalInformationForm
                 {
                     cmd4.CommandType = CommandType.Text;
                     cmd4.CommandText = "UPDATE CLIENT SET CLI_BALANCE = @CLI_BALANCE WHERE CLI_ID = '" + get_id + "'";
-                    decimal balance = GetClientBalanceFromSession();
-                    cmd4.Parameters.AddWithValue("@CLI_BALANCE", balance + get_amount);
+
+                    decimal balance = GetClientBalanceFromSession2();
+                    if (balance >= 100 && get_amount <= balance)
+                    {
+                        cmd4.Parameters.AddWithValue("@CLI_BALANCE", balance + get_amount);
+                    }
+                     else
+                     {
+                      txt_amount.Text = "Insufficient Balance To send Money";
+                      Response.Redirect("Cashin.aspx");
+                     }    
                     var ctr = cmd4.ExecuteNonQuery();
                 }
                 // Update sender Status
@@ -227,8 +269,16 @@ namespace PersonalInformationForm
                 {
                     cmd3.CommandType = CommandType.Text;
                     cmd3.CommandText = "UPDATE CLIENT SET CLI_BALANCE = @CLI_BALANCE WHERE CLI_ID = '" + cli_id + "'";
-                    decimal balance = GetClientBalanceFromSession();
-                    cmd3.Parameters.AddWithValue("@CLI_BALANCE", balance - get_amount);
+                    decimal balance = GetClientBalanceFromSession();  
+                      if (balance >= 100 && get_amount <= balance)
+                      {
+                        cmd3.Parameters.AddWithValue("@CLI_BALANCE", balance - get_amount);
+                      }
+                     else 
+                    {
+                      txt_amount.Text = "Insufficient Balance To send Money";
+                       Response.Redirect("Cashin.aspx");
+                    }
                     var ctr = cmd3.ExecuteNonQuery();
                 }
                 // Insert Sender Data

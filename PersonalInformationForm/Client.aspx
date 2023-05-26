@@ -100,37 +100,37 @@
         }
         .auto-style30 {
             position: absolute;
-            top: 176px;
+            top: 168px;
             left: 18px;
             z-index: 1;
             width: 185px;
         }
         .auto-style31 {
             position: absolute;
-            top: -67px;
+            top: -75px;
             left: 184px;
             z-index: 1;
             width: 177px;
         }
         .auto-style32 {
             position: absolute;
-            top: 98px;
-            left: 512px;
+            top: 101px;
+            left: 466px;
             z-index: 1;
         }
         .auto-style33 {
             position: absolute;
-            top: 96px;
-            left: 583px;
+            top: 99px;
+            left: 562px;
             z-index: 1;
-            width: 496px;
+            width: 475px;
         }
         .auto-style34 {
             position: absolute;
             top: 84px;
             left: 0px;
             z-index: 1;
-            width: 1358px;
+            width: 1222px;
             height: 84px;
         }
         .auto-style35 {
@@ -145,15 +145,15 @@
        
         .auto-style36 {
             position: absolute;
-            top: 164px;
-            left: 978px;
+            top: 170px;
+            left: 930px;
             z-index: 1;
             width: 146px;
         }
         .auto-style37 {
             position: absolute;
-            top: 164px;
-            left: 1129px;
+            top: 170px;
+            left: 1079px;
             z-index: 1;
         }
         .auto-style38 {
@@ -172,7 +172,7 @@
         .auto-style40 {
             position: absolute;
             top: 142px;
-            left: 651px;
+            left: 704px;
             z-index: 1;
             width: 128px;
         }
@@ -226,6 +226,26 @@
             position: absolute;
             top: 822px;
             left: 799px;
+            z-index: 1;
+        }
+               
+        .auto-style48 {
+            position: absolute;
+            top: 89px;
+            left: 1121px;
+            z-index: 1;
+            width: 94px;
+        }
+        .auto-style49 {
+            position: absolute;
+            top: 89px;
+            left: 1070px;
+            z-index: 1;
+        }
+        .auto-style50 {
+            position: absolute;
+            top: 142px;
+            left: 569px;
             z-index: 1;
         }
                
@@ -315,11 +335,11 @@
         
         <asp:Label ID="user_name" runat="server" CssClass="auto-style33" Font-Size="20pt"></asp:Label>
 &nbsp;<asp:Label ID="acc_status" runat="server" CssClass="auto-style40"></asp:Label>
+        <asp:Label ID="cli_status" runat="server" CssClass="auto-style48"></asp:Label>
                 <asp:Label ID="acc_balance" runat="server" CssClass="auto-style18" Font-Size="35pt">0.00</asp:Label>
 
         <asp:Label ID="Label11" runat="server" CssClass="auto-style30" Text="Account Number:" Font-Size="15pt"></asp:Label>
             <asp:Label ID="Label15" runat="server" CssClass="auto-style38" Font-Size="15pt" Text="Total Money Sent"></asp:Label>
-    </form>
      <div class="footer-basic">
         <footer>
             <div class="social" style="width: 1104px"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: -1px; width: 43px; height: 44px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -20px; left: 1px; width: 39px"></i></a>
@@ -335,7 +355,11 @@
             <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 936px; left: 442px">E-Wallet Co. © 2023</p>
         </footer>
        
+         <asp:Label ID="Label16" runat="server" CssClass="auto-style49" Text="Status:"></asp:Label>
+         <asp:Label ID="Label17" runat="server" CssClass="auto-style50" Text="Verification Status:"></asp:Label>
+       
     </div>
+    </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 </body>

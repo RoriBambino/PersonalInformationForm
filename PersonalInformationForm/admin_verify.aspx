@@ -43,6 +43,20 @@
             left: 603px;
             z-index: 1;
         }
+        .auto-style5 {
+            width: 217px;
+            height: 163px;
+            position: absolute;
+            top: 347px;
+            left: 146px;
+            z-index: 1;
+        }
+        .auto-style6 {
+            position: absolute;
+            top: 274px;
+            left: 340px;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
@@ -74,12 +88,12 @@
                            </a>
                        </li>
                         <li>
-                           <a href="#">
+                           <a href="admin_status.aspx">
                              Status
                            </a>
                        </li>
                         <li>
-                           <a href="#">
+                           <a href="admin_transaction.aspx">
                              View Transactions
                            </a>
                        </li>
@@ -93,10 +107,20 @@
     </div>
 
     <form id="form1" runat="server">
-        <div>
+         <div>
+            <asp:Button ID="btn_vwall" runat="server" CssClass="auto-style10" Text="View"  style="z-index: 1; position: absolute; top: 270px; left: 877px" OnClick="btn_vwall_Click" />
+            <asp:TextBox ID="txt_dfrom" Height="25px" placeholder="Last Name" runat="server" style="text-indent: 10px; z-index: 1; position: absolute; top: 272px; left: 388px;" TextMode="Date" CssClass="auto-style25"></asp:TextBox>
+            <asp:TextBox ID="txt_dto" Height="25px" placeholder="Last Name" runat="server" style="text-indent: 10px; z-index: 1; position: absolute; top: 272px; left: 672px;" TextMode="Date" CssClass="auto-style25"></asp:TextBox>
+            <div class="auto-style5">
+                <asp:GridView ID="vw_all" runat="server" ScrollBars="Vertical" PageSize="10" CssClass="auto-style16">
 
+            </asp:GridView>
+
+            </div>
+            
+            <asp:Label ID="Label3" runat="server" CssClass="auto-style12" Font-Size="X-Large" ForeColor="#3333CC" Text="ACCOUNT VALIDATION" style="z-index: 1; position: absolute; top: 189px; left: 522px"></asp:Label>
+            <asp:Label ID="Label5" runat="server" CssClass="auto-style15" Text="TO:" style="z-index: 1; position: absolute; top: 274px; left: 632px; width: 35px"></asp:Label>
         </div>
-    </form>
  <div class="footer-basic">
         <footer>
         
@@ -106,12 +130,16 @@
             <ul class="list-inline">
                 <li class="auto-style2"><a href="Admin.aspx">Home</a></li>
                 <li class="auto-style4"><a href="admin_verify.aspx" >Verify</a></li>
-                <li class="auto-style3"><a href="#" >Status</a></li>
-                <li class="auto-style1"><a href="#">View Transactions</a></li>
+                <li class="auto-style3"><a href="admin_status.aspx" >Status</a></li>
+                <li class="auto-style1"><a href="admin_transaction.aspx">View Transactions</a></li>
             </ul>
             <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 912px; left: 447px">E-Wallet Co. © 2023</p>
         </footer>
+        <asp:Label ID="Label6" runat="server" CssClass="auto-style6" Text="FROM:"></asp:Label>
     </div>
+    
+   
+    </form>
     
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

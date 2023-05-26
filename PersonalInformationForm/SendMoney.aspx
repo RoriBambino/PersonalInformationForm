@@ -70,6 +70,7 @@
             left: 683px;
             z-index: 1;
             width: 201px;
+            right: 247px;
         }
         .auto-style11 {
             position: absolute;
@@ -208,6 +209,13 @@
             left: 917px;
             z-index: 1;
         }
+        .auto-style30 {
+            position: absolute;
+            top: 284px;
+            left: 737px;
+            z-index: 1;
+            height: 35px;
+        }
         </style>
 </head>
 <body>
@@ -279,8 +287,9 @@
         <asp:Label ID="Label_pass" runat="server" CssClass="auto-style23" Text="Password:"></asp:Label>
         <asp:TextBox ID="txt_password" runat="server" CssClass="auto-style24" TextMode="Password"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_amount" CssClass="auto-style25" ErrorMessage="* Input Amount" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
-        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txt_amount" CssClass="auto-style26" ErrorMessage="* Money Reached Min/Max Amount" Font-Size="Small" ForeColor="#CC0000" MaximumValue="10000" MinimumValue="100"></asp:RangeValidator>
+        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txt_amount" CssClass="auto-style26" ErrorMessage="* Money Reached Min/Max Amount" Font-Size="Small" ForeColor="#CC0000" MaximumValue="10000.00" MinimumValue="100.00" Type="Currency"></asp:RangeValidator>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txt_password" CssClass="auto-style27" ErrorMessage="* Input Password" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+            <asp:Label ID="txt_status" runat="server" CssClass="auto-style30"></asp:Label>
         </div>
         
    <div class="footer-basic">

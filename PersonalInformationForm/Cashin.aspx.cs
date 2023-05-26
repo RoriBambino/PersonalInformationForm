@@ -82,56 +82,49 @@ namespace PersonalInformationForm
                 using (var conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    using(var cmd4 = conn.CreateCommand())
-                    {
-                        cmd4.CommandType = CommandType.Text;
-                        cmd4.CommandText = "SELECT CLI_ID FROM CLIENT";
-                        using (SqlDataReader reader = cmd4.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                decimal check_blnc = Convert.ToDecimal(reader["CLI_ID"]);
-                                int balance = Convert.ToInt32(check_blnc);
-                                if (balance == 50000)
-                                {
-                                    Response.Write("<script>alert('Balance Exceed Balance')</script>");
-                                }
-                                else
-                                {
+                   
+                        decimal balance = GetClientBalanceFromSession();
 
-                                }
+
+                        if (balance >= 50000)
+                        {
+                                    Response.Write("<script>alert('Balance Exceed Balance')</script>");
+                        }
+                        else
+                        {
+
+                        using (var cmd = conn.CreateCommand())
+                        {
+                            cmd.CommandType = CommandType.Text;
+                            cmd.CommandText = "INSERT INTO [TRANSACTION] (TRA_TYPE, TRA_AMOUNT, TRA_NUMBER, CLI_ID) VALUES(@TYPE, @AMOUNT, @TRA_NUMBER, @CLI_ID)";
+
+                            cmd.Parameters.AddWithValue("@TYPE", type);
+                            cmd.Parameters.AddWithValue("@AMOUNT", amount);
+                            cmd.Parameters.AddWithValue("@TRA_NUMBER", tra_number);
+                            cmd.Parameters.AddWithValue("@CLI_ID", cli_id);
+                            var ctr = cmd.ExecuteNonQuery();
+
+                        }
+
+                        using (var cmd2 = conn.CreateCommand())
+                        {
+                            cmd2.CommandType = CommandType.Text;
+                            cmd2.CommandText = "UPDATE CLIENT SET CLI_BALANCE = @CLI_BALANCE WHERE CLI_ID = '" + cli_id + "'";
+                            cmd2.Parameters.AddWithValue("@CLI_BALANCE", balance + amount);
+
+                            var ctr = cmd2.ExecuteNonQuery();
+                            if (ctr >= 1)
+                            {
+                                Response.Write("<script>alert('Account Successfuly Cashed In')</script>");
+                                Response.Redirect("Client.aspx");
                             }
                         }
-
                     }
+                            
+                        
 
-                    using (var cmd = conn.CreateCommand())
-                    {
-                        cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "INSERT INTO [TRANSACTION] (TRA_TYPE, TRA_AMOUNT, TRA_NUMBER, CLI_ID) VALUES(@TYPE, @AMOUNT, @TRA_NUMBER, @CLI_ID)";
-
-                                cmd.Parameters.AddWithValue("@TYPE", type);
-                                cmd.Parameters.AddWithValue("@AMOUNT", amount);
-                                cmd.Parameters.AddWithValue("@TRA_NUMBER", tra_number);
-                                cmd.Parameters.AddWithValue("@CLI_ID", cli_id);
-                                var ctr = cmd.ExecuteNonQuery();             
-
-                    }
                     
-                    using (var cmd2 = conn.CreateCommand())
-                    {
-                        cmd2.CommandType = CommandType.Text;
-                        cmd2.CommandText = "UPDATE CLIENT SET CLI_BALANCE = @CLI_BALANCE WHERE CLI_ID = '"+ cli_id+ "'";
-                        decimal balance = GetClientBalanceFromSession();
-                        cmd2.Parameters.AddWithValue("@CLI_BALANCE", balance + amount);
-                          
-                        var ctr = cmd2.ExecuteNonQuery();
-                        if (ctr >= 1)
-                        {
-                            Response.Write("<script>alert('Account Successfuly Cashed In')</script>");
-                            Response.Redirect("Client.aspx");
-                        }
-                    }
+
                     
                     if (conn.State == System.Data.ConnectionState.Open)
                     {

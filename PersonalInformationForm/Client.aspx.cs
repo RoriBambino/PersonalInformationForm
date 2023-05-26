@@ -24,7 +24,8 @@ namespace PersonalInformationForm
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 { //Make it like after user login access the db matching their account
                     conn.Open();
-                  
+                    int cli_id = Convert.ToInt32(Session["Client_id"]);
+                   
                     using (var cmd = conn.CreateCommand())
                     {
                         // Connect database
@@ -52,7 +53,7 @@ namespace PersonalInformationForm
                                 cli_create_date.Text = get_date;
                                 acc_status.Text = reader["CLI_VERIFY"].ToString();
                                 acc_balance.Text = reader["CLI_BALANCE"].ToString();
-
+                                cli_status.Text = reader["CLI_STATUS"].ToString();
 
 
                             }
@@ -67,7 +68,6 @@ namespace PersonalInformationForm
                     {
                         // Connect database
                         cmd2.CommandType = CommandType.Text;
-                        int cli_id = Convert.ToInt32(Session["Client_id"]);
                         cmd2.CommandText = "SELECT SUM(TRA_AMOUNT) AS TOTAL_SUM FROM [TRANSACTION] WHERE TRA_TYPE = 'SENDER' AND CLI_ID = '" + cli_id +"'";
                         object result = cmd2.ExecuteScalar();
                         if (result != DBNull.Value)
@@ -84,6 +84,7 @@ namespace PersonalInformationForm
                        
                        
                     }
+                   
                     if (conn.State == System.Data.ConnectionState.Open)
                     {
                         Response.Write("<script>alert('Connected Successfully!')</script>");

@@ -57,10 +57,10 @@
         }
         .auto-style6 {
             position: absolute;
-            top: 164px;
-            left: 734px;
+            top: 165px;
+            left: 724px;
             z-index: 1;
-            width: 112px;
+            width: 153px;
         }
         .auto-style7 {
             position: absolute;
@@ -234,7 +234,7 @@
             <asp:Label ID="Label7" runat="server" CssClass="auto-style15" Font-Size="Large" Text="₱"></asp:Label>
             <asp:Label ID="check_balance" runat="server" CssClass="auto-style23" Visible="False"></asp:Label>
         </div>
-        <asp:Label ID="Label3" runat="server" CssClass="auto-style6" Text="Cash Out"></asp:Label>
+        <asp:Label ID="Label3" runat="server" CssClass="auto-style6" Text="Cash Out" Font-Bold="False" Font-Size="XX-Large"></asp:Label>
         <asp:Label ID="Label4" runat="server" CssClass="auto-style8" Text="Total Balance:"></asp:Label>
         <asp:Label ID="money_balance" runat="server" CssClass="auto-style11">0</asp:Label>
         <asp:Label ID="Label6" runat="server" CssClass="auto-style12" Text="Amount To Withdraw"></asp:Label>

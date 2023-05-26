@@ -35,17 +35,19 @@ namespace PersonalInformationForm
 
                                 if (check_ver == "VERIFIED")
                                 {
+                                    txt_verifyacc.Visible = false;
                                     verify.Visible = false;
                                     btn_veracc.Visible = false;
                                 }
                                 else if (check_ver == "PENDING")
                                 {
                                     txt_verifyacc.Text = "Your Account is being Verified right now!";
-                                    view_mode.Attributes["disabled"] = "disabled";
+                                    
                                     btn_veracc.Enabled = false;
                                 }
-                                else
+                                else if(check_ver == "UNVERIFIED")
                                 {
+                                    txt_verifyacc.Visible = false;
                                     verify.Visible = true;
                                     btn_veracc.Visible = true;
                                     verify.EnableViewState = true;
@@ -88,6 +90,11 @@ namespace PersonalInformationForm
         protected void btn_editacc_Click(object sender, EventArgs e)
         {
             Response.Redirect("editacc.aspx");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("acc_deactivate.aspx");
         }
     }
 }

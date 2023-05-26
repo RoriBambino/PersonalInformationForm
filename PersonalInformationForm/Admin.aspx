@@ -124,17 +124,17 @@
                            </a>
                        </li>
                         <li>
-                           <a href="#">
+                           <a href="admin_status.aspx">
                              Status
                            </a>
                        </li>
                         <li>
-                           <a href="#">
+                           <a href="admin_transaction.aspx">
                              View Transactions
                            </a>
                        </li>
                         <li>
-                            <a href="#">Settings </a>
+                            <a href="admin_settings.aspx">Settings </a>
                        </li>
                        
                    </ul>
@@ -166,8 +166,8 @@
             <ul class="list-inline">
                 <li class="auto-style2"><a href="Admin.aspx">Home</a></li>
                 <li class="auto-style5"><a href="admin_verify.aspx" >Verify</a></li>
-                <li class="auto-style4"><a href="#" >Status</a></li>
-                <li class="auto-style1"><a href="#">View Transactions</a></li>
+                <li class="auto-style4"><a href="admin_status.aspx" >Status</a></li>
+                <li class="auto-style1"><a href="admin_transaction.aspx">View Transactions</a></li>
             </ul>
             <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 912px; left: 447px">E-Wallet Co. © 2023</p>
         </footer>

@@ -17,8 +17,11 @@ namespace PersonalInformationForm
 
         protected void Page_Load(object sender, EventArgs e)
         {
+          
             try
             {
+                vw_image.Visible = false;
+
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 { //Make it like after user login access the db matching their account
                     conn.Open();
@@ -52,6 +55,8 @@ namespace PersonalInformationForm
             // Turn the image to String
             string str = Convert.ToBase64String(pic);
             // Prefix the meme type that include the data in the URL
+            vw_image.Visible = true;
+
             vw_image.ImageUrl = "data:image/jpeg;base64," + str;
         }
 
@@ -71,6 +76,7 @@ namespace PersonalInformationForm
 
                 // Session
                 string clientId = Session["Client_id"].ToString();
+                string password = (string)Session["Password"];
                 // For data base
                 string get_lname = lname.Text;
                 string get_fname = fname.Text;
@@ -85,6 +91,8 @@ namespace PersonalInformationForm
                 string verify_status = "PENDING";
                 DateTime currentDate = DateTime.Now;
                 string get_date = currentDate.ToShortDateString();
+                string get_npass = txt_nwpass.Text;
+                string get_cnpass = txt_confirmpass.Text;
 
                 // Create or set a condition to check if the file being uploaded is an image file
 
@@ -97,7 +105,7 @@ namespace PersonalInformationForm
                         {
                             cmd.CommandType = CommandType.Text;
                             cmd.CommandText = "UPDATE CLIENT SET CLI_LNAME = @get_lname, CLI_FNAME = @get_fname, CLI_MNAME = @get_midname, CLI_DOB = @get_dob, CLI_STREET_ADD = @get_streetadd , " +
-                                    "CLI_APP_UNIT = @get_appunit, CLI_CITY = @get_city, CLI_MARITAL_STATUS = @get_marital, CLI_SEX = @get_sex, CLI_MOBILE_NUM = @get_mobnumber , CLI_ID_PIC = @pic, CLI_DATE_UPDATED = @get_date, CLI_VERIFY = @verify_status WHERE CLI_ID = '" + clientId + "'";
+                                    "CLI_APP_UNIT = @get_appunit, CLI_CITY = @get_city, CLI_MARITAL_STATUS = @get_marital, CLI_SEX = @get_sex, CLI_MOBILE_NUM = @get_mobnumber ,CLI_PASSWORD = @get_password, CLI_ID_PIC = @pic, CLI_DATE_UPDATED = @get_date, CLI_VERIFY = @verify_status WHERE CLI_ID = '" + clientId + "'";
 
                             cmd.Parameters.AddWithValue("GET_LNAME", get_lname);
                             cmd.Parameters.AddWithValue("GET_FNAME", get_fname);
@@ -109,6 +117,14 @@ namespace PersonalInformationForm
                             cmd.Parameters.AddWithValue("@GET_MARITAL", get_marital);
                             cmd.Parameters.AddWithValue("@GET_SEX", get_sex);
                             cmd.Parameters.AddWithValue("@GET_MOBNUMBER", get_mobnumber);
+                            if (password != get_npass)
+                            {
+                                cmd.Parameters.AddWithValue("@GET_PASSWORD", get_npass);
+                            }
+                            else
+                            {
+                                txt_notpass.Text = "* Password Already Exist";
+                            }
                             cmd.Parameters.AddWithValue("@PIC", pic);
                             cmd.Parameters.AddWithValue("@GET_DATE", get_date);
                             cmd.Parameters.AddWithValue("@VERIFY_STATUS", verify_status);

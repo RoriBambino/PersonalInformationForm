@@ -156,6 +156,10 @@
     <Content Include="Admin.aspx" />
     <Content Include="admin_verify.aspx" />
     <Content Include="editacc.aspx" />
+    <Content Include="acc_deactivate.aspx" />
+    <Content Include="admin_status.aspx" />
+    <Content Include="admin_transaction.aspx" />
+    <Content Include="admin_settings.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -331,6 +335,34 @@
     </Compile>
     <Compile Include="editacc.aspx.designer.cs">
       <DependentUpon>editacc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="acc_deactivate.aspx.cs">
+      <DependentUpon>acc_deactivate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="acc_deactivate.aspx.designer.cs">
+      <DependentUpon>acc_deactivate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_status.aspx.cs">
+      <DependentUpon>admin_status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_status.aspx.designer.cs">
+      <DependentUpon>admin_status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_transaction.aspx.cs">
+      <DependentUpon>admin_transaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_transaction.aspx.designer.cs">
+      <DependentUpon>admin_transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_settings.aspx.cs">
+      <DependentUpon>admin_settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_settings.aspx.designer.cs">
+      <DependentUpon>admin_settings.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

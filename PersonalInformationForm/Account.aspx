@@ -217,8 +217,8 @@
                 <asp:Button ID="btn_editacc" runat="server" CssClass="auto-style10" Text="Edit Account" ForeColor="#6699FF" OnClick="btn_editacc_Click" />
                 <img id="edit" runat="server" alt="Edit Account" class="auto-style15" src="Image/Edit%20Account.png" />
             </a>
-            <a href="#">
-                <asp:Button ID="Button4" runat="server" CssClass="auto-style12" Text="Deactivate" ForeColor="#660066" />
+            <a href="acc_deactivate.aspx">
+                <asp:Button ID="Button4" runat="server" CssClass="auto-style12" Text="Deactivate" ForeColor="#660066" OnClick="Button4_Click"  />
                 <img id="deactivate" runat="server" alt="Deactiviate PNG" class="auto-style14" src="Image/Deactivate%20Acc.png" />
             </a>
             

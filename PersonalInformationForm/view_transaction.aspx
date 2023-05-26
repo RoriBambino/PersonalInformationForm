@@ -7,49 +7,49 @@
     <title>View Transaction</title>
    <link rel="icon" type="image/png" href="Image/wallet.png" />
     <link href="Style.css" rel="stylesheet"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <style type="text/css">
         .auto-style1 {
             width: 189px;
             height: 28px;
             position: absolute;
-            top: 890px;
-            left: 782px;
+            top: 1850px;
+            left: 856px;
             z-index: 1;
         }
         .auto-style2 {
             width: 114px;
-            height: 28px;
+            height: 24px;
             position: absolute;
-            top: 889px;
-            left: 412px;
+            top: 1852px;
+            left: 420px;
         }
         .auto-style5 {
-            width: 164px;
+            width: 123px;
             height: 28px;
             position: absolute;
-            top: 890px;
-            left: 647px;
+            top: 1850px;
+            left: 739px;
             z-index: 1;
         }
         .auto-style6 {
             width: 120px;
-            height: 28px;
+            height: 25px;
             position: absolute;
-            top: 889px;
-            left: 487px;
+            top: 1852px;
+            left: 534px;
             z-index: 1;
             margin-bottom: 0px;
         }
         .auto-style7 {
             width: 102px;
-            height: 28px;
+            height: 25px;
             position: absolute;
-            top: 889px;
-            left: 580px;
+            top: 1851px;
+            left: 638px;
             z-index: 1;
         }
         .auto-style9 {
@@ -62,24 +62,16 @@
         }
         .auto-style10 {
             position: absolute;
-            top: 273px;
-            left: 930px;
+            top: 269px;
+            left: 996px;
             z-index: 1;
               text-decoration: none;
             border-radius: 10px;
             cursor: pointer;
             border-style: none;
             background-color: grey;
-            width: 120px;
-            height: 37px;
-        }
-        .auto-style11 {
-            width: 613px;
-            height: 163px;
-            position: absolute;
-            top: 319px;
-            left: 386px;
-            z-index: 1;
+            width: 94px;
+            height: 33px;
         }
         .auto-style12 {
             position: absolute;
@@ -90,22 +82,248 @@
         }
         .auto-style13 {
             position: absolute;
-            top: 275px;
-            left: 325px;
+            top: 276px;
+            left: 259px;
             z-index: 1;
-        }
-        .auto-style14 {
-            padding: 50px 0;
-            background-color: #ffffff;
-            color: #4b4c4d;
-            margin-left: 40px;
         }
         .auto-style15 {
             position: absolute;
-            top: 274px;
-            left: 638px;
+            top: 766px;
+            left: 541px;
+            z-index: 1;
+            width: 27px;
+            height: 26px;
+        }
+        .gridlines{
+             overflow-y: auto;
+             border: solid 5px black; 
+             height:300px;
+             background-color:white
+        }
+        .auto-style18 {
+            position: absolute;
+            top: 767px;
+            left: 267px;
             z-index: 1;
         }
+        .auto-style19 {
+            position: absolute;
+            top: 276px;
+            left: 549px;
+            z-index: 1;
+            width: 23px;
+        }
+        .auto-style20 {
+            position: absolute;
+            top: 1212px;
+            left: 992px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 120px;
+            }
+        .auto-style22 {
+            position: absolute;
+            top: 1086px;
+            left: 348px;
+            z-index: 1;
+        }
+        .auto-style23 {
+            position: absolute;
+            top: 1217px;
+            left: 560px;
+            z-index: 1;
+            width: 32px;
+        }
+        .auto-style24 {
+            position: absolute;
+            top: 1216px;
+            left: 268px;
+            z-index: 1;
+        }
+        .auto-style25 {
+            position: absolute;
+            top: 266px;
+            left: 598px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 149px;
+            height: 36px;
+        }
+        .auto-style26 {
+            position: absolute;
+            top: 763px;
+            left: 990px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 93px;
+            height: 28px;
+        }
+        .auto-style27 {
+            position: absolute;
+            top: 1212px;
+            left: 600px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 168px;
+            height: 33px;
+        }
+        .auto-style28 {
+            position: absolute;
+            top: 1208px;
+            left: 330px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 142px;
+            height: 34px;
+        }
+        .auto-style29 {
+            position: absolute;
+            top: 268px;
+            left: 328px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 166px;
+            height: 33px;
+        }
+        .auto-style30 {
+            position: absolute;
+            top: 761px;
+            left: 594px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 153px;
+            height: 35px;
+        }
+        .auto-style31 {
+            position: absolute;
+            top: 759px;
+            left: 330px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 141px;
+            height: 38px;
+        }
+        .auto-style32 {
+            position: absolute;
+            top: 272px;
+            left: 843px;
+            z-index: 1;
+        }
+        .auto-style33 {
+            position: absolute;
+            top: 274px;
+            left: 792px;
+            z-index: 1;
+        }
+        .auto-style34 {
+            position: absolute;
+            top: 768px;
+            left: 800px;
+            z-index: 1;
+            height: 24px;
+        }
+        .auto-style35 {
+            position: absolute;
+            top: 765px;
+            left: 849px;
+            z-index: 1;
+        }
+        .auto-style36 {
+            position: absolute;
+            top: 1215px;
+            left: 856px;
+            z-index: 1;
+        }
+        .auto-style37 {
+            position: absolute;
+            top: 1217px;
+            left: 801px;
+            z-index: 1;
+            height: 23px;
+            margin-bottom: 3px;
+        }
+         .gridViewContainer {
+         
+         height: 300px; /* Set the desired height for the scrollable area */
+         width: 700px;
+         overflow-y: auto;
+         background-color:white;
+         text-align:center;
+         display: flex;
+         justify-content: center;
+         margin-top: 260px;
+         margin-left: 300px;
+         }
+          .gridViewContainer1 {
+          height: 300px; /* Set the desired height for the scrollable area */
+         width: 700px;
+         overflow-y: auto;
+         background-color:white;
+         text-align:center;
+         display: flex;
+         justify-content: center;
+         margin-top: 150px;
+         margin-left: 300px;
+         }
+        
+        .auto-style38 {
+            position: absolute;
+            top: 1158px;
+            left: 630px;
+            z-index: 1;
+            width: 162px;
+        }
+        .auto-style39 {
+            position: absolute;
+            top: 726px;
+            left: 625px;
+            z-index: 1;
+            width: 184px;
+        }
+         .gridViewContainer2 {
+          height: 300px; /* Set the desired height for the scrollable area */
+         width: 700px;
+         overflow-y: auto;
+         background-color:white;
+         text-align:center;
+         display: flex;
+         justify-content: center;
+         margin-top: 190px;
+         margin-left: 300px;
+         padding-bottom: 100px;
+         }
     </style>
 </head>
 <body>
@@ -113,9 +331,9 @@
      <div class="menu">
             <!--Header-->
            <div class="logo">
-               <a  ref="pageLogo" href="PersonalInfoEntry.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
+               <a  ref="pageLogo" href="PersonalInfoEntry.aspx"><img class="icon" src="Image/wallet.png" alt="logo" /></a>
                <nav>
-                <input type="checkbox" id="check">
+                <input type="checkbox" id="check" />
                 <asp:Label ID="Label2" runat="server" CssClass="auto-style22" Font-Names="Bookman Old Style" Font-Size="X-Large" ForeColor="Black" Text="E-Save" style="z-index: 1; position: absolute; top: 33px; left: 169px"></asp:Label>
 
                 <label for="check" class="checkbtn">
@@ -157,20 +375,93 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Label1" runat="server" Text="Sent, Cash Out, Recieved" CssClass="auto-style9"></asp:Label>
+            <asp:Label ID="Label4" runat="server" CssClass="auto-style13" Text="FROM:"></asp:Label>
+            <asp:Label ID="Label6" runat="server" CssClass="auto-style19" Text="TO:"></asp:Label>
             <asp:Button ID="btn_vwall" runat="server" CssClass="auto-style10" Text="View" OnClick="btn_vwall_Click" />
-            <asp:TextBox ID="txt_dfrom" Height="25px" placeholder="Last Name" runat="server" style="text-indent: 10px; z-index: 1; position: absolute; top: 272px; left: 388px;" TextMode="Date" CssClass="auto-style25"></asp:TextBox>
-            <asp:TextBox ID="txt_dto" Height="25px" placeholder="Last Name" runat="server" style="text-indent: 10px; z-index: 1; position: absolute; top: 272px; left: 672px;" TextMode="Date" CssClass="auto-style25"></asp:TextBox>
-
-            <asp:GridView ID="vw_all" runat="server" CssClass="auto-style11">
-            </asp:GridView>
+            <asp:TextBox ID="txt_dfrom" placeholder="Last Name" runat="server" style="text-indent: 10px; " TextMode="Date" CssClass="auto-style29"></asp:TextBox>
+            <asp:TextBox ID="txt_dto" placeholder="Last Name" runat="server" style="text-indent: 10px; " TextMode="Date" CssClass="auto-style25"></asp:TextBox>
+           
+            <div class="gridViewContainer">
+                <asp:Label ID="Label14" runat="server" CssClass="auto-style39" Font-Size="Large" Text="CASH IN &amp; CASH OUT"></asp:Label>
+                <asp:GridView ID="vw_all" runat="server" AutoGenerateColumns="false" ShowHeaderWhenEmpty="True" BorderColor="#999999">
+                     <Columns>
+                        <asp:BoundField DataField="TRA_ID" HeaderText="Transaction ID"></asp:BoundField>
+                        <asp:BoundField DataField="TRA_TYPE" HeaderText="Transaction Type"></asp:BoundField>
+                        <asp:BoundField DataField="TRA_AMOUNT" HeaderText="Amount"></asp:BoundField>
+                        <asp:BoundField DataField="TRA_NUMBER" HeaderText="Transaction Number"></asp:BoundField>
+                        <asp:BoundField DataField="CLI_ID" HeaderText="Client's ID"></asp:BoundField>
+                        <asp:BoundField DataField="TRA_DATE" HeaderText="Transaction Date" DataFormatString="{0:yyyy-MM-dd}"></asp:BoundField>
+                    </Columns>
+                </asp:GridView>
+            </div>
+             
             <asp:Label ID="Label3" runat="server" CssClass="auto-style12" Font-Size="X-Large" ForeColor="#3333CC" Text="Statement of Account"></asp:Label>
             <asp:Label ID="Label5" runat="server" CssClass="auto-style15" Text="TO:"></asp:Label>
+            <asp:Label ID="Label7" runat="server" CssClass="auto-style18" Text="FROM:"></asp:Label>
+             
+              <asp:Button ID="btn_vwdeposit" runat="server" CssClass="auto-style26" Text="View" OnClick="btn_vwdeposit_Click1"  />
+            <asp:TextBox ID="txt_dfrom2" placeholder="Last Name" runat="server" style="text-indent: 10px; " TextMode="Date" CssClass="auto-style31"></asp:TextBox>
+            <asp:TextBox ID="txt_dto2" placeholder="Last Name" runat="server" style="text-indent: 10px; " TextMode="Date" CssClass="auto-style30"></asp:TextBox>
+                 <asp:Label ID="Label12" runat="server" CssClass="auto-style37" Text="TYPE:"></asp:Label>
+            
+            <div class="gridViewContainer1" >
+                 <asp:Label ID="Label13" runat="server" CssClass="auto-style38" Font-Size="Large" Text="SENT &amp; RECIEVED"></asp:Label>
+                 <asp:GridView ID="vw_deposit" runat="server" AutoGenerateColumns="false" > 
+                      <Columns>
+                        <asp:BoundField DataField="TRA_ID" HeaderText="Transaction ID"></asp:BoundField>
+                        <asp:BoundField DataField="TRA_TYPE" HeaderText="Transaction Type"></asp:BoundField>
+                        <asp:BoundField DataField="TRA_AMOUNT" HeaderText="Amount"></asp:BoundField>
+                        <asp:BoundField DataField="TRA_NUMBER" HeaderText="Transaction Number"></asp:BoundField>
+                        <asp:BoundField DataField="CLI_ID" HeaderText="Client's ID"></asp:BoundField>
+                        <asp:BoundField DataField="TRA_DATE" HeaderText="Transaction Date" DataFormatString="{0:yyyy-MM-dd}"></asp:BoundField>
+                    </Columns>
+                 </asp:GridView>
+            </div>
+
+             <asp:Label ID="Label8" runat="server" CssClass="auto-style23" Text="TO:"></asp:Label>
+            <asp:Label ID="Label9" runat="server" CssClass="auto-style24" Text="FROM:"></asp:Label>
+             
+              <asp:Button ID="btn_vwsent" runat="server" CssClass="auto-style20" Text="View" OnClick="btn_vwsent_Click" />
+            <asp:TextBox ID="txt_dfrom3" placeholder="Last Name" runat="server" style="text-indent: 10px; " TextMode="Date" CssClass="auto-style28"></asp:TextBox>
+            <asp:TextBox ID="txt_dto3" placeholder="Last Name" runat="server" style="text-indent: 10px; " TextMode="Date" CssClass="auto-style27"></asp:TextBox>
+            
+            <div class="gridViewContainer2">
+                <asp:GridView ID="vw_sent" runat="server" AutoGenerateColumns="false">
+                     <Columns>
+                        <asp:BoundField DataField="TRA_ID" HeaderText="Transaction ID"></asp:BoundField>
+                        <asp:BoundField DataField="TRA_TYPE" HeaderText="Transaction Type"></asp:BoundField>
+                        <asp:BoundField DataField="TRA_AMOUNT" HeaderText="Amount"></asp:BoundField>
+                        <asp:BoundField DataField="TRA_NUMBER" HeaderText="Transaction Number"></asp:BoundField>
+                        <asp:BoundField DataField="CLI_ID" HeaderText="Client's ID"></asp:BoundField>
+                        <asp:BoundField DataField="TRA_DATE" HeaderText="Transaction Date" DataFormatString="{0:yyyy-MM-dd}"></asp:BoundField>
+                    </Columns>
+            </asp:GridView>
+            </div>
+
+              <asp:Label ID="Label11" runat="server" CssClass="auto-style34" Text="TYPE:"></asp:Label>
+        <asp:DropDownList ID="DropDownList2" runat="server" CssClass="auto-style35">
+            <asp:ListItem>ALL</asp:ListItem>
+            <asp:ListItem>CASH IN</asp:ListItem>
+            <asp:ListItem>CASH OUT</asp:ListItem>
+        </asp:DropDownList>
+        <asp:DropDownList ID="DropDownList3" runat="server" CssClass="auto-style36">
+            <asp:ListItem>ALL</asp:ListItem>
+            <asp:ListItem>SENDER</asp:ListItem>
+            <asp:ListItem>RECIEVER</asp:ListItem>
+        </asp:DropDownList>
+         <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style32">
+             <asp:ListItem>ALL</asp:ListItem>
+             <asp:ListItem>CASH IN</asp:ListItem>
+             <asp:ListItem>CASH OUT</asp:ListItem>
+             <asp:ListItem>SENDER</asp:ListItem>
+             <asp:ListItem>RECIEVER</asp:ListItem>
+         </asp:DropDownList>
+         <asp:Label ID="Label10" runat="server" CssClass="auto-style33" Text="TYPE:"></asp:Label>
         </div>
- 
-     <div class="auto-style14">
+  </form>
+     <div class="footer-basic">
         <footer>
-        
-            <div class="social" style="width: 1104px; z-index: 1; height: 65px; position: absolute; top: 830px; left: 170px;"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: 472px; width: 43px; height: 44px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 533px; width: 39px"></i></a>
+            <div class="social" style="width: 1104px; z-index: 1; height: 65px; position: absolute; top: 1788px; left: 141px;"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: 472px; width: 43px; height: 44px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 533px; width: 39px"></i></a>
                 <a href="#" class="auto-style47" ><i class="icon ion-social-instagram" style="z-index: 1; position: absolute; top: -19px; left: 588px; width: 42px; height: 40px"></i></a>
             </div>
             <ul class="list-inline">
@@ -180,13 +471,11 @@
                 <li class="auto-style5"><a href="SendMoney.aspx">Send Money</a></li>
                 <li class="auto-style1"><a href="view_transaction.aspx">View Transactions</a></li>
             </ul>
-            <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 948px; left: 447px">E-Wallet Co. © 2023</p>
-        </footer>
-         <asp:Label ID="Label4" runat="server" CssClass="auto-style13" Text="FROM:"></asp:Label>
+            <p class="copyright" style="z-index: 1; width: 544px; height: 0px; position: absolute; top: 1869px; left: 419px">E-Wallet Co. © 2023</p>
+        </footer>  
     </div>
- 
-    </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-</body>
+     
+    </body>
 </html>
