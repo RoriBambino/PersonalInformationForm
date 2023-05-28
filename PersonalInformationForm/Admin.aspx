@@ -67,8 +67,8 @@
         }
         .auto-style12 {
             position: absolute;
-            top: 2px;
-            left: 359px;
+            top: 1px;
+            left: 263px;
             z-index: 1;
             width: 131px;
             height: 122px;
@@ -80,6 +80,7 @@
             z-index: 1;
             width: 122px;
             height: 123px;
+            display:flex;
         }
         .auto-style14 {
             position: absolute;
@@ -89,8 +90,30 @@
         }
         .auto-style15 {
             position: absolute;
-            top: 128px;
-            left: 373px;
+            top: 195px;
+            left: 263px;
+            z-index: 1;
+            width: 123px;
+            background-color:mistyrose;
+            border-radius: 10px;
+            height: 42px;
+            padding: 10px;
+        }
+        .verify{
+            background-color:dodgerblue;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        .auto-style16 {
+            position: absolute;
+            top: 395px;
+            left: 381px;
+            z-index: 1;
+        }
+        .auto-style17 {
+            position: absolute;
+            top: 429px;
+            left: 441px;
             z-index: 1;
         }
     </style>
@@ -147,16 +170,18 @@
                 <img src="Image/user%20status.png" class="auto-style10" /><br />
                 <asp:Label ID="Label1" runat="server" Text="User Status" CssClass="auto-style11"></asp:Label>
             </a>
-            <a href="admin_verify.aspx">
+            
+                  <a href="admin_verify.aspx">
                 <img src="Image/verified-account.png" class="auto-style12" />
-                <asp:Label ID="Label3" runat="server" Text="Verify Account" CssClass="auto-style15"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="Verify Account" CssClass="auto-style15" ForeColor="#9900FF"></asp:Label>
             </a>
+            
+          
             <a href="#">
                 <img src="Image/View%20Transaction.png" class="auto-style13" />
                 <asp:Label ID="Label4" runat="server" Text="View Transactions" CssClass="auto-style14"></asp:Label>
             </a>
         </div>
-    </form>
     <div class="footer-basic">
         <footer>
         
@@ -171,7 +196,16 @@
             </ul>
             <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 912px; left: 447px">E-Wallet Co. © 2023</p>
         </footer>
+        <asp:Label ID="Label5" runat="server" CssClass="auto-style16" Text="Number of Pendings:"></asp:Label>
     </div>
+    
+   
+        <strong>
+        <asp:Label ID="txt_nover" runat="server" CssClass="auto-style17"></asp:Label>
+        </strong>
+    
+   
+    </form>
     
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -17,11 +17,6 @@ namespace PersonalInformationForm
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        protected void btn_vwall_Click(object sender, EventArgs e)
-        {
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -30,14 +25,7 @@ namespace PersonalInformationForm
                     using (var cmd = conn.CreateCommand())
                     {
                         cmd.CommandType = CommandType.Text;
-                        int cli_id = Convert.ToInt32(Session["Client_id"]);
-
-                        string fromDate = txt_dfrom.Text;
-                        string toDate = txt_dto.Text;
-
                         cmd.CommandText = "SELECT * FROM  [CLIENT]";
-                        cmd.Parameters.AddWithValue("@FROMDATE", fromDate);
-                        cmd.Parameters.AddWithValue("@TODATE", toDate);
                         DataTable dt = new DataTable();
                         SqlDataAdapter sda = new SqlDataAdapter(cmd);
                         sda.Fill(dt);
@@ -56,10 +44,15 @@ namespace PersonalInformationForm
                     conn.Close();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Response.Write("Execute Error: " + ex);
             }
+        }
+
+        protected void btn_vwall_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

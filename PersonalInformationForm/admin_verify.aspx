@@ -53,9 +53,10 @@
         }
         .auto-style6 {
             position: absolute;
-            top: 274px;
-            left: 340px;
+            top: 543px;
+            left: 143px;
             z-index: 1;
+            margin-bottom: 1px;
         }
     </style>
 </head>
@@ -108,18 +109,15 @@
 
     <form id="form1" runat="server">
          <div>
-            <asp:Button ID="btn_vwall" runat="server" CssClass="auto-style10" Text="View"  style="z-index: 1; position: absolute; top: 270px; left: 877px" OnClick="btn_vwall_Click" />
-            <asp:TextBox ID="txt_dfrom" Height="25px" placeholder="Last Name" runat="server" style="text-indent: 10px; z-index: 1; position: absolute; top: 272px; left: 388px;" TextMode="Date" CssClass="auto-style25"></asp:TextBox>
-            <asp:TextBox ID="txt_dto" Height="25px" placeholder="Last Name" runat="server" style="text-indent: 10px; z-index: 1; position: absolute; top: 272px; left: 672px;" TextMode="Date" CssClass="auto-style25"></asp:TextBox>
+            <asp:Button ID="btn_vwall" runat="server" CssClass="auto-style10" Text="View"  style="z-index: 1; position: absolute; top: 5366px; left: 575px" OnClick="btn_vwall_Click" />
             <div class="auto-style5">
-                <asp:GridView ID="vw_all" runat="server" ScrollBars="Vertical" PageSize="10" CssClass="auto-style16">
+                <asp:GridView ID="vw_all" runat="server" ScrollBars="Vertical" PageSize="10" CssClass="auto-style16" AutoGenerateSelectButton="True">
 
             </asp:GridView>
 
             </div>
             
             <asp:Label ID="Label3" runat="server" CssClass="auto-style12" Font-Size="X-Large" ForeColor="#3333CC" Text="ACCOUNT VALIDATION" style="z-index: 1; position: absolute; top: 189px; left: 522px"></asp:Label>
-            <asp:Label ID="Label5" runat="server" CssClass="auto-style15" Text="TO:" style="z-index: 1; position: absolute; top: 274px; left: 632px; width: 35px"></asp:Label>
         </div>
  <div class="footer-basic">
         <footer>
@@ -135,14 +133,16 @@
             </ul>
             <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 912px; left: 447px">E-Wallet Co. © 2023</p>
         </footer>
-        <asp:Label ID="Label6" runat="server" CssClass="auto-style6" Text="FROM:"></asp:Label>
     </div>
+    
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+         <asp:Label ID="Label4" runat="server" CssClass="auto-style6" Text="Label"></asp:Label>
     
    
     </form>
     
    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-</body>
+    </body>
 </html>
