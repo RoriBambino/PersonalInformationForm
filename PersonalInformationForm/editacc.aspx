@@ -458,7 +458,7 @@
             <asp:Label ID="Label27" runat="server" CssClass="auto-style43" Text="New Password:"></asp:Label>
             <asp:TextBox ID="txt_nwpass" runat="server" CssClass="auto-style44" TextMode="Password"></asp:TextBox>
             <asp:Label ID="Label28" runat="server" CssClass="auto-style48" Text="Password:"></asp:Label>
-            <asp:TextBox ID="txt_confirmpass" runat="server" CssClass="auto-style51"></asp:TextBox>
+            <asp:TextBox ID="txt_confirmpass" runat="server" CssClass="auto-style51" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator16" runat="server" ControlToValidate="txt_nwpass" CssClass="auto-style53" ErrorMessage="* Input New Passoword" Font-Size="Small" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             <asp:Label ID="txt_notpass" runat="server" CssClass="auto-style59" Font-Size="Small" ForeColor="#CC0000"></asp:Label>
         </p>
@@ -491,7 +491,7 @@
             <asp:ListItem>Female</asp:ListItem>
         </asp:DropDownList>
         <asp:Label ID="Label15" runat="server" CssClass="auto-style35" Text="Sex:"></asp:Label>
-         <asp:Button ID="btn_vwimg" runat="server" CssClass="auto-style40" OnClick="btn_vwimg_Click" Text="Preview" CausesValidation="False" Font-Bold="True" Font-Names="Calisto MT" Font-Size="Medium" ForeColor="#3333CC" OnClientClick="return false;" />
+         <asp:Button ID="btn_vwimg" runat="server" CssClass="auto-style40" OnClick="btn_vwimg_Click" Text="Preview" CausesValidation="False" Font-Bold="True" Font-Names="Calisto MT" Font-Size="Medium" ForeColor="#3333CC" />
         <br />
         <br />
         <asp:TextBox ID="city" runat="server" CssClass="auto-style27"></asp:TextBox>

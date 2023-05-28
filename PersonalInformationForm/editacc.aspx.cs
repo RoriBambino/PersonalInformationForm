@@ -133,7 +133,7 @@ namespace PersonalInformationForm
                             if (ctr > 0)
                             {
                                 Response.Write("<script>alert('Account Successfuly Updated')</script>");
-                                Response.Redirect("Client.aspx");
+                                Response.Redirect("Account.aspx");
                             }
                         }
                         if (conn.State == System.Data.ConnectionState.Open)
