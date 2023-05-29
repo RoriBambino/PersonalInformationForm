@@ -18,14 +18,16 @@ namespace PersonalInformationForm
         {
             try
             {
-               
+                int get_clid = Convert.ToInt32(Session["Client_id"]);
+
                 using (var conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
                     using (var cmd = conn.CreateCommand())
                     {
                         cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "SELECT * FROM CLIENT";
+                        cmd.CommandText = "SELECT CLI_VERIFY FROM CLIENT WHERE CLI_ID = @CLI_ID";
+                        cmd.Parameters.AddWithValue("@CLI_ID", get_clid );
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             // Checks Clients Status if they are verified or not to verfy account
@@ -42,10 +44,10 @@ namespace PersonalInformationForm
                                 else if (check_ver == "PENDING")
                                 {
                                     txt_verifyacc.Text = "Your Account is being Verified right now!";
-                                    
                                     btn_veracc.Enabled = false;
+                                    btn_veracc.Visible = false;
                                 }
-                                else if(check_ver == "UNVERIFIED")
+                                else if(check_ver == "UNVERIFIED" || check_ver == "DECLINED")
                                 {
                                     txt_verifyacc.Visible = false;
                                     verify.Visible = true;

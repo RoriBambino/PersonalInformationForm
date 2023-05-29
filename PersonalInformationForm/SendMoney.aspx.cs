@@ -31,7 +31,57 @@ namespace PersonalInformationForm
             txt_password.Visible = false;
             Label_pass.Visible = false;
             btnsend.Visible = false;
+            try
+            {
+                // Variables
+              
+                using (var conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
 
+                    using (var cmd = conn.CreateCommand())
+                    {
+                        string clientId = Session["Client_id"].ToString();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "SELECT CLI_VERIFY FROM CLIENT WHERE CLI_ID = @CLI_ID";
+                        cmd.Parameters.AddWithValue("@CLI_ID", clientId);
+
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read())
+                        { 
+                            string get_verify = reader["CLI_VERIFY"].ToString();
+                            if (get_verify == "UNVERIFIED" || get_verify == "DECLINED")
+                            {
+                                Response.Write("<script>alert('Your Account is Unverified')</script>");
+                                Response.Redirect("Account.aspx");
+                            }
+                            else 
+                            {
+                                Response.Write("<script>alert('Connected')</script>");
+                            }
+                        }
+                        else
+                        {
+                            Response.Write("<script>alert('Account Number Cannot Be Found')</script>");
+                        }
+
+                    }
+                    if (conn.State == System.Data.ConnectionState.Open)
+                    {
+                        Response.Write("<script>alert('Connected Successfully!')</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<p>Failed to Connect!</p>");
+                    }
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("Error Message : " + ex);
+            }
 
         }
 

@@ -123,7 +123,7 @@
      <div class="menu">
             <!--Header-->
            <div class="logo">
-               <a  ref="pageLogo" href="PersonalInfoEntry.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
+               <a  ref="pageLogo" href="#"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
                <nav>
                 <input type="checkbox" id="check">
                 <asp:Label ID="Label2" runat="server" CssClass="auto-style22" Font-Names="Bookman Old Style" Font-Size="X-Large" ForeColor="Black" Text="E-Save" style="z-index: 1; position: absolute; top: 33px; left: 169px"></asp:Label>
@@ -166,7 +166,7 @@
     </div>
     <form id="form1" runat="server">
         <div class="auto-style9">
-            <a href="#">
+            <a href="admin_status.aspx">
                 <img src="Image/user%20status.png" class="auto-style10" /><br />
                 <asp:Label ID="Label1" runat="server" Text="User Status" CssClass="auto-style11"></asp:Label>
             </a>
@@ -177,7 +177,7 @@
             </a>
             
           
-            <a href="#">
+            <a href="admin_transaction.aspx">
                 <img src="Image/View%20Transaction.png" class="auto-style13" />
                 <asp:Label ID="Label4" runat="server" Text="View Transactions" CssClass="auto-style14"></asp:Label>
             </a>

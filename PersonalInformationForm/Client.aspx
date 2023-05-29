@@ -245,8 +245,9 @@
         .auto-style50 {
             position: absolute;
             top: 142px;
-            left: 569px;
+            left: 543px;
             z-index: 1;
+            width: 139px;
         }
                
     </style>

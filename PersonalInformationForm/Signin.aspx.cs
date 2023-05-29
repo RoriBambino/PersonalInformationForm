@@ -45,13 +45,18 @@ namespace PersonalInformationForm
                                     string admin = dr["ADMIN_EMAIL"].ToString();
                                     DateTime currentDate = DateTime.Today;
                                     string get_date = currentDate.ToString("MM-dd-yyyy");
-                                if (input_username.Text == user)
+                                    string get_status = dr["CLI_STATUS"].ToString();
+                                    if (input_username.Text == user && get_status != "SUSPENDED")
                                     {
                                         Session["Username"] = get_input;
                                         Session["Password"] = get_pass;
                                         Session["Client_id"] = dr["CLI_ID"];
                                         Session["Date"] = get_date;
 
+                                    }
+                                    else if (get_status == "SUSPENDED")
+                                    {
+                                    Response.Write("<script>alert('This Account Is Suspended!')</script>");
                                     }
                                     else if (input_username.Text == admin)
                                     {
