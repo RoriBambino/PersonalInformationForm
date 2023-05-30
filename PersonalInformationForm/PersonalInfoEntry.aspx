@@ -95,7 +95,7 @@
             margin: 20px 0;
             position: absolute;
             top: 395px;
-            left: 1031px;
+            left: 900px;
             z-index: 1;
             height: 135px;
         }
@@ -106,7 +106,7 @@
             margin: 20px 0;
             position: absolute;
             top: 538px;
-            left: 710px;
+            left: 644px;
             z-index: 1;
             height: 165px;
         }
@@ -117,7 +117,7 @@
             margin: 20px 0;
             position: absolute;
             top: 398px;
-            left: 418px;
+            left: 379px;
             z-index: 1;
             height: 146px;
         }
@@ -128,32 +128,32 @@
             margin: 20px 0;
             position: absolute;
             top: 548px;
-            left: 153px;
+            left: 123px;
             z-index: 1;
             height: 108px;
         }
         .auto-style16 {
             position: absolute;
             top: 516px;
-            left: 185px;
+            left: 156px;
             z-index: 1;
         }
         .auto-style17 {
             position: absolute;
             top: 612px;
-            left: 443px;
+            left: 405px;
             z-index: 1;
         }
         .auto-style18 {
             position: absolute;
             top: 506px;
-            left: 733px;
+            left: 658px;
             z-index: 1;
         }
         .auto-style19 {
             position: absolute;
             top: 597px;
-            left: 1010px;
+            left: 878px;
             z-index: 1;
             width: 208px;
         }

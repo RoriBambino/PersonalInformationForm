@@ -15,19 +15,19 @@
     <style type="text/css">
         .auto-style1 {
             position: absolute;
-            top: 519px;
+            top: 520px;
             left: 607px;
             z-index: 1;
         }
         .auto-style2 {
             position: absolute;
-            top: 518px;
+            top: 520px;
             left: 689px;
             z-index: 1;
         }
         .auto-style3 {
             position: absolute;
-            top: 519px;
+            top: 520px;
             left: 768px;
             z-index: 1;
         }
@@ -86,6 +86,7 @@
             top: 270px;
             left: 627px;
             z-index: 1;
+            width: 187px;
         }
         .auto-style12 {
             position: absolute;
@@ -102,8 +103,9 @@
         .auto-style15 {
             position: absolute;
             top: 324px;
-            left: 628px;
+            left: 626px;
             z-index: 1;
+            width: 190px;
         }
         .auto-style16 {
             position: absolute;
@@ -142,8 +144,9 @@
         .auto-style23 {
             position: absolute;
             top: 375px;
-            left: 689px;
+            left: 623px;
             z-index: 1;
+            width: 223px;
         }
       
     </style>
@@ -199,7 +202,11 @@
     </form>
     <div class="footer-basic">
         <footer>
-            <div class="social" style="width: 1054px"><a href="#" class="auto-style1"><i class="icon ion-social-instagram"></i></a><a href="#" class="auto-style3"><i class="icon ion-social-twitter"></i></a><a href="#" class="auto-style2"><i class="icon ion-social-facebook"></i></a></div>
+            <div class="social" style="width: 1054px; height: 3px;">
+                <a href="#" class="auto-style1"><i class="icon ion-social-instagram"></i></a>
+                <a href="#" class="auto-style3"><i class="icon ion-social-twitter"></i></a><a href="#" class="auto-style2"><i class="icon ion-social-facebook"></i></a>
+
+            </div>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="PersonalInfoEntry.aspx" class="auto-style8">Home</a></li>
                 <li class="list-inline-item"><a href="#" class="auto-style7">Services</a></li>

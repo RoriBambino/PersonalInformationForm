@@ -64,7 +64,7 @@
         .auto-style18 {
             position: absolute;
             top: 308px;
-            left: 310px;
+            left: 344px;
             z-index: 1;
         }
         .auto-style19 {
@@ -115,13 +115,13 @@
         .auto-style32 {
             position: absolute;
             top: 101px;
-            left: 466px;
+            left: 485px;
             z-index: 1;
         }
         .auto-style33 {
             position: absolute;
             top: 99px;
-            left: 562px;
+            left: 565px;
             z-index: 1;
             width: 475px;
         }
@@ -166,13 +166,13 @@
         .auto-style39 {
             position: absolute;
             top: 308px;
-            left: 820px;
+            left: 863px;
             z-index: 1;
         }
         .auto-style40 {
             position: absolute;
             top: 142px;
-            left: 704px;
+            left: 681px;
             z-index: 1;
             width: 128px;
         }
@@ -181,16 +181,16 @@
             width: 53px;
             height: 46px;
             position: absolute;
-            top: 559px;
-            left: 476px;
+            top: 554px;
+            left: 366px;
             z-index: 1;
         }
         .auto-style42 {
             width: 59px;
             height: 50px;
             position: absolute;
-            top: 556px;
-            left: 614px;
+            top: 555px;
+            left: 559px;
             z-index: 1;
         }
         .auto-style43 {
@@ -198,13 +198,13 @@
             height: 53px;
             position: absolute;
             top: 556px;
-            left: 786px;
+            left: 736px;
             z-index: 1;
         }
         .auto-style44 {
             position: absolute;
             top: 558px;
-            left: 959px;
+            left: 916px;
             z-index: 1;
             width: 54px;
             height: 54px;
@@ -313,17 +313,17 @@
         </div>
     
         <a href="Cashin.aspx">
-        &nbsp;<asp:Label ID="Label3" runat="server" CssClass="auto-style23" Text="Cash In" style="z-index: 1; position: absolute; top: 511px; left: 468px" Font-Size="14pt"></asp:Label> 
+        &nbsp;<asp:Label ID="Label3" runat="server" CssClass="auto-style23" Text="Cash In" style="z-index: 1; position: absolute; top: 511px; left: 362px" Font-Size="14pt"></asp:Label> 
         <img class= "auto-style41" src="Image/wallet2.png" alt="Cash In" /></a><a href="Cashout.aspx"><img class= "auto-style42" src="Image/cash.png" alt="Cash Out"/>
-        <asp:Label ID="Label4" runat="server" CssClass="auto-style24" Text="Cash Out" style="z-index: 1; position: absolute; top: 512px; left: 599px" Font-Size="14pt"></asp:Label>
+        <asp:Label ID="Label4" runat="server" CssClass="auto-style24" Text="Cash Out" style="z-index: 1; position: absolute; top: 511px; left: 551px; height: 29px;" Font-Size="14pt"></asp:Label>
     </a>
     <a href="SendMoney.aspx">
         <img class= "auto-style43" src="Image/payment-method.png" alt="Send Money"/>
-        <asp:Label ID="Label5" runat="server" CssClass="auto-style25" Text="Send Money" style="z-index: 1; position: absolute; top: 513px; left: 757px; width: 109px;" Font-Size="14pt"></asp:Label>
+        <asp:Label ID="Label5" runat="server" CssClass="auto-style25" Text="Send Money" style="z-index: 1; position: absolute; top: 512px; left: 717px; width: 109px;" Font-Size="14pt"></asp:Label>
     </a>
     <a href="#">
         <img class= "auto-style44" src="Image/investigation.png" alt="View Transactions"/>
-        &nbsp;<asp:Label ID="Label6" runat="server" CssClass="auto-style26" Text="Transactions" style="z-index: 1; position: absolute; top: 515px; left: 935px" Font-Size="14pt"></asp:Label>
+        &nbsp;<asp:Label ID="Label6" runat="server" CssClass="auto-style26" Text="Transactions" style="z-index: 1; position: absolute; top: 513px; left: 894px" Font-Size="14pt"></asp:Label>
     </a>
      <a href="#">
          &nbsp;</a><div>

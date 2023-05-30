@@ -42,15 +42,6 @@ namespace PersonalInformationForm
         protected global::System.Web.UI.WebControls.Label txt_verifyacc;
 
         /// <summary>
-        /// view_mode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor view_mode;
-
-        /// <summary>
         /// verify control.
         /// </summary>
         /// <remarks>
@@ -58,6 +49,15 @@ namespace PersonalInformationForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlImage verify;
+
+        /// <summary>
+        /// view_mode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor view_mode;
 
         /// <summary>
         /// btn_veracc control.
@@ -69,15 +69,6 @@ namespace PersonalInformationForm
         protected global::System.Web.UI.WebControls.Button btn_veracc;
 
         /// <summary>
-        /// btn_editacc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_editacc;
-
-        /// <summary>
         /// edit control.
         /// </summary>
         /// <remarks>
@@ -85,6 +76,15 @@ namespace PersonalInformationForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlImage edit;
+
+        /// <summary>
+        /// btn_editacc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_editacc;
 
         /// <summary>
         /// Button4 control.

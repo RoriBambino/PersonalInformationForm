@@ -47,14 +47,27 @@ namespace PersonalInformationForm
                                     btn_veracc.Enabled = false;
                                     btn_veracc.Visible = false;
                                 }
-                                else if(check_ver == "UNVERIFIED" || check_ver == "DECLINED")
+                                else if(check_ver == "UNVERIFIED")
                                 {
                                     txt_verifyacc.Visible = false;
                                     verify.Visible = true;
                                     btn_veracc.Visible = true;
                                     verify.EnableViewState = true;
                                     btn_veracc.Enabled = true;
+
+                                    btn_editacc.Visible = true;
+                                    btn_editacc.Enabled = false;     
                                 }
+                                else if (check_ver == "DECLINED")
+                                {
+                                    txt_verifyacc.Visible = false;
+                                    verify.Visible = true;
+                                    btn_veracc.Visible = true;
+                                    verify.EnableViewState = true;
+                                    btn_veracc.Enabled = true;
+                                    btn_editacc.Enabled = false;
+                                }
+
                             }
                         }
                         if (conn.State == System.Data.ConnectionState.Open)

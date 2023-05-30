@@ -63,7 +63,7 @@
         .auto-style8 {
             position: absolute;
             top: 345px;
-            left: 383px;
+            left: 291px;
             z-index: 1;
             text-decoration: none;
             border-radius: 50px;
@@ -82,7 +82,7 @@
         .auto-style10 {
             position: absolute;
             top: 345px;
-            left: 570px;
+            left: 512px;
             z-index: 1;
             text-decoration: none;
             border-radius: 50px;
@@ -95,7 +95,7 @@
         .auto-style11 {
             position: absolute;
             top: 346px;
-            left: 950px;
+            left: 907px;
             z-index: 1;
             text-decoration: none;
             border-radius: 50px;
@@ -108,7 +108,7 @@
         .auto-style12 {
             position: absolute;
             top: 345px;
-            left: 772px;
+            left: 717px;
             z-index: 1;
             text-decoration: none;
             border-radius: 50px;
@@ -123,7 +123,7 @@
             height: 115px;
             position: absolute;
             top: 220px;
-            left: 386px;
+            left: 296px;
             z-index: 1;
         }
         .auto-style14 {
@@ -131,7 +131,7 @@
             height: 111px;
             position: absolute;
             top: 222px;
-            left: 769px;
+            left: 718px;
             z-index: 1;
         }
         .auto-style15 {
@@ -139,21 +139,21 @@
             height: 105px;
             position: absolute;
             top: 228px;
-            left: 574px;
+            left: 514px;
             z-index: 1;
         }
         .auto-style16 {
             width: 98px;
             height: 100px;
             position: absolute;
-            top: 226px;
-            left: 963px;
+            top: 229px;
+            left: 920px;
             z-index: 1;
         }
         .auto-style17 {
             position: absolute;
             top: 190px;
-            left: 296px;
+            left: 244px;
             z-index: 1;
             width: 401px;
         }
@@ -209,13 +209,14 @@
         <div class="auto-style6">
 
              <asp:Label ID="txt_verifyacc" runat="server" CssClass="auto-style17"></asp:Label>
+            <img id="verify" runat="server" alt="Verify Account" class="auto-style13" src="Image/verified-account.png" />
             <a href="user_verify.aspx" id="view_mode" runat="server" onclick="return false;">
-                <img id="verify" runat="server" alt="Verify Account" class="auto-style13" src="Image/verified-account.png" />
                 <asp:Button ID="btn_veracc" runat="server" CssClass="auto-style8" OnClick="Button1_Click" Text="Verify Account" ForeColor="#CC99FF" />
             </a>
-            <a href="editacc.aspx">
+            <img id="edit" runat="server" alt="Edit Account" class="auto-style15" src="Image/Edit%20Account.png" />
+            <a href="editacc.aspx" >
                 <asp:Button ID="btn_editacc" runat="server" CssClass="auto-style10" Text="Edit Account" ForeColor="#6699FF" OnClick="btn_editacc_Click" />
-                <img id="edit" runat="server" alt="Edit Account" class="auto-style15" src="Image/Edit%20Account.png" />
+                
             </a>
             <a href="acc_deactivate.aspx">
                 <asp:Button ID="Button4" runat="server" CssClass="auto-style12" Text="Deactivate" ForeColor="#660066" OnClick="Button4_Click"  />

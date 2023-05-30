@@ -263,9 +263,13 @@
         
         .auto-style42 {
             position: absolute;
-            top: 672px;
-            left: 859px;
+            top: 673px;
+            left: 910px;
             z-index: 1;
+             border: 1px solid black; /* Customize the border style as desired */
+            border-radius: 50%;
+           width: 100px; /* Set the desired width */
+            height: 100px; /* Set the desired height */
         }
         .auto-style43 {
             position: absolute;
@@ -324,7 +328,7 @@
                            </a>
                        </li>
                         <li>
-                            <a href="#">Settings </a>
+                            <a href="admin_settings.aspx">Settings </a>
                        </li>
                        
                    </ul>
@@ -367,7 +371,7 @@
                  <br /> <br />
             </div>
               <br />
-              <asp:Image ID="vw_image" runat="server" Height="25%" Width="20%" CssClass="auto-style42" />
+              <asp:Image ID="vw_image" runat="server"  CssClass="auto-style42" />
               <br />
               <br />
              <div class="info">

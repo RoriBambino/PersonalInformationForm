@@ -16,31 +16,31 @@
             width: 162px;
             height: 28px;
             position: absolute;
-            top: 887px;
-            left: 812px;
+            top: 750px;
+            left: 731px;
             z-index: 1;
         }
         .auto-style2 {
             width: 97px;
             height: 28px;
             position: absolute;
-            top: 888px;
-            left: 506px;
+            top: 751px;
+            left: 454px;
         }
         .auto-style3 {
             width: 94px;
             height: 28px;
             position: absolute;
-            top: 888px;
-            left: 719px;
+            top: 751px;
+            left: 638px;
             z-index: 1;
         }
         .auto-style4 {
             width: 94px;
             height: 28px;
             position: absolute;
-            top: 888px;
-            left: 603px;
+            top: 751px;
+            left: 550px;
             z-index: 1;
         }
         .auto-style5 {
@@ -130,7 +130,7 @@
      <div class="menu">
             <!--Header-->
            <div class="logo">
-               <a  ref="pageLogo" href="PersonalInfoEntry.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
+               <a  ref="pageLogo" href="Admin.aspx"><img class="icon" src="Image/wallet.png" alt="logo" ></a>
                <nav>
                 <input type="checkbox" id="check">
                 <asp:Label ID="Label2" runat="server" CssClass="auto-style22" Font-Names="Bookman Old Style" Font-Size="X-Large" ForeColor="Black" Text="E-Save" style="z-index: 1; position: absolute; top: 33px; left: 169px"></asp:Label>
@@ -182,7 +182,7 @@
  <div class="footer-basic">
         <footer>
         
-            <div class="social" style="width: 1104px; z-index: 1; height: 65px; position: absolute; top: 830px; left: 170px;"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -21px; left: 475px; width: 38px; height: 41px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 533px; width: 39px"></i></a>
+            <div class="social" style="width: 1104px; z-index: 1; height: 65px; position: absolute; top: 693px; left: 103px;"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -21px; left: 475px; width: 38px; height: 41px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 533px; width: 39px"></i></a>
                 <a href="#" class="auto-style47" ><i class="icon ion-social-instagram" style="z-index: 1; position: absolute; top: -19px; left: 588px; width: 42px; height: 40px"></i></a>
             </div>
             <ul class="list-inline">
@@ -191,7 +191,7 @@
                 <li class="auto-style3"><a href="admin_status.aspx" >Status</a></li>
                 <li class="auto-style1"><a href="#">View Transactions</a></li>
             </ul>
-            <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 912px; left: 447px">E-Wallet Co. © 2023</p>
+            <p class="copyright" style="z-index: 1; width: 556px; height: 19px; position: absolute; top: 771px; left: 398px">E-Wallet Co. © 2023</p>
             <asp:TextBox ID="txt_email" runat="server" CssClass="auto-style8"></asp:TextBox>
         </footer>
         <asp:TextBox ID="txt_pass" runat="server" CssClass="auto-style10"></asp:TextBox>

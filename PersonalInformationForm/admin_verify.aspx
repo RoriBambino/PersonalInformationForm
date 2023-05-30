@@ -179,9 +179,9 @@
         .auto-style27 {
             position: absolute;
             top: 636px;
-            left: 919px;
+            left: 916px;
             z-index: 1;
-            width: 105px;
+            width: 88px;
         }
         .auto-style29 {
             position: absolute;
@@ -263,9 +263,13 @@
         
         .auto-style42 {
             position: absolute;
-            top: 672px;
-            left: 859px;
+            top: 674px;
+            left: 909px;
             z-index: 1;
+            border: 1px solid black; /* Customize the border style as desired */
+            border-radius: 50%;
+           width: 100px; /* Set the desired width */
+            height: 100px; /* Set the desired height */
         }
         .auto-style43 {
             position: absolute;
@@ -367,7 +371,7 @@
                  <br /> <br />
             </div>
               <br />
-              <asp:Image ID="vw_image" runat="server" Height="25%" Width="20%" CssClass="auto-style42" />
+              <asp:Image ID="vw_image" runat="server" CssClass="auto-style42" />
               <br />
               <br />
              <div class="info">
@@ -415,8 +419,8 @@
  <div class="footer-basic">
         <footer>
         
-            <div class="social" style="width: 1104px; z-index: 1; height: 65px; position: absolute; top: 973px; left: 141px;"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -11px; left: 475px; width: 38px; height: 41px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -10px; left: 533px; width: 39px"></i></a>
-                <a href="#" class="auto-style47" ><i class="icon ion-social-instagram" style="z-index: 1; position: absolute; top: -10px; left: 588px; width: 42px; height: 40px"></i></a>
+            <div class="social" style="width: 1104px; z-index: 1; height: 65px; position: absolute; top: 973px; left: 141px;"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -21px; left: 475px; width: 38px; height: 41px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -21px; left: 533px; width: 39px"></i></a>
+                <a href="#" class="auto-style47" ><i class="icon ion-social-instagram" style="z-index: 1; position: absolute; top: -20px; left: 588px; width: 42px; height: 40px"></i></a>
             </div>
             <ul class="list-inline">
                 <li class="auto-style2"><a href="Admin.aspx">Home</a></li>

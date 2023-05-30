@@ -54,7 +54,7 @@
         .auto-style10 {
             position: absolute;
             top: 2px;
-            left: 595px;
+            left: 485px;
             z-index: 1;
             width: 128px;
             height: 126px;
@@ -62,7 +62,7 @@
         .auto-style11 {
             position: absolute;
             top: 132px;
-            left: 617px;
+            left: 507px;
             z-index: 1;
         }
         .auto-style12 {
@@ -75,8 +75,8 @@
         }
         .auto-style13 {
             position: absolute;
-            top: 1px;
-            left: 821px;
+            top: 3px;
+            left: 694px;
             z-index: 1;
             width: 122px;
             height: 123px;
@@ -84,20 +84,21 @@
         }
         .auto-style14 {
             position: absolute;
-            top: 130px;
-            left: 820px;
+            top: 132px;
+            left: 693px;
             z-index: 1;
         }
         .auto-style15 {
             position: absolute;
-            top: 195px;
-            left: 263px;
+            top: 189px;
+            left: 262px;
             z-index: 1;
-            width: 123px;
+            width: 131px;
             background-color:mistyrose;
             border-radius: 10px;
-            height: 42px;
+            height: 45px;
             padding: 10px;
+            text-align:center;
         }
         .verify{
             background-color:dodgerblue;
@@ -107,13 +108,13 @@
         .auto-style16 {
             position: absolute;
             top: 395px;
-            left: 381px;
+            left: 384px;
             z-index: 1;
         }
         .auto-style17 {
             position: absolute;
-            top: 429px;
-            left: 441px;
+            top: 422px;
+            left: 444px;
             z-index: 1;
         }
     </style>
@@ -171,7 +172,7 @@
                 <asp:Label ID="Label1" runat="server" Text="User Status" CssClass="auto-style11"></asp:Label>
             </a>
             
-                  <a href="admin_verify.aspx">
+           <a href="admin_verify.aspx">
                 <img src="Image/verified-account.png" class="auto-style12" />
                 <asp:Label ID="Label3" runat="server" Text="Verify Account" CssClass="auto-style15" ForeColor="#9900FF"></asp:Label>
             </a>
