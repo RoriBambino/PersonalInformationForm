@@ -108,16 +108,16 @@ namespace PersonalInformationForm
                          
                             if (reader.Read())
                             {
-                            string chk_status = "DEACTIVATED";
+                            
                             string get_status = reader["CLI_STATUS"].ToString();
-                            if (get_status == chk_status)
+                            if (get_status == "SUSPENDED" || get_status == "DEACTIVATED")
                             {
                                 txt_status.Text = "This Account Is Unavailable At the Moment!";
                                 
                             }
                             else
                             {
-                                 txt_accnum.Text = reader["CLI_ID"].ToString();
+                            txt_accnum.Text = reader["CLI_ID"].ToString();
                             string lname = reader["CLI_LNAME"].ToString();
                             string fnmae = reader["CLI_FNAME"].ToString();
                             string mname = reader["CLI_MNAME"].ToString();
