@@ -20,7 +20,7 @@ namespace PersonalInformationForm
           
             try
             {
-                vw_image.Visible = false;
+               
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 { //Make it like after user login access the db matching their account
@@ -28,7 +28,59 @@ namespace PersonalInformationForm
 
                     string username = (string)Session["Username"];
                     string password = (string)Session["Password"];
+                    string clientId = Session["Client_id"].ToString();
+
                     txt_username.Text = username.ToString();
+
+                    using (var cmd = conn.CreateCommand())
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "SELECT * FROM CLIENT WHERE CLI_ID = @GET_ID";
+                        cmd.Parameters.AddWithValue("@GET_ID", clientId);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                byte[] imageData = null;
+                                object imageValue = reader["CLI_ID_PIC"];
+                                fname.Text = reader["CLI_FNAME"].ToString();
+                                middle_name.Text = reader["CLI_MNAME"].ToString();
+                                lname.Text = reader["CLI_LNAME"].ToString();
+                                txtDOB.Text = reader["CLI_DOB"].ToString();
+                                appartment.Text = reader["CLI_APP_UNIT"].ToString();
+                                street_add.Text = reader["CLI_STREET_ADD"].ToString();
+                                city.Text = reader["CLI_CITY"].ToString();
+                                m_number.Text = reader["CLI_MOBILE_NUM"].ToString();
+
+
+                                if (imageValue != DBNull.Value)
+                                {
+                                    imageData = (byte[])reader["CLI_ID_PIC"];
+                                }
+                                if (imageData == null || imageData.Length == 0)
+                                {
+                                    // Set a default image or placeholder
+                                    vw_image.ImageUrl = "Image/View Transaction.png";
+                                }
+                                else
+                                {
+
+                                    string str = Convert.ToBase64String(imageData);
+                                    vw_image.ImageUrl = "data:image/png;base64," + str;
+                                }
+                            }
+
+                        }
+                    }
+                    if (conn.State == System.Data.ConnectionState.Open)
+                    {
+                        Response.Write("<script>alert('Connected Successfully!')</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<p>Failed to Connect!</p>");
+                    }
 
                     conn.Close();
                 }
@@ -88,7 +140,7 @@ namespace PersonalInformationForm
                 string get_marital = DropDownList1.Text;
                 string get_sex = DropDownList4.Text;
                 string get_mobnumber = m_number.Text;
-                string verify_status = "PENDING";
+                
                 DateTime currentDate = DateTime.Now;
                 string get_date = currentDate.ToShortDateString();
                 string get_npass = txt_nwpass.Text;
@@ -105,7 +157,7 @@ namespace PersonalInformationForm
                         {
                             cmd.CommandType = CommandType.Text;
                             cmd.CommandText = "UPDATE CLIENT SET CLI_LNAME = @get_lname, CLI_FNAME = @get_fname, CLI_MNAME = @get_midname, CLI_DOB = @get_dob, CLI_STREET_ADD = @get_streetadd , " +
-                                    "CLI_APP_UNIT = @get_appunit, CLI_CITY = @get_city, CLI_MARITAL_STATUS = @get_marital, CLI_SEX = @get_sex, CLI_MOBILE_NUM = @get_mobnumber ,CLI_PASSWORD = @get_password, CLI_ID_PIC = @pic, CLI_DATE_UPDATED = @get_date, CLI_VERIFY = @verify_status WHERE CLI_ID = '" + clientId + "'";
+                                    "CLI_APP_UNIT = @get_appunit, CLI_CITY = @get_city, CLI_MARITAL_STATUS = @get_marital, CLI_SEX = @get_sex, CLI_MOBILE_NUM = @get_mobnumber ,CLI_PASSWORD = @get_password, CLI_ID_PIC = @pic, CLI_DATE_UPDATED = @get_date WHERE CLI_ID = '" + clientId + "'";
 
                             cmd.Parameters.AddWithValue("GET_LNAME", get_lname);
                             cmd.Parameters.AddWithValue("GET_FNAME", get_fname);
@@ -127,7 +179,7 @@ namespace PersonalInformationForm
                             }
                             cmd.Parameters.AddWithValue("@PIC", pic);
                             cmd.Parameters.AddWithValue("@GET_DATE", get_date);
-                            cmd.Parameters.AddWithValue("@VERIFY_STATUS", verify_status);
+                            
 
                             var ctr = cmd.ExecuteNonQuery();
                             if (ctr > 0)

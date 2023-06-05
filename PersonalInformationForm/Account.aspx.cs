@@ -46,6 +46,8 @@ namespace PersonalInformationForm
                                     txt_verifyacc.Text = "Your Account is being Verified right now!";
                                     btn_veracc.Enabled = false;
                                     btn_veracc.Visible = false;
+                                    btn_editacc.Visible = true;
+                                    btn_editacc.Enabled = false;
                                 }
                                 else if(check_ver == "UNVERIFIED")
                                 {

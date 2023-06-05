@@ -23,9 +23,35 @@ namespace PersonalInformationForm
                 { //Make it like after user login access the db matching their account
                     conn.Open();
                    
-                        string username = (string)Session["Username"];  
+                        string username = (string)Session["Username"];
+                        string clientId = Session["Client_id"].ToString();
                         txt_username.Text = username.ToString();
 
+                    using (var cmd = conn.CreateCommand())
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "SELECT * FROM CLIENT WHERE CLI_ID = @GET_ID";
+                        cmd.Parameters.AddWithValue("@GET_ID", clientId);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                fname.Text = reader["CLI_FNAME"].ToString();
+                                middle_name.Text = reader["CLI_MNAME"].ToString();
+                                lname.Text = reader["CLI_LNAME"].ToString();
+                            }
+
+                        }
+                    }
+                    if (conn.State == System.Data.ConnectionState.Open)
+                    {
+                        Response.Write("<script>alert('Connected Successfully!')</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<p>Failed to Connect!</p>");
+                    }
                     conn.Close();
                 }
             }

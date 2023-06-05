@@ -51,7 +51,7 @@ namespace PersonalInformationForm
                         if (reader.Read())
                         { 
                             string get_verify = reader["CLI_VERIFY"].ToString();
-                            if (get_verify == "UNVERIFIED" || get_verify == "DECLINED")
+                            if (get_verify == "UNVERIFIED" || get_verify == "DECLINED" || get_verify == "PENDING")
                             {
                                 Response.Write("<script>alert('Your Account is Unverified')</script>");
                                 Response.Redirect("Account.aspx");

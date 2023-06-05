@@ -257,8 +257,12 @@
         .auto-style42 {
             position: absolute;
             top: 426px;
-            left: 168px;
+            left: 210px;
             z-index: 1;
+               border: 1px solid black; /* Customize the border style as desired */
+            border-radius: 50%;
+           width: 100px; /* Set the desired width */
+            height: 100px; /* Set the desired height */
         }
         .auto-style43 {
             position: absolute;
@@ -483,7 +487,7 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="city" CssClass="auto-style26" ErrorMessage="*Input City" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
          <asp:Label ID="Label26" runat="server" CssClass="auto-style38" Text="Upload ID Picture"></asp:Label>
         <br />
-         <asp:Image ID="vw_image" runat="server" Height="25%" Width="20%" CssClass="auto-style42"/>
+         <asp:Image ID="vw_image" runat="server" CssClass="auto-style42"/>
         <br />
         <asp:DropDownList ID="DropDownList4" runat="server" CssClass="auto-style134" style="z-index: 1; position: absolute; top: 651px; left: 842px">
             <asp:ListItem>Sex</asp:ListItem>
