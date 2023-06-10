@@ -19,16 +19,16 @@
         .auto-style5 {
             position: absolute;
             top: 133px;
-            left: 717px;
+            left: 604px;
             z-index: 1;
             width: 135px;
             height: 53px;
-            right: 216px;
+            right: 399px;
         }
         .auto-style133 {
             position: absolute;
             top: 520px;
-            left: 883px;
+            left: 765px;
             z-index: 1;
              border-radius: 50px;
             cursor: pointer;
@@ -67,118 +67,118 @@
         .auto-style139 {
             position: absolute;
             top: 359px;
-            left: 596px;
+            left: 499px;
             z-index: 1;
         }
         .auto-style140 {
             position: absolute;
             top: 357px;
-            left: 698px;
+            left: 606px;
             z-index: 1;
         }
         .auto-style143 {
             position: absolute;
             top: 382px;
-            left: 740px;
+            left: 650px;
             z-index: 1;
         }
         .auto-style144 {
             position: absolute;
             top: 400px;
-            left: 606px;
+            left: 499px;
             z-index: 1;
         }
         .auto-style145 {
             position: absolute;
             top: 398px;
-            left: 698px;
+            left: 605px;
             z-index: 1;
         }
         .auto-style146 {
             position: absolute;
             top: 439px;
-            left: 544px;
+            left: 457px;
             z-index: 1;
         }
         .auto-style147 {
             position: absolute;
             top: 439px;
-            left: 697px;
+            left: 605px;
             z-index: 1;
         }
         .auto-style148 {
             position: absolute;
             top: 421px;
-            left: 737px;
+            left: 651px;
             z-index: 1;
         }
         .auto-style149 {
             position: absolute;
             top: 462px;
-            left: 686px;
+            left: 593px;
             z-index: 1;
         }
         .auto-style150 {
             position: absolute;
             top: 462px;
-            left: 698px;
+            left: 608px;
             z-index: 1;
         }
 
         .auto-style152 {
             position: absolute;
             top: 639px;
-            left: 845px;
+            left: 773px;
             z-index: 1;
         }
         .auto-style153 {
             position: absolute;
-            top: 639px;
-            left: 655px;
+            top: 638px;
+            left: 549px;
             z-index: 1;
         }
         .auto-style154 {
             position: absolute;
             top: 639px;
-            left: 749px;
+            left: 663px;
             z-index: 1;
         }
         .auto-style155 {
             position: absolute;
             top: 689px;
-            left: 568px;
+            left: 482px;
             z-index: 1;
         }
         .auto-style156 {
             position: absolute;
             top: 689px;
-            left: 655px;
+            left: 578px;
             z-index: 1;
         }
         .auto-style157 {
             position: absolute;
             top: 689px;
-            left: 755px;
+            left: 683px;
             z-index: 1;
         }
         .auto-style158 {
             position: absolute;
             top: 688px;
-            left: 843px;
+            left: 789px;
             z-index: 1;
             width: 66px;
         }
         .auto-style159 {
             position: absolute;
             top: 688px;
-            left: 942px;
+            left: 905px;
             z-index: 1;
         }
        
         .auto-style160 {
             position: absolute;
-            top: 520px;
-            left: 550px;
+            top: 525px;
+            left: 474px;
             z-index: 1;
             text-decoration: none;
             border-radius: 50px;
@@ -200,64 +200,64 @@
         .auto-style162 {
             position: absolute;
             top: 484px;
-            left: 684px;
+            left: 627px;
             z-index: 1;
         }
        
         .auto-style163 {
             position: absolute;
             top: 482px;
-            left: 823px;
+            left: 762px;
             z-index: 1;
         }
        
         .auto-style164 {
             position: absolute;
             top: 231px;
-            left: 597px;
+            left: 501px;
             z-index: 1;
         }
         .auto-style165 {
             position: absolute;
             top: 229px;
-            left: 697px;
+            left: 605px;
             z-index: 1;
-            width: 181px;
+            width: 192px;
         }
         .auto-style166 {
             position: absolute;
             top: 255px;
-            left: 734px;
+            left: 651px;
             z-index: 1;
         }
         .auto-style167 {
             position: absolute;
             top: 273px;
-            left: 596px;
+            left: 500px;
             z-index: 1;
         }
         .auto-style168 {
             position: absolute;
             top: 273px;
-            left: 697px;
+            left: 606px;
             z-index: 1;
         }
         .auto-style169 {
             position: absolute;
             top: 298px;
-            left: 732px;
+            left: 650px;
             z-index: 1;
         }
         .auto-style170 {
             position: absolute;
             top: 316px;
-            left: 580px;
+            left: 498px;
             z-index: 1;
         }
         .auto-style171 {
             position: absolute;
             top: 315px;
-            left: 697px;
+            left: 607px;
             z-index: 1;
         }
                
@@ -363,7 +363,7 @@
                 <li class="list-inline-item"><a href="Signin.aspx" class="auto-style158">Sign In</a></li>
                 <li class="list-inline-item"><a href="PersonalInfoentry2.aspx" class="auto-style159">Register</a></li>
             </ul>
-            <p class="copyright" style="width: 835px; height: 19px; z-index: 1; position: absolute; top: 721px; left: 362px">E-Wallet Co. © 2023</p>
+            <p class="copyright" style="width: 835px; height: 19px; z-index: 1; position: absolute; top: 721px; left: 276px">E-Wallet Co. © 2023</p>
         </footer>
     </div>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
