@@ -44,7 +44,6 @@ namespace PersonalInformationForm
                                 else if (check_ver == "PENDING")
                                 {
                                     txt_verifyacc.Text = "Your Account is being Verified right now!";
-                                    btn_veracc.Enabled = false;
                                     btn_veracc.Visible = false;
                                     btn_editacc.Visible = true;
                                     btn_editacc.Enabled = false;
@@ -52,21 +51,14 @@ namespace PersonalInformationForm
                                 else if(check_ver == "UNVERIFIED")
                                 {
                                     txt_verifyacc.Visible = false;
-                                    verify.Visible = true;
                                     btn_veracc.Visible = true;
-                                    verify.EnableViewState = true;
-                                    btn_veracc.Enabled = true;
-
                                     btn_editacc.Visible = true;
                                     btn_editacc.Enabled = false;     
                                 }
                                 else if (check_ver == "DECLINED")
                                 {
                                     txt_verifyacc.Visible = false;
-                                    verify.Visible = true;
                                     btn_veracc.Visible = true;
-                                    verify.EnableViewState = true;
-                                    btn_veracc.Enabled = true;
                                     btn_editacc.Enabled = false;
                                 }
 
@@ -90,10 +82,7 @@ namespace PersonalInformationForm
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("user_verify.aspx");
-        }
+       
 
         protected void Button2_Click(object sender, EventArgs e)
         {
@@ -112,6 +101,11 @@ namespace PersonalInformationForm
         protected void Button4_Click(object sender, EventArgs e)
         {
             Response.Redirect("acc_deactivate.aspx");
+        }
+
+        protected void btn_veracc_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("user_verify.aspx");
         }
     }
 }

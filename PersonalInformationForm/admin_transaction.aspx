@@ -17,7 +17,7 @@
             width: 189px;
             height: 28px;
             position: absolute;
-            top: 1850px;
+            top: 1911px;
             left: 856px;
             z-index: 1;
         }
@@ -25,23 +25,23 @@
             width: 114px;
             height: 24px;
             position: absolute;
-            top: 1852px;
+            top: 1914px;
             left: 420px;
         }
         .auto-style5 {
             width: 123px;
             height: 28px;
             position: absolute;
-            top: 1850px;
-            left: 739px;
+            top: 1911px;
+            left: 757px;
             z-index: 1;
         }
         .auto-style6 {
             width: 120px;
             height: 25px;
             position: absolute;
-            top: 1852px;
-            left: 534px;
+            top: 1914px;
+            left: 530px;
             z-index: 1;
             margin-bottom: 0px;
         }
@@ -49,8 +49,8 @@
             width: 102px;
             height: 25px;
             position: absolute;
-            top: 1851px;
-            left: 638px;
+            top: 1914px;
+            left: 658px;
             z-index: 1;
         }
         .auto-style9 {
@@ -63,7 +63,7 @@
         }
         .auto-style10 {
             position: absolute;
-            top: 269px;
+            top: 289px;
             left: 996px;
             z-index: 1;
               text-decoration: none;
@@ -83,13 +83,13 @@
         }
         .auto-style13 {
             position: absolute;
-            top: 276px;
+            top: 293px;
             left: 259px;
             z-index: 1;
         }
         .auto-style15 {
             position: absolute;
-            top: 766px;
+            top: 846px;
             left: 541px;
             z-index: 1;
             width: 27px;
@@ -103,20 +103,20 @@
         }
         .auto-style18 {
             position: absolute;
-            top: 767px;
+            top: 848px;
             left: 267px;
             z-index: 1;
         }
         .auto-style19 {
             position: absolute;
-            top: 276px;
+            top: 294px;
             left: 549px;
             z-index: 1;
             width: 23px;
         }
         .auto-style20 {
             position: absolute;
-            top: 1212px;
+            top: 1475px;
             left: 992px;
             z-index: 1;
             text-decoration: none;
@@ -134,20 +134,20 @@
         }
         .auto-style23 {
             position: absolute;
-            top: 1217px;
+            top: 1476px;
             left: 560px;
             z-index: 1;
             width: 32px;
         }
         .auto-style24 {
             position: absolute;
-            top: 1216px;
-            left: 268px;
+            top: 1477px;
+            left: 256px;
             z-index: 1;
         }
         .auto-style25 {
             position: absolute;
-            top: 266px;
+            top: 285px;
             left: 598px;
             z-index: 1;
             text-decoration: none;
@@ -160,7 +160,7 @@
         }
         .auto-style26 {
             position: absolute;
-            top: 763px;
+            top: 838px;
             left: 990px;
             z-index: 1;
             text-decoration: none;
@@ -173,7 +173,7 @@
         }
         .auto-style27 {
             position: absolute;
-            top: 1212px;
+            top: 1469px;
             left: 600px;
             z-index: 1;
             text-decoration: none;
@@ -186,8 +186,8 @@
         }
         .auto-style28 {
             position: absolute;
-            top: 1208px;
-            left: 330px;
+            top: 1466px;
+            left: 321px;
             z-index: 1;
             text-decoration: none;
             border-radius: 10px;
@@ -199,7 +199,7 @@
         }
         .auto-style29 {
             position: absolute;
-            top: 268px;
+            top: 284px;
             left: 328px;
             z-index: 1;
             text-decoration: none;
@@ -212,7 +212,7 @@
         }
         .auto-style30 {
             position: absolute;
-            top: 761px;
+            top: 839px;
             left: 594px;
             z-index: 1;
             text-decoration: none;
@@ -225,7 +225,7 @@
         }
         .auto-style31 {
             position: absolute;
-            top: 759px;
+            top: 839px;
             left: 330px;
             z-index: 1;
             text-decoration: none;
@@ -238,38 +238,38 @@
         }
         .auto-style32 {
             position: absolute;
-            top: 272px;
+            top: 291px;
             left: 843px;
             z-index: 1;
         }
         .auto-style33 {
             position: absolute;
-            top: 274px;
+            top: 293px;
             left: 792px;
             z-index: 1;
         }
         .auto-style34 {
             position: absolute;
-            top: 768px;
+            top: 845px;
             left: 800px;
             z-index: 1;
             height: 24px;
         }
         .auto-style35 {
             position: absolute;
-            top: 765px;
+            top: 842px;
             left: 849px;
             z-index: 1;
         }
         .auto-style36 {
             position: absolute;
-            top: 1215px;
+            top: 1476px;
             left: 856px;
             z-index: 1;
         }
         .auto-style37 {
             position: absolute;
-            top: 1217px;
+            top: 1478px;
             left: 801px;
             z-index: 1;
             height: 23px;
@@ -295,14 +295,14 @@
          text-align:center;
          display: flex;
          justify-content: center;
-         margin-top: 150px;
+         margin-top: 230px;
          margin-left: 300px;
          }
         
         .auto-style38 {
             position: absolute;
-            top: 1158px;
-            left: 630px;
+            top: 1356px;
+            left: 624px;
             z-index: 1;
             width: 162px;
         }
@@ -321,10 +321,112 @@
          text-align:center;
          display: flex;
          justify-content: center;
-         margin-top: 190px;
+         margin-top: 340px;
          margin-left: 300px;
          padding-bottom: 100px;
          }
+        .auto-style40 {
+            position: absolute;
+            top: 250px;
+            left: 260px;
+            z-index: 1;
+            height: 24px;
+            width: 234px;
+        }
+        .auto-style41 {
+            position: absolute;
+            top: 242px;
+            left: 390px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 212px;
+            height: 33px;
+        }
+        .auto-style42 {
+            position: absolute;
+            top: 781px;
+            left: 394px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 212px;
+            height: 33px;
+        }
+        .auto-style43 {
+            position: absolute;
+            top: 791px;
+            left: 267px;
+            z-index: 1;
+            height: 24px;
+            width: 234px;
+        }
+        .auto-style44 {
+            position: absolute;
+            top: 1433px;
+            left: 254px;
+            z-index: 1;
+            height: 24px;
+            width: 234px;
+        }
+        .auto-style45 {
+            position: absolute;
+            top: 603px;
+            left: 380px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 212px;
+            height: 33px;
+        }
+        .auto-style46 {
+            position: absolute;
+            top: 947px;
+            left: 381px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 212px;
+            height: 33px;
+        }
+        .auto-style47 {
+            position: absolute;
+            top: 1257px;
+            left: 368px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 212px;
+            height: 33px;
+        }
+        .auto-style48 {
+            position: absolute;
+            top: 1425px;
+            left: 385px;
+            z-index: 1;
+            text-decoration: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: none;
+            background-color: grey;
+            width: 212px;
+            height: 33px;
+        }
     </style>
 </head>
 <body>
@@ -373,6 +475,7 @@
     </div>
     <form id="form1" runat="server">
         <div>
+
             <asp:Label ID="Label1" runat="server" Text="Sent, Cash Out, Recieved" CssClass="auto-style9"></asp:Label>
             <asp:Label ID="Label4" runat="server" CssClass="auto-style13" Text="FROM:"></asp:Label>
             <asp:Label ID="Label6" runat="server" CssClass="auto-style19" Text="TO:"></asp:Label>
@@ -380,6 +483,9 @@
             <asp:TextBox ID="txt_dfrom" placeholder="Last Name" runat="server" style="text-indent: 10px; " TextMode="Date" CssClass="auto-style29"></asp:TextBox>
             <asp:TextBox ID="txt_dto" placeholder="Last Name" runat="server" style="text-indent: 10px; " TextMode="Date" CssClass="auto-style25"></asp:TextBox>
            
+            <asp:Label ID="Label15" runat="server" CssClass="auto-style43" Text="Account Number:"></asp:Label>
+            <asp:TextBox ID="txt_id" runat="server" CssClass="auto-style41" TextMode="Number" BorderStyle="Solid"></asp:TextBox>
+
             <div class="gridViewContainer">
                 <asp:Label ID="Label14" runat="server" CssClass="auto-style39" Font-Size="Large" Text="CASH IN &amp; CASH OUT"></asp:Label>
                 <asp:GridView ID="vw_all" runat="server" AutoGenerateColumns="false" ShowHeaderWhenEmpty="True" BorderColor="#999999">
@@ -403,6 +509,9 @@
             <asp:TextBox ID="txt_dto2" placeholder="Last Name" runat="server" style="text-indent: 10px; " TextMode="Date" CssClass="auto-style30"></asp:TextBox>
                  <asp:Label ID="Label12" runat="server" CssClass="auto-style37" Text="TYPE:"></asp:Label>
             
+            <asp:Label ID="Label16" runat="server" CssClass="auto-style40" Text="Account Number:"></asp:Label>
+            <asp:TextBox ID="txt_id2" runat="server" CssClass="auto-style42" TextMode="Number" BorderStyle="Solid"></asp:TextBox>
+            
             <div class="gridViewContainer1" >
                  <asp:Label ID="Label13" runat="server" CssClass="auto-style38" Font-Size="Large" Text="SENT &amp; RECIEVED"></asp:Label>
                  <asp:GridView ID="vw_deposit" runat="server" AutoGenerateColumns="false" > 
@@ -424,6 +533,8 @@
             <asp:TextBox ID="txt_dfrom3" placeholder="Last Name" runat="server" style="text-indent: 10px; " TextMode="Date" CssClass="auto-style28"></asp:TextBox>
             <asp:TextBox ID="txt_dto3" placeholder="Last Name" runat="server" style="text-indent: 10px; " TextMode="Date" CssClass="auto-style27"></asp:TextBox>
             
+              <asp:Label ID="Label17" runat="server" CssClass="auto-style44" Text="Account Number:"></asp:Label>
+            <asp:TextBox ID="txt_id3" runat="server" CssClass="auto-style48" TextMode="Number" BorderStyle="Solid"></asp:TextBox>
             <div class="gridViewContainer2">
                 <asp:GridView ID="vw_sent" runat="server" AutoGenerateColumns="false">
                      <Columns>
@@ -460,7 +571,7 @@
   </form>
      <div class="footer-basic">
         <footer>
-            <div class="social" style="width: 1104px; z-index: 1; height: 65px; position: absolute; top: 1788px; left: 141px;"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: 472px; width: 43px; height: 44px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 533px; width: 39px"></i></a>
+            <div class="social" style="width: 1104px; z-index: 1; height: 65px; position: absolute; top: 1852px; left: 137px;"><a href="#" class="auto-style45" ><i class="icon ion-social-twitter" style="z-index: 1; position: absolute; top: -22px; left: 472px; width: 43px; height: 44px;"></i></a><a href="#" class="auto-style46" ><i class="icon ion-social-facebook" style="z-index: 1; position: absolute; top: -19px; left: 533px; width: 39px"></i></a>
                 <a href="#" class="auto-style47" ><i class="icon ion-social-instagram" style="z-index: 1; position: absolute; top: -19px; left: 588px; width: 42px; height: 40px"></i></a>
             </div>
             <ul class="list-inline">
@@ -470,7 +581,7 @@
                 <li class="auto-style5"><a href="SendMoney.aspx">Send Money</a></li>
                 <li class="auto-style1"><a href="view_transaction.aspx">View Transactions</a></li>
             </ul>
-            <p class="copyright" style="z-index: 1; width: 544px; height: 0px; position: absolute; top: 1869px; left: 419px">E-Wallet Co. © 2023</p>
+            <p class="copyright" style="z-index: 1; width: 544px; height: 0px; position: absolute; top: 1933px; left: 413px">E-Wallet Co. © 2023</p>
         </footer>  
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

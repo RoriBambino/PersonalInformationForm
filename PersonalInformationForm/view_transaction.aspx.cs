@@ -59,7 +59,7 @@ namespace PersonalInformationForm
                        
                         if (dt.Rows.Count == 0)
                         {
-                            Response.Write("<script>alert('The table is empty')</script>");
+                            Response.Write("<script>alert('The Cash in and Cash out table is empty')</script>");
                         }
                         else
                         {
@@ -80,7 +80,7 @@ namespace PersonalInformationForm
 
                         if (dt.Rows.Count == 0)
                         {
-                            Response.Write("<script>alert('The table is empty')</script>");
+                            Response.Write("<script>alert('The Sender and Reviever table is empty')</script>");
                         }
                         else
                         {

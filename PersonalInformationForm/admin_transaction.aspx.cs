@@ -88,7 +88,7 @@ namespace PersonalInformationForm
                             vw_sent.DataBind();
                         }
                     }
-
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -126,28 +126,38 @@ namespace PersonalInformationForm
                     using (SqlConnection conn = new SqlConnection(connectionString))
                     {
                         conn.Open();
+                        int search_id = Convert.ToInt32(txt_id.Text);
                         using (var cmd = conn.CreateCommand())
                         {
+
                             cmd.CommandType = CommandType.Text;
-                            cmd.CommandText = "SELECT * FROM [TRANSACTION] WHERE TRA_TYPE = @TYPE AND (TRA_DATE BETWEEN @GET_DFROM AND @GET_DTO) ORDER BY (TRA_DATE)";
+                            cmd.CommandText = "SELECT TRA_ID, TRA_TYPE ,TRA_AMOUNT, TRA_NUMBER, CLI_ID, TRA_DATE FROM [TRANSACTION] WHERE TRA_TYPE = @TYPE AND (TRA_DATE BETWEEN @GET_DFROM AND @GET_DTO) AND CLI_ID = @CLI_ID ORDER BY (TRA_DATE) ";
                             cmd.Parameters.AddWithValue("@TYPE", type);
                             cmd.Parameters.AddWithValue("@GET_DFROM", get_dfrom);
                             cmd.Parameters.AddWithValue("@GET_DTO", get_dto);
-                           
+                            cmd.Parameters.AddWithValue("@CLI_ID", search_id);
+
                             DataTable dt = new DataTable();
                             SqlDataAdapter sda = new SqlDataAdapter(cmd);
                             sda.Fill(dt);
+                            SqlDataReader reader = cmd.ExecuteReader();
 
-                            if (dt.Rows.Count == 0)
+                            if (reader.Read())
                             {
-                                Response.Write("<script>alert('The table is empty')</script>");
+                                int get_id = Convert.ToInt32(reader["CLI_ID"]);
+                                if (dt.Rows.Count == 0 || search_id != get_id)
+                                {
+                                    Response.Write("<script>alert('The table is empty')</script>");
+                                }
+                                else
+                                {
+                                    vw_all.DataSource = dt;
+                                    vw_all.DataBind();
+                                }
                             }
-                            else
-                            {
-                                vw_all.DataSource = dt;
-                                vw_all.DataBind();
-                            }
+                                
                         }
+                       
                         conn.Close();
                     }
                 }
@@ -190,27 +200,36 @@ namespace PersonalInformationForm
 
                     {
                         conn.Open();
+                        int search_id = Convert.ToInt32(txt_id2.Text);
+
                         using (var cmd = conn.CreateCommand())
                         {
                             cmd.CommandType = CommandType.Text;
-                            cmd.CommandText = "SELECT * FROM [TRANSACTION] WHERE TRA_TYPE = @TYPE AND (TRA_DATE BETWEEN @GET_DFROM AND @GET_DTO) ORDER BY (TRA_DATE)";
+                            cmd.CommandText = "SELECT TRA_ID, TRA_TYPE ,TRA_AMOUNT, TRA_NUMBER, CLI_ID, TRA_DATE FROM [TRANSACTION]  WHERE TRA_TYPE = @TYPE AND (TRA_DATE BETWEEN @GET_DFROM AND @GET_DTO) AND CLI_ID = @CLI_ID ORDER BY (TRA_DATE)";
                             cmd.Parameters.AddWithValue("@TYPE", type);
                             cmd.Parameters.AddWithValue("@GET_DFROM", get_dfrom);
                             cmd.Parameters.AddWithValue("@GET_DTO", get_dto);
-                            
+                            cmd.Parameters.AddWithValue("@CLI_ID", search_id);
+
                             DataTable dt = new DataTable();
                             SqlDataAdapter sda = new SqlDataAdapter(cmd);
                             sda.Fill(dt);
+                            SqlDataReader reader = cmd.ExecuteReader();
 
-                            if (dt.Rows.Count == 0)
+                            if (reader.Read())
                             {
-                                Response.Write("<script>alert('The table is empty')</script>");
+                                int get_id = Convert.ToInt32(reader["CLI_ID"]);
+                                if (dt.Rows.Count == 0 || search_id != get_id)
+                                {
+                                    Response.Write("<script>alert('The table is empty')</script>");
+                                }
+                                else
+                                {
+                                    vw_deposit.DataSource = dt;
+                                    vw_deposit.DataBind();
+                                }
                             }
-                            else
-                            {
-                                vw_deposit.DataSource = dt;
-                                vw_deposit.DataBind();
-                            }
+                                
                         }
                         conn.Close();
                     }
@@ -252,27 +271,36 @@ namespace PersonalInformationForm
                     using (SqlConnection conn = new SqlConnection(connectionString))
                     {
                         conn.Open();
+                        int search_id = Convert.ToInt32(txt_id3.Text);
+
                         using (var cmd = conn.CreateCommand())
                         {
                             cmd.CommandType = CommandType.Text;
-                            cmd.CommandText = "SELECT * FROM [TRANSACTION] WHERE TRA_TYPE = @TYPE AND (TRA_DATE BETWEEN @GET_DFROM AND @GET_DTO) ORDER BY (TRA_DATE)";
+                            cmd.CommandText = "SELECT TRA_ID, TRA_TYPE ,TRA_AMOUNT, TRA_NUMBER, CLI_ID, TRA_DATE FROM [TRANSACTION]  WHERE TRA_TYPE = @TYPE AND (TRA_DATE BETWEEN @GET_DFROM AND @GET_DTO) AND CLI_ID = @CLI_ID ORDER BY (TRA_DATE)";
                             cmd.Parameters.AddWithValue("@TYPE", type);
                             cmd.Parameters.AddWithValue("@GET_DFROM", get_dfrom);
                             cmd.Parameters.AddWithValue("@GET_DTO", get_dto);
-                            
+                            cmd.Parameters.AddWithValue("@CLI_ID", search_id);
+
                             DataTable dt = new DataTable();
                             SqlDataAdapter sda = new SqlDataAdapter(cmd);
                             sda.Fill(dt);
+                            SqlDataReader reader = cmd.ExecuteReader();
 
-                            if (dt.Rows.Count == 0)
+                            if (reader.Read())
                             {
-                                Response.Write("<script>alert('The table is empty')</script>");
+                                int get_id = Convert.ToInt32(reader["CLI_ID"]);
+                                if (dt.Rows.Count == 0 || search_id != get_id)
+                                {
+                                    Response.Write("<script>alert('The table is empty')</script>");
+                                }
+                                else
+                                {
+                                    vw_sent.DataSource = dt;
+                                    vw_sent.DataBind();
+                                }
                             }
-                            else
-                            {
-                                vw_sent.DataSource = dt;
-                                vw_sent.DataBind();
-                            }
+                               
                         }
                         conn.Close();
                     }
@@ -283,6 +311,8 @@ namespace PersonalInformationForm
                 Response.Write("Error: " + ex);
             }
         }
+
+      
     }
 
 }

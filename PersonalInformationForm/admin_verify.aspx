@@ -258,7 +258,7 @@
             margin-left: 100px;
             margin-right: -30px;
             margin-top: 150px;
-            padding-left: 800px;
+            padding-left: 760px;
         }
         
         .auto-style42 {

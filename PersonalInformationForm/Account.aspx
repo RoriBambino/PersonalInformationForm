@@ -210,8 +210,8 @@
 
              <asp:Label ID="txt_verifyacc" runat="server" CssClass="auto-style17"></asp:Label>
             <img id="verify" runat="server" alt="Verify Account" class="auto-style13" src="Image/verified-account.png" />
-            <a href="user_verify.aspx" id="view_mode" runat="server" onclick="return false;">
-                <asp:Button ID="btn_veracc" runat="server" CssClass="auto-style8" OnClick="Button1_Click" Text="Verify Account" ForeColor="#CC99FF" />
+            <a href="user_verify.aspx" id="view_mode" runat="server">
+                <asp:Button ID="btn_veracc" runat="server" CssClass="auto-style8"  Text="Verify Account" ForeColor="#CC99FF" OnClick="btn_veracc_Click" />
             </a>
             <img id="edit" runat="server" alt="Edit Account" class="auto-style15" src="Image/Edit%20Account.png" />
             <a href="editacc.aspx" >

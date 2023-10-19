@@ -58,7 +58,7 @@
         .auto-style6 {
             position: absolute;
             top: 165px;
-            left: 724px;
+            left: 627px;
             z-index: 1;
             width: 153px;
         }
@@ -70,7 +70,7 @@
         .auto-style8 {
             position: absolute;
             top: 251px;
-            left: 612px;
+            left: 554px;
             z-index: 1;
         }
         .auto-style9 {
@@ -81,20 +81,20 @@
         .auto-style10 {
             position: absolute;
             top: 251px;
-            left: 712px;
+            left: 654px;
             z-index: 1;
         }
         .auto-style11 {
             position: absolute;
             top: 251px;
-            left: 729px;
+            left: 667px;
             z-index: 1;
             width: 123px;
         }
         .auto-style12 {
             position: absolute;
             top: 371px;
-            left: 693px;
+            left: 625px;
             z-index: 1;
             height: 28px;
             width: 152px;
@@ -102,7 +102,7 @@
         .auto-style13 {
             position: absolute;
             top: 310px;
-            left: 723px;
+            left: 641px;
             z-index: 1;
             text-decoration: none;
             border-radius: 50px;
@@ -115,14 +115,14 @@
         .auto-style14 {
             position: absolute;
             top: 413px;
-            left: 659px;
+            left: 578px;
             z-index: 1;
             width: 236px;
         }
         .auto-style15 {
             position: absolute;
             top: 414px;
-            left: 638px;
+            left: 560px;
             z-index: 1;
             height: 28px;
             width: 17px;
@@ -130,7 +130,7 @@
         .auto-style18 {
             position: absolute;
             top: 476px;
-            left: 705px;
+            left: 645px;
             z-index: 1;
              text-decoration: none;
             border-radius: 50px;
@@ -156,7 +156,7 @@
         .auto-style20 {
             position: absolute;
             top: 437px;
-            left: 608px;
+            left: 523px;
             z-index: 1;
             width: 355px;
             height: 19px;
@@ -164,7 +164,7 @@
         .auto-style21 {
             position: absolute;
             top: 438px;
-            left: 685px;
+            left: 608px;
             z-index: 1;
             width: 185px;
         }
@@ -177,7 +177,7 @@
         .auto-style23 {
             position: absolute;
             top: 281px;
-            left: 747px;
+            left: 646px;
             z-index: 1;
         }
     </style>
